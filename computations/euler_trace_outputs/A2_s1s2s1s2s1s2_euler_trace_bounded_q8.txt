@@ -1,0 +1,15 @@
+Case: A2_s1s2s1s2s1s2
+Braid: s1 s2 s1 s2 s1 s2
+Method: euler_trace_bounded_q8
+Description: bounded homogeneous linear algebra, max_q_degree=8
+Python: 3.11.7
+Platform: macOS-10.16-x86_64-i386-64bit
+max_q_degree: 8
+Rouquier terms: 64
+Elapsed wall time seconds: 92.619172
+
+Polynomial:
+4*A**2*Q**8 + 3*A**2*Q**6 + 2*A**2*Q**4 + A**2*Q**2 + 6*A*Q**8 + 4*A*Q**6 + 3*A*Q**4 + A*Q**2 + A + 3*Q**8 + Q**6 + Q**4 + 1
+
+Expanded polynomial:
+4*A**2*Q**8 + 3*A**2*Q**6 + 2*A**2*Q**4 + A**2*Q**2 + 6*A*Q**8 + 4*A*Q**6 + 3*A*Q**4 + A*Q**2 + A + 3*Q**8 + Q**6 + Q**4 + 1

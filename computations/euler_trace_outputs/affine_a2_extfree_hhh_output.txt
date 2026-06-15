@@ -1,0 +1,42 @@
+Affine A2 Ext-free HHH computation
+Python: 3.11.7
+Output file: /Users/calvinyost-wolff/Documents/my math papers/acyclicClusterAlgebras/computations/euler_trace_outputs/affine_a2_extfree_hhh_output.txt
+Timeout seconds: 3600
+Validate: True
+
+setup diagram and realization: 0.001525s
+diagram vertices: (0, 1, 2)
+diagram edges: [(0, 1), (0, 2), (1, 2)]
+braid: ((0, '+'), (1, '+'), (2, '+'), (0, '+'), (1, '+'), (2, '+'))
+realization dimension: 2
+s0 action on V^* used by R:
+Matrix([[-1, -1], [0, 1]])
+alpha_0: [1, 0]
+s1 action on V^* used by R:
+Matrix([[0, 1], [1, 0]])
+alpha_1: [-1, 1]
+s2 action on V^* used by R:
+Matrix([[1, 0], [-1, -1]])
+alpha_2: [0, 1]
+
+build Rouquier complex as free left R-modules: 15.018641s
+R variables: (x_0, x_1)
+Rouquier degrees: [-6, -5, -4, -3, -2, -1, 0]
+number of Rouquier terms: 64
+number of Rouquier arrows: 192
+d^2=0 on free-left-R Rouquier complex: True
+
+Computing termwise Ext-free data...
+term (1, 1, 1, 1, 1, 1): degree=-6, word=(0, 1, 2, 0, 1, 2), rank=64
+  Koszul complex: 22.957089s
+  k tensor_R Ext generator degrees: 0.149777s
+  Ext^0: rank=11, generator_q_degrees=[6, 8, 8, 8, 8, 8, 10, 10, 10, 10, 12], lift_time=4.004722s
+  Ext^1: rank=22, generator_q_degrees=[0, 2, 2, 2, 2, 2, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 6, 6, 6, 6, 6, 8], lift_time=13.433250s
+  Ext^2: rank=11, generator_q_degrees=[-4, -2, -2, -2, -2, 0, 0, 0, 0, 0, 2], lift_time=0.845967s
+term (1, 1, 1, 1, 1, 1) total: 41.392632s
+
+term (0, 1, 1, 1, 1, 1): degree=-5, word=(1, 2, 0, 1, 2), rank=32
+  Koszul complex: 4.596458s
+  k tensor_R Ext generator degrees: 0.047589s
+
+ERROR after 94.274139s: ValueError('affine A2 term (0, 1, 1, 1, 1, 1), Ext degree 0: expected 2 new free generator(s) at Q=6, found 1')

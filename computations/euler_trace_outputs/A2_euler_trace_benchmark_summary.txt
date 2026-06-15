@@ -1,0 +1,24 @@
+A2 Euler trace benchmark
+Python: 3.11.7
+Platform: macOS-10.16-x86_64-i386-64bit
+Trials: 1 timed run per method/case
+
+A2_s1s2s1s2 / euler_trace:
+  file: A2_s1s2s1s2_euler_trace.txt
+  elapsed: 2.427459s
+  polynomial: A + Q**4 + 1
+
+A2_s1s2s1s2 / euler_trace_bounded_q8:
+  file: A2_s1s2s1s2_euler_trace_bounded_q8.txt
+  elapsed: 3.103335s
+  polynomial: A + Q**4 + 1
+
+A2_s1s2s1s2s1s2 / euler_trace:
+  file: A2_s1s2s1s2s1s2_euler_trace.txt
+  elapsed: 73.721555s
+  polynomial: (A**2*Q**2 + A*Q**8 - A*Q**6 + 2*A*Q**4 - A*Q**2 + A + Q**12 - 2*Q**10 + 2*Q**8 - Q**6 + 2*Q**4 - 2*Q**2 + 1)/((Q - 1)**2*(Q + 1)**2)
+
+A2_s1s2s1s2s1s2 / euler_trace_bounded_q8:
+  file: A2_s1s2s1s2s1s2_euler_trace_bounded_q8.txt
+  elapsed: 92.619172s
+  polynomial: 4*A**2*Q**8 + 3*A**2*Q**6 + 2*A**2*Q**4 + A**2*Q**2 + 6*A*Q**8 + 4*A*Q**6 + 3*A*Q**4 + A*Q**2 + A + 3*Q**8 + Q**6 + Q**4 + 1

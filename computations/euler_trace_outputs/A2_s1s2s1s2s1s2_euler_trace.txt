@@ -1,0 +1,15 @@
+Case: A2_s1s2s1s2s1s2
+Braid: s1 s2 s1 s2 s1 s2
+Method: euler_trace
+Description: exact rational Hilbert-series computation
+Python: 3.11.7
+Platform: macOS-10.16-x86_64-i386-64bit
+max_q_degree: none (full rational result)
+Rouquier terms: 64
+Elapsed wall time seconds: 73.721555
+
+Polynomial:
+(A**2*Q**2 + A*Q**8 - A*Q**6 + 2*A*Q**4 - A*Q**2 + A + Q**12 - 2*Q**10 + 2*Q**8 - Q**6 + 2*Q**4 - 2*Q**2 + 1)/((Q - 1)**2*(Q + 1)**2)
+
+Expanded polynomial:
+A**2*Q**2/(Q**4 - 2*Q**2 + 1) + A*Q**8/(Q**4 - 2*Q**2 + 1) - A*Q**6/(Q**4 - 2*Q**2 + 1) + 2*A*Q**4/(Q**4 - 2*Q**2 + 1) - A*Q**2/(Q**4 - 2*Q**2 + 1) + A/(Q**4 - 2*Q**2 + 1) + Q**12/(Q**4 - 2*Q**2 + 1) - 2*Q**10/(Q**4 - 2*Q**2 + 1) + 2*Q**8/(Q**4 - 2*Q**2 + 1) - Q**6/(Q**4 - 2*Q**2 + 1) + 2*Q**4/(Q**4 - 2*Q**2 + 1) - 2*Q**2/(Q**4 - 2*Q**2 + 1) + 1/(Q**4 - 2*Q**2 + 1)

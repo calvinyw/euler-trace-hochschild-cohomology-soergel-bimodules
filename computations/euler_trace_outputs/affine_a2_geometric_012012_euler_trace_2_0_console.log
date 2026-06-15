@@ -1,0 +1,1520 @@
+Affine A2 geometric 2D s0s1s2s0s1s2 Euler-trace 2.0 computation
+Python: 3.11.7
+Platform: macOS-10.16-x86_64-i386-64bit
+Output file: /Users/calvinyost-wolff/Documents/my math papers/acyclicClusterAlgebras/computations/euler_trace_outputs/affine_a2_geometric_012012_euler_trace_2_0_output.txt
+Timeout seconds: 86400
+Validate minimization pipeline: True
+Check d^2=0 before Ext computations: True
+
+setup geometric 2D realization: 0.003751s
+diagram vertices: (0, 1, 2)
+diagram edges: [(0, 1), (0, 2), (1, 2)]
+braid: ((0, '+'), (1, '+'), (2, '+'), (0, '+'), (1, '+'), (2, '+'))
+realization dimension: 2
+input matrices interpreted as V action; R uses the contragredient V^* action
+s0 action on V^* used by R:
+Matrix([[-1, -1], [0, 1]])
+alpha_0: [1, 0]
+s1 action on V^* used by R:
+Matrix([[0, 1], [1, 0]])
+alpha_1: [-1, 1]
+s2 action on V^* used by R:
+Matrix([[1, 0], [-1, -1]])
+alpha_2: [0, 1]
+
+build Rouquier complex as free left R-modules: 15.535602s
+R variables: (x_0, x_1)
+Rouquier degrees: [-6, -5, -4, -3, -2, -1, 0]
+number of Rouquier terms: 64
+number of Rouquier arrows: 192
+d^2=0 on free-left-R Rouquier complex: True
+check d^2=0: 33.527027s
+
+construct left polynomial ring: 0.001142s
+ring: QQ[x_0,x_1]
+
+term (1, 1, 1, 1, 1, 1): degree=-6, word=(0, 1, 2, 0, 1, 2), rank=64
+  Koszul complex: 23.728287s
+  step 1 field B+H+S splitting: 2890.141808s
+    field homology ranks by Ext degree: {0: 11, 1: 22, 2: 11}
+    field source ranks by Ext degree: {0: 53, 1: 53, 2: 0}
+  step 2 lifted cancellation/minimal complex: 3759.606267s
+    minimal ranks by Ext degree: {0: 11, 1: 22, 2: 11}
+    cancelled S->B pairs by source degree: {0: 53, 1: 53, 2: 0}
+  step 3 certified free homology splitting: 0.039227s
+    split free Q-degrees by Ext degree: {0: [6, 8, 8, 8, 8, 8, 10, 10, 10, 10, 12], 1: [0, 2, 2, 2, 2, 2, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 6, 6, 6, 6, 6, 8], 2: [-4, -2, -2, -2, -2, 0, 0, 0, 0, 0, 2]}
+    remaining ranks by Ext degree: {0: 0, 1: 0, 2: 0}
+  step 4 Groebner Hilbert series on remaining complex: 0.003202s
+  Ext^0: Hilb_Q=(Q**12 + 4*Q**10 + 5*Q**8 + Q**6)/(Q**4 - 2*Q**2 + 1)
+    remaining contribution=0
+    split-free contribution=(Q**12 + 4*Q**10 + 5*Q**8 + Q**6)/(Q**4 - 2*Q**2 + 1)
+  Ext^1: Hilb_Q=(Q**8 + 5*Q**6 + 10*Q**4 + 5*Q**2 + 1)/(Q**4 - 2*Q**2 + 1)
+    remaining contribution=0
+    split-free contribution=(Q**8 + 5*Q**6 + 10*Q**4 + 5*Q**2 + 1)/(Q**4 - 2*Q**2 + 1)
+  Ext^2: Hilb_Q=(Q**6 + 5*Q**4 + 4*Q**2 + 1)/(Q**8 - 2*Q**6 + Q**4)
+    remaining contribution=0
+    split-free contribution=(Q**6 + 5*Q**4 + 4*Q**2 + 1)/(Q**8 - 2*Q**6 + Q**4)
+term (1, 1, 1, 1, 1, 1) total: 6673.534907s
+
+term (0, 1, 1, 1, 1, 1): degree=-5, word=(1, 2, 0, 1, 2), rank=32
+  Koszul complex: 4.520031s
+  step 1 field B+H+S splitting: 0.124680s
+    field homology ranks by Ext degree: {0: 6, 1: 12, 2: 6}
+    field source ranks by Ext degree: {0: 26, 1: 26, 2: 0}
+  step 2 lifted cancellation/minimal complex: 150.336702s
+    minimal ranks by Ext degree: {0: 6, 1: 12, 2: 6}
+    cancelled S->B pairs by source degree: {0: 26, 1: 26, 2: 0}
+  step 3 certified free homology splitting: 0.384057s
+    split free Q-degrees by Ext degree: {0: [6, 8], 1: [2, 2, 2, 4, 4, 4], 2: [-2, 0]}
+    remaining ranks by Ext degree: {0: 4, 1: 6, 2: 4}
+  step 4 Groebner Hilbert series on remaining complex: 0.032907s
+  Ext^0: Hilb_Q=(Q**10 + 3*Q**8 + Q**6)/(Q**4 - 2*Q**2 + 1)
+    remaining contribution=(Q**10 + 2*Q**8)/(Q**4 - 2*Q**2 + 1)
+    split-free contribution=(Q**8 + Q**6)/(Q**4 - 2*Q**2 + 1)
+  Ext^1: Hilb_Q=(5*Q**4 + 4*Q**2 + 1)/(Q**4 - 2*Q**2 + 1)
+    remaining contribution=(2*Q**4 + Q**2 + 1)/(Q**4 - 2*Q**2 + 1)
+    split-free contribution=(3*Q**4 + 3*Q**2)/(Q**4 - 2*Q**2 + 1)
+  Ext^2: Hilb_Q=(-Q**6 + 2*Q**4 + 3*Q**2 + 1)/(Q**8 - 2*Q**6 + Q**4)
+    remaining contribution=(-Q**6 + Q**4 + 2*Q**2 + 1)/(Q**8 - 2*Q**6 + Q**4)
+    split-free contribution=(Q**2 + 1)/(Q**6 - 2*Q**4 + Q**2)
+term (0, 1, 1, 1, 1, 1) total: 155.412589s
+
+term (1, 0, 1, 1, 1, 1): degree=-5, word=(0, 2, 0, 1, 2), rank=32
+  Koszul complex: 4.218668s
+  step 1 field B+H+S splitting: 0.122649s
+    field homology ranks by Ext degree: {0: 6, 1: 12, 2: 6}
+    field source ranks by Ext degree: {0: 26, 1: 26, 2: 0}
+  step 2 lifted cancellation/minimal complex: 133.067556s
+    minimal ranks by Ext degree: {0: 6, 1: 12, 2: 6}
+    cancelled S->B pairs by source degree: {0: 26, 1: 26, 2: 0}
+  step 3 certified free homology splitting: 0.618115s
+    split free Q-degrees by Ext degree: {0: [6, 8], 1: [2, 2, 2, 4, 4, 4], 2: [-2, 0]}
+    remaining ranks by Ext degree: {0: 4, 1: 6, 2: 4}
+  step 4 Groebner Hilbert series on remaining complex: 0.033788s
+  Ext^0: Hilb_Q=(Q**10 + 3*Q**8 + Q**6)/(Q**4 - 2*Q**2 + 1)
+    remaining contribution=(Q**10 + 2*Q**8)/(Q**4 - 2*Q**2 + 1)
+    split-free contribution=(Q**8 + Q**6)/(Q**4 - 2*Q**2 + 1)
+  Ext^1: Hilb_Q=(5*Q**4 + 4*Q**2 + 1)/(Q**4 - 2*Q**2 + 1)
+    remaining contribution=(2*Q**4 + Q**2 + 1)/(Q**4 - 2*Q**2 + 1)
+    split-free contribution=(3*Q**4 + 3*Q**2)/(Q**4 - 2*Q**2 + 1)
+  Ext^2: Hilb_Q=(-Q**6 + 2*Q**4 + 3*Q**2 + 1)/(Q**8 - 2*Q**6 + Q**4)
+    remaining contribution=(-Q**6 + Q**4 + 2*Q**2 + 1)/(Q**8 - 2*Q**6 + Q**4)
+    split-free contribution=(Q**2 + 1)/(Q**6 - 2*Q**4 + Q**2)
+term (1, 0, 1, 1, 1, 1) total: 138.075309s
+
+term (1, 1, 0, 1, 1, 1): degree=-5, word=(0, 1, 0, 1, 2), rank=32
+  Koszul complex: 4.236680s
+  step 1 field B+H+S splitting: 0.122897s
+    field homology ranks by Ext degree: {0: 6, 1: 12, 2: 6}
+    field source ranks by Ext degree: {0: 26, 1: 26, 2: 0}
+  step 2 lifted cancellation/minimal complex: 133.508441s
+    minimal ranks by Ext degree: {0: 6, 1: 12, 2: 6}
+    cancelled S->B pairs by source degree: {0: 26, 1: 26, 2: 0}
+  step 3 certified free homology splitting: 0.573264s
+    split free Q-degrees by Ext degree: {0: [6, 8], 1: [2, 2, 2, 4, 4, 4], 2: [-2, 0]}
+    remaining ranks by Ext degree: {0: 4, 1: 6, 2: 4}
+  step 4 Groebner Hilbert series on remaining complex: 0.033885s
+  Ext^0: Hilb_Q=(Q**10 + 3*Q**8 + Q**6)/(Q**4 - 2*Q**2 + 1)
+    remaining contribution=(Q**10 + 2*Q**8)/(Q**4 - 2*Q**2 + 1)
+    split-free contribution=(Q**8 + Q**6)/(Q**4 - 2*Q**2 + 1)
+  Ext^1: Hilb_Q=(5*Q**4 + 4*Q**2 + 1)/(Q**4 - 2*Q**2 + 1)
+    remaining contribution=(2*Q**4 + Q**2 + 1)/(Q**4 - 2*Q**2 + 1)
+    split-free contribution=(3*Q**4 + 3*Q**2)/(Q**4 - 2*Q**2 + 1)
+  Ext^2: Hilb_Q=(-Q**6 + 2*Q**4 + 3*Q**2 + 1)/(Q**8 - 2*Q**6 + Q**4)
+    remaining contribution=(-Q**6 + Q**4 + 2*Q**2 + 1)/(Q**8 - 2*Q**6 + Q**4)
+    split-free contribution=(Q**2 + 1)/(Q**6 - 2*Q**4 + Q**2)
+term (1, 1, 0, 1, 1, 1) total: 138.490418s
+
+term (1, 1, 1, 0, 1, 1): degree=-5, word=(0, 1, 2, 1, 2), rank=32
+  Koszul complex: 4.196720s
+  step 1 field B+H+S splitting: 0.123190s
+    field homology ranks by Ext degree: {0: 6, 1: 12, 2: 6}
+    field source ranks by Ext degree: {0: 26, 1: 26, 2: 0}
+  step 2 lifted cancellation/minimal complex: 133.341244s
+    minimal ranks by Ext degree: {0: 6, 1: 12, 2: 6}
+    cancelled S->B pairs by source degree: {0: 26, 1: 26, 2: 0}
+  step 3 certified free homology splitting: 0.589710s
+    split free Q-degrees by Ext degree: {0: [6, 8], 1: [2, 2, 2, 4, 4, 4], 2: [-2, 0]}
+    remaining ranks by Ext degree: {0: 4, 1: 6, 2: 4}
+  step 4 Groebner Hilbert series on remaining complex: 0.034254s
+  Ext^0: Hilb_Q=(Q**10 + 3*Q**8 + Q**6)/(Q**4 - 2*Q**2 + 1)
+    remaining contribution=(Q**10 + 2*Q**8)/(Q**4 - 2*Q**2 + 1)
+    split-free contribution=(Q**8 + Q**6)/(Q**4 - 2*Q**2 + 1)
+  Ext^1: Hilb_Q=(5*Q**4 + 4*Q**2 + 1)/(Q**4 - 2*Q**2 + 1)
+    remaining contribution=(2*Q**4 + Q**2 + 1)/(Q**4 - 2*Q**2 + 1)
+    split-free contribution=(3*Q**4 + 3*Q**2)/(Q**4 - 2*Q**2 + 1)
+  Ext^2: Hilb_Q=(-Q**6 + 2*Q**4 + 3*Q**2 + 1)/(Q**8 - 2*Q**6 + Q**4)
+    remaining contribution=(-Q**6 + Q**4 + 2*Q**2 + 1)/(Q**8 - 2*Q**6 + Q**4)
+    split-free contribution=(Q**2 + 1)/(Q**6 - 2*Q**4 + Q**2)
+term (1, 1, 1, 0, 1, 1) total: 138.300048s
+
+term (1, 1, 1, 1, 0, 1): degree=-5, word=(0, 1, 2, 0, 2), rank=32
+  Koszul complex: 4.340141s
+  step 1 field B+H+S splitting: 0.122845s
+    field homology ranks by Ext degree: {0: 6, 1: 12, 2: 6}
+    field source ranks by Ext degree: {0: 26, 1: 26, 2: 0}
+  step 2 lifted cancellation/minimal complex: 133.219677s
+    minimal ranks by Ext degree: {0: 6, 1: 12, 2: 6}
+    cancelled S->B pairs by source degree: {0: 26, 1: 26, 2: 0}
+  step 3 certified free homology splitting: 0.621833s
+    split free Q-degrees by Ext degree: {0: [6, 8], 1: [2, 2, 2, 4, 4, 4], 2: [-2, 0]}
+    remaining ranks by Ext degree: {0: 4, 1: 6, 2: 4}
+  step 4 Groebner Hilbert series on remaining complex: 0.033625s
+  Ext^0: Hilb_Q=(Q**10 + 3*Q**8 + Q**6)/(Q**4 - 2*Q**2 + 1)
+    remaining contribution=(Q**10 + 2*Q**8)/(Q**4 - 2*Q**2 + 1)
+    split-free contribution=(Q**8 + Q**6)/(Q**4 - 2*Q**2 + 1)
+  Ext^1: Hilb_Q=(5*Q**4 + 4*Q**2 + 1)/(Q**4 - 2*Q**2 + 1)
+    remaining contribution=(2*Q**4 + Q**2 + 1)/(Q**4 - 2*Q**2 + 1)
+    split-free contribution=(3*Q**4 + 3*Q**2)/(Q**4 - 2*Q**2 + 1)
+  Ext^2: Hilb_Q=(-Q**6 + 2*Q**4 + 3*Q**2 + 1)/(Q**8 - 2*Q**6 + Q**4)
+    remaining contribution=(-Q**6 + Q**4 + 2*Q**2 + 1)/(Q**8 - 2*Q**6 + Q**4)
+    split-free contribution=(Q**2 + 1)/(Q**6 - 2*Q**4 + Q**2)
+term (1, 1, 1, 1, 0, 1) total: 138.352413s
+
+term (1, 1, 1, 1, 1, 0): degree=-5, word=(0, 1, 2, 0, 1), rank=32
+  Koszul complex: 5.544370s
+  step 1 field B+H+S splitting: 0.221252s
+    field homology ranks by Ext degree: {0: 6, 1: 12, 2: 6}
+    field source ranks by Ext degree: {0: 26, 1: 26, 2: 0}
+  step 2 lifted cancellation/minimal complex: 204.068999s
+    minimal ranks by Ext degree: {0: 6, 1: 12, 2: 6}
+    cancelled S->B pairs by source degree: {0: 26, 1: 26, 2: 0}
+  step 3 certified free homology splitting: 0.351809s
+    split free Q-degrees by Ext degree: {0: [6, 8], 1: [2, 2, 2, 2, 4, 4, 4, 4], 2: [-2, 0]}
+    remaining ranks by Ext degree: {0: 4, 1: 4, 2: 4}
+  step 4 Groebner Hilbert series on remaining complex: 0.030693s
+  Ext^0: Hilb_Q=(Q**10 + 3*Q**8 + Q**6)/(Q**4 - 2*Q**2 + 1)
+    remaining contribution=(Q**10 + 2*Q**8)/(Q**4 - 2*Q**2 + 1)
+    split-free contribution=(Q**8 + Q**6)/(Q**4 - 2*Q**2 + 1)
+  Ext^1: Hilb_Q=(5*Q**4 + 4*Q**2 + 1)/(Q**4 - 2*Q**2 + 1)
+    remaining contribution=(Q**4 + 1)/(Q**4 - 2*Q**2 + 1)
+    split-free contribution=(4*Q**4 + 4*Q**2)/(Q**4 - 2*Q**2 + 1)
+  Ext^2: Hilb_Q=(-Q**6 + 2*Q**4 + 3*Q**2 + 1)/(Q**8 - 2*Q**6 + Q**4)
+    remaining contribution=(-Q**6 + Q**4 + 2*Q**2 + 1)/(Q**8 - 2*Q**6 + Q**4)
+    split-free contribution=(Q**2 + 1)/(Q**6 - 2*Q**4 + Q**2)
+term (1, 1, 1, 1, 1, 0) total: 210.231471s
+
+term (0, 0, 1, 1, 1, 1): degree=-4, word=(2, 0, 1, 2), rank=16
+  Koszul complex: 0.755176s
+  step 1 field B+H+S splitting: 0.021548s
+    field homology ranks by Ext degree: {0: 3, 1: 6, 2: 3}
+    field source ranks by Ext degree: {0: 13, 1: 13, 2: 0}
+  step 2 lifted cancellation/minimal complex: 7.416032s
+    minimal ranks by Ext degree: {0: 3, 1: 6, 2: 3}
+    cancelled S->B pairs by source degree: {0: 13, 1: 13, 2: 0}
+  step 3 certified free homology splitting: 0.064800s
+    split free Q-degrees by Ext degree: {0: [6], 1: [2, 2], 2: [-2]}
+    remaining ranks by Ext degree: {0: 2, 1: 4, 2: 2}
+  step 4 Groebner Hilbert series on remaining complex: 0.025990s
+  Ext^0: Hilb_Q=(Q**8 + Q**6)/(Q**4 - 2*Q**2 + 1)
+    remaining contribution=Q**8/(Q**4 - 2*Q**2 + 1)
+    split-free contribution=Q**6/(Q**4 - 2*Q**2 + 1)
+  Ext^1: Hilb_Q=(-Q**6 + Q**4 + 3*Q**2 + 1)/(Q**4 - 2*Q**2 + 1)
+    remaining contribution=(-Q**6 + Q**4 + Q**2 + 1)/(Q**4 - 2*Q**2 + 1)
+    split-free contribution=2*Q**2/(Q**4 - 2*Q**2 + 1)
+  Ext^2: Hilb_Q=(-Q**6 + 2*Q**2 + 1)/(Q**8 - 2*Q**6 + Q**4)
+    remaining contribution=(-Q**6 + Q**2 + 1)/(Q**8 - 2*Q**6 + Q**4)
+    split-free contribution=1/(Q**6 - 2*Q**4 + Q**2)
+term (0, 0, 1, 1, 1, 1) total: 8.292766s
+
+term (0, 1, 0, 1, 1, 1): degree=-4, word=(1, 0, 1, 2), rank=16
+  Koszul complex: 0.814671s
+  step 1 field B+H+S splitting: 0.022180s
+    field homology ranks by Ext degree: {0: 3, 1: 6, 2: 3}
+    field source ranks by Ext degree: {0: 13, 1: 13, 2: 0}
+  step 2 lifted cancellation/minimal complex: 7.524229s
+    minimal ranks by Ext degree: {0: 3, 1: 6, 2: 3}
+    cancelled S->B pairs by source degree: {0: 13, 1: 13, 2: 0}
+  step 3 certified free homology splitting: 0.005640s
+    split free Q-degrees by Ext degree: {0: [6, 6, 8], 1: [0, 2, 2, 2, 2, 4], 2: [-4, -2, -2]}
+    remaining ranks by Ext degree: {0: 0, 1: 0, 2: 0}
+  step 4 Groebner Hilbert series on remaining complex: 0.000182s
+  Ext^0: Hilb_Q=(Q**8 + 2*Q**6)/(Q**4 - 2*Q**2 + 1)
+    remaining contribution=0
+    split-free contribution=(Q**8 + 2*Q**6)/(Q**4 - 2*Q**2 + 1)
+  Ext^1: Hilb_Q=(Q**4 + 4*Q**2 + 1)/(Q**4 - 2*Q**2 + 1)
+    remaining contribution=0
+    split-free contribution=(Q**4 + 4*Q**2 + 1)/(Q**4 - 2*Q**2 + 1)
+  Ext^2: Hilb_Q=(2*Q**2 + 1)/(Q**8 - 2*Q**6 + Q**4)
+    remaining contribution=0
+    split-free contribution=(2*Q**2 + 1)/(Q**8 - 2*Q**6 + Q**4)
+term (0, 1, 0, 1, 1, 1) total: 8.375830s
+
+term (0, 1, 1, 0, 1, 1): degree=-4, word=(1, 2, 1, 2), rank=16
+  Koszul complex: 0.806524s
+  step 1 field B+H+S splitting: 0.023656s
+    field homology ranks by Ext degree: {0: 3, 1: 6, 2: 3}
+    field source ranks by Ext degree: {0: 13, 1: 13, 2: 0}
+  step 2 lifted cancellation/minimal complex: 7.417663s
+    minimal ranks by Ext degree: {0: 3, 1: 6, 2: 3}
+    cancelled S->B pairs by source degree: {0: 13, 1: 13, 2: 0}
+  step 3 certified free homology splitting: 0.005577s
+    split free Q-degrees by Ext degree: {0: [6, 6, 8], 1: [0, 2, 2, 2, 2, 4], 2: [-4, -2, -2]}
+    remaining ranks by Ext degree: {0: 0, 1: 0, 2: 0}
+  step 4 Groebner Hilbert series on remaining complex: 0.000176s
+  Ext^0: Hilb_Q=(Q**8 + 2*Q**6)/(Q**4 - 2*Q**2 + 1)
+    remaining contribution=0
+    split-free contribution=(Q**8 + 2*Q**6)/(Q**4 - 2*Q**2 + 1)
+  Ext^1: Hilb_Q=(Q**4 + 4*Q**2 + 1)/(Q**4 - 2*Q**2 + 1)
+    remaining contribution=0
+    split-free contribution=(Q**4 + 4*Q**2 + 1)/(Q**4 - 2*Q**2 + 1)
+  Ext^2: Hilb_Q=(2*Q**2 + 1)/(Q**8 - 2*Q**6 + Q**4)
+    remaining contribution=0
+    split-free contribution=(2*Q**2 + 1)/(Q**8 - 2*Q**6 + Q**4)
+term (0, 1, 1, 0, 1, 1) total: 8.262200s
+
+term (0, 1, 1, 1, 0, 1): degree=-4, word=(1, 2, 0, 2), rank=16
+  Koszul complex: 0.822617s
+  step 1 field B+H+S splitting: 0.021985s
+    field homology ranks by Ext degree: {0: 3, 1: 6, 2: 3}
+    field source ranks by Ext degree: {0: 13, 1: 13, 2: 0}
+  step 2 lifted cancellation/minimal complex: 7.478951s
+    minimal ranks by Ext degree: {0: 3, 1: 6, 2: 3}
+    cancelled S->B pairs by source degree: {0: 13, 1: 13, 2: 0}
+  step 3 certified free homology splitting: 0.005554s
+    split free Q-degrees by Ext degree: {0: [6, 6, 8], 1: [0, 2, 2, 2, 2, 4], 2: [-4, -2, -2]}
+    remaining ranks by Ext degree: {0: 0, 1: 0, 2: 0}
+  step 4 Groebner Hilbert series on remaining complex: 0.000177s
+  Ext^0: Hilb_Q=(Q**8 + 2*Q**6)/(Q**4 - 2*Q**2 + 1)
+    remaining contribution=0
+    split-free contribution=(Q**8 + 2*Q**6)/(Q**4 - 2*Q**2 + 1)
+  Ext^1: Hilb_Q=(Q**4 + 4*Q**2 + 1)/(Q**4 - 2*Q**2 + 1)
+    remaining contribution=0
+    split-free contribution=(Q**4 + 4*Q**2 + 1)/(Q**4 - 2*Q**2 + 1)
+  Ext^2: Hilb_Q=(2*Q**2 + 1)/(Q**8 - 2*Q**6 + Q**4)
+    remaining contribution=0
+    split-free contribution=(2*Q**2 + 1)/(Q**8 - 2*Q**6 + Q**4)
+term (0, 1, 1, 1, 0, 1) total: 8.337912s
+
+term (0, 1, 1, 1, 1, 0): degree=-4, word=(1, 2, 0, 1), rank=16
+  Koszul complex: 1.105452s
+  step 1 field B+H+S splitting: 0.027067s
+    field homology ranks by Ext degree: {0: 3, 1: 6, 2: 3}
+    field source ranks by Ext degree: {0: 13, 1: 13, 2: 0}
+  step 2 lifted cancellation/minimal complex: 13.466468s
+    minimal ranks by Ext degree: {0: 3, 1: 6, 2: 3}
+    cancelled S->B pairs by source degree: {0: 13, 1: 13, 2: 0}
+  step 3 certified free homology splitting: 0.046970s
+    split free Q-degrees by Ext degree: {0: [6], 1: [2, 2], 2: [-2]}
+    remaining ranks by Ext degree: {0: 2, 1: 4, 2: 2}
+  step 4 Groebner Hilbert series on remaining complex: 0.025406s
+  Ext^0: Hilb_Q=(Q**8 + Q**6)/(Q**4 - 2*Q**2 + 1)
+    remaining contribution=Q**8/(Q**4 - 2*Q**2 + 1)
+    split-free contribution=Q**6/(Q**4 - 2*Q**2 + 1)
+  Ext^1: Hilb_Q=(-Q**6 + Q**4 + 3*Q**2 + 1)/(Q**4 - 2*Q**2 + 1)
+    remaining contribution=(-Q**6 + Q**4 + Q**2 + 1)/(Q**4 - 2*Q**2 + 1)
+    split-free contribution=2*Q**2/(Q**4 - 2*Q**2 + 1)
+  Ext^2: Hilb_Q=(-Q**6 + 2*Q**2 + 1)/(Q**8 - 2*Q**6 + Q**4)
+    remaining contribution=(-Q**6 + Q**2 + 1)/(Q**8 - 2*Q**6 + Q**4)
+    split-free contribution=1/(Q**6 - 2*Q**4 + Q**2)
+term (0, 1, 1, 1, 1, 0) total: 14.680549s
+
+term (1, 0, 0, 1, 1, 1): degree=-4, word=(0, 0, 1, 2), rank=16
+  Koszul complex: 0.335193s
+  step 1 field B+H+S splitting: 0.016318s
+    field homology ranks by Ext degree: {0: 4, 1: 8, 2: 4}
+    field source ranks by Ext degree: {0: 12, 1: 12, 2: 0}
+  step 2 lifted cancellation/minimal complex: 1.383390s
+    minimal ranks by Ext degree: {0: 4, 1: 8, 2: 4}
+    cancelled S->B pairs by source degree: {0: 12, 1: 12, 2: 0}
+  step 3 certified free homology splitting: 0.087612s
+    split free Q-degrees by Ext degree: {1: [0, 2, 2, 4]}
+    remaining ranks by Ext degree: {0: 4, 1: 4, 2: 4}
+  step 4 Groebner Hilbert series on remaining complex: 0.034231s
+  Ext^0: Hilb_Q=(Q**8 + Q**6)/(Q**4 - 2*Q**2 + 1)
+    remaining contribution=(Q**8 + Q**6)/(Q**4 - 2*Q**2 + 1)
+    split-free contribution=0
+  Ext^1: Hilb_Q=(-Q**6 + Q**4 + 3*Q**2 + 1)/(Q**4 - 2*Q**2 + 1)
+    remaining contribution=(-Q**4 - Q**2)/(Q**2 - 1)
+    split-free contribution=(Q**4 + 2*Q**2 + 1)/(Q**4 - 2*Q**2 + 1)
+  Ext^2: Hilb_Q=(-Q**6 + 2*Q**2 + 1)/(Q**8 - 2*Q**6 + Q**4)
+    remaining contribution=(-Q**6 + 2*Q**2 + 1)/(Q**8 - 2*Q**6 + Q**4)
+    split-free contribution=0
+term (1, 0, 0, 1, 1, 1) total: 1.863906s
+
+term (1, 0, 1, 0, 1, 1): degree=-4, word=(0, 2, 1, 2), rank=16
+  Koszul complex: 0.816773s
+  step 1 field B+H+S splitting: 0.021324s
+    field homology ranks by Ext degree: {0: 3, 1: 6, 2: 3}
+    field source ranks by Ext degree: {0: 13, 1: 13, 2: 0}
+  step 2 lifted cancellation/minimal complex: 6.762053s
+    minimal ranks by Ext degree: {0: 3, 1: 6, 2: 3}
+    cancelled S->B pairs by source degree: {0: 13, 1: 13, 2: 0}
+  step 3 certified free homology splitting: 0.005496s
+    split free Q-degrees by Ext degree: {0: [6, 6, 8], 1: [0, 2, 2, 2, 2, 4], 2: [-4, -2, -2]}
+    remaining ranks by Ext degree: {0: 0, 1: 0, 2: 0}
+  step 4 Groebner Hilbert series on remaining complex: 0.000172s
+  Ext^0: Hilb_Q=(Q**8 + 2*Q**6)/(Q**4 - 2*Q**2 + 1)
+    remaining contribution=0
+    split-free contribution=(Q**8 + 2*Q**6)/(Q**4 - 2*Q**2 + 1)
+  Ext^1: Hilb_Q=(Q**4 + 4*Q**2 + 1)/(Q**4 - 2*Q**2 + 1)
+    remaining contribution=0
+    split-free contribution=(Q**4 + 4*Q**2 + 1)/(Q**4 - 2*Q**2 + 1)
+  Ext^2: Hilb_Q=(2*Q**2 + 1)/(Q**8 - 2*Q**6 + Q**4)
+    remaining contribution=0
+    split-free contribution=(2*Q**2 + 1)/(Q**8 - 2*Q**6 + Q**4)
+term (1, 0, 1, 0, 1, 1) total: 7.614696s
+
+term (1, 0, 1, 1, 0, 1): degree=-4, word=(0, 2, 0, 2), rank=16
+  Koszul complex: 0.823825s
+  step 1 field B+H+S splitting: 0.021370s
+    field homology ranks by Ext degree: {0: 3, 1: 6, 2: 3}
+    field source ranks by Ext degree: {0: 13, 1: 13, 2: 0}
+  step 2 lifted cancellation/minimal complex: 6.684887s
+    minimal ranks by Ext degree: {0: 3, 1: 6, 2: 3}
+    cancelled S->B pairs by source degree: {0: 13, 1: 13, 2: 0}
+  step 3 certified free homology splitting: 0.005526s
+    split free Q-degrees by Ext degree: {0: [6, 6, 8], 1: [0, 2, 2, 2, 2, 4], 2: [-4, -2, -2]}
+    remaining ranks by Ext degree: {0: 0, 1: 0, 2: 0}
+  step 4 Groebner Hilbert series on remaining complex: 0.000175s
+  Ext^0: Hilb_Q=(Q**8 + 2*Q**6)/(Q**4 - 2*Q**2 + 1)
+    remaining contribution=0
+    split-free contribution=(Q**8 + 2*Q**6)/(Q**4 - 2*Q**2 + 1)
+  Ext^1: Hilb_Q=(Q**4 + 4*Q**2 + 1)/(Q**4 - 2*Q**2 + 1)
+    remaining contribution=0
+    split-free contribution=(Q**4 + 4*Q**2 + 1)/(Q**4 - 2*Q**2 + 1)
+  Ext^2: Hilb_Q=(2*Q**2 + 1)/(Q**8 - 2*Q**6 + Q**4)
+    remaining contribution=0
+    split-free contribution=(2*Q**2 + 1)/(Q**8 - 2*Q**6 + Q**4)
+term (1, 0, 1, 1, 0, 1) total: 7.544766s
+
+term (1, 0, 1, 1, 1, 0): degree=-4, word=(0, 2, 0, 1), rank=16
+  Koszul complex: 1.088582s
+  step 1 field B+H+S splitting: 0.026149s
+    field homology ranks by Ext degree: {0: 3, 1: 6, 2: 3}
+    field source ranks by Ext degree: {0: 13, 1: 13, 2: 0}
+  step 2 lifted cancellation/minimal complex: 12.574943s
+    minimal ranks by Ext degree: {0: 3, 1: 6, 2: 3}
+    cancelled S->B pairs by source degree: {0: 13, 1: 13, 2: 0}
+  step 3 certified free homology splitting: 0.005848s
+    split free Q-degrees by Ext degree: {0: [6, 6, 8], 1: [0, 2, 2, 2, 2, 4], 2: [-4, -2, -2]}
+    remaining ranks by Ext degree: {0: 0, 1: 0, 2: 0}
+  step 4 Groebner Hilbert series on remaining complex: 0.000191s
+  Ext^0: Hilb_Q=(Q**8 + 2*Q**6)/(Q**4 - 2*Q**2 + 1)
+    remaining contribution=0
+    split-free contribution=(Q**8 + 2*Q**6)/(Q**4 - 2*Q**2 + 1)
+  Ext^1: Hilb_Q=(Q**4 + 4*Q**2 + 1)/(Q**4 - 2*Q**2 + 1)
+    remaining contribution=0
+    split-free contribution=(Q**4 + 4*Q**2 + 1)/(Q**4 - 2*Q**2 + 1)
+  Ext^2: Hilb_Q=(2*Q**2 + 1)/(Q**8 - 2*Q**6 + Q**4)
+    remaining contribution=0
+    split-free contribution=(2*Q**2 + 1)/(Q**8 - 2*Q**6 + Q**4)
+term (1, 0, 1, 1, 1, 0) total: 13.704462s
+
+term (1, 1, 0, 0, 1, 1): degree=-4, word=(0, 1, 1, 2), rank=16
+  Koszul complex: 0.340428s
+  step 1 field B+H+S splitting: 0.016484s
+    field homology ranks by Ext degree: {0: 4, 1: 8, 2: 4}
+    field source ranks by Ext degree: {0: 12, 1: 12, 2: 0}
+  step 2 lifted cancellation/minimal complex: 1.547632s
+    minimal ranks by Ext degree: {0: 4, 1: 8, 2: 4}
+    cancelled S->B pairs by source degree: {0: 12, 1: 12, 2: 0}
+  step 3 certified free homology splitting: 0.086837s
+    split free Q-degrees by Ext degree: {1: [0, 2, 2, 4]}
+    remaining ranks by Ext degree: {0: 4, 1: 4, 2: 4}
+  step 4 Groebner Hilbert series on remaining complex: 0.034555s
+  Ext^0: Hilb_Q=(Q**8 + Q**6)/(Q**4 - 2*Q**2 + 1)
+    remaining contribution=(Q**8 + Q**6)/(Q**4 - 2*Q**2 + 1)
+    split-free contribution=0
+  Ext^1: Hilb_Q=(-Q**6 + Q**4 + 3*Q**2 + 1)/(Q**4 - 2*Q**2 + 1)
+    remaining contribution=(-Q**4 - Q**2)/(Q**2 - 1)
+    split-free contribution=(Q**4 + 2*Q**2 + 1)/(Q**4 - 2*Q**2 + 1)
+  Ext^2: Hilb_Q=(-Q**6 + 2*Q**2 + 1)/(Q**8 - 2*Q**6 + Q**4)
+    remaining contribution=(-Q**6 + 2*Q**2 + 1)/(Q**8 - 2*Q**6 + Q**4)
+    split-free contribution=0
+term (1, 1, 0, 0, 1, 1) total: 2.033280s
+
+term (1, 1, 0, 1, 0, 1): degree=-4, word=(0, 1, 0, 2), rank=16
+  Koszul complex: 0.764306s
+  step 1 field B+H+S splitting: 0.021359s
+    field homology ranks by Ext degree: {0: 3, 1: 6, 2: 3}
+    field source ranks by Ext degree: {0: 13, 1: 13, 2: 0}
+  step 2 lifted cancellation/minimal complex: 6.813113s
+    minimal ranks by Ext degree: {0: 3, 1: 6, 2: 3}
+    cancelled S->B pairs by source degree: {0: 13, 1: 13, 2: 0}
+  step 3 certified free homology splitting: 0.005562s
+    split free Q-degrees by Ext degree: {0: [6, 6, 8], 1: [0, 2, 2, 2, 2, 4], 2: [-4, -2, -2]}
+    remaining ranks by Ext degree: {0: 0, 1: 0, 2: 0}
+  step 4 Groebner Hilbert series on remaining complex: 0.000175s
+  Ext^0: Hilb_Q=(Q**8 + 2*Q**6)/(Q**4 - 2*Q**2 + 1)
+    remaining contribution=0
+    split-free contribution=(Q**8 + 2*Q**6)/(Q**4 - 2*Q**2 + 1)
+  Ext^1: Hilb_Q=(Q**4 + 4*Q**2 + 1)/(Q**4 - 2*Q**2 + 1)
+    remaining contribution=0
+    split-free contribution=(Q**4 + 4*Q**2 + 1)/(Q**4 - 2*Q**2 + 1)
+  Ext^2: Hilb_Q=(2*Q**2 + 1)/(Q**8 - 2*Q**6 + Q**4)
+    remaining contribution=0
+    split-free contribution=(2*Q**2 + 1)/(Q**8 - 2*Q**6 + Q**4)
+term (1, 1, 0, 1, 0, 1) total: 7.613254s
+
+term (1, 1, 0, 1, 1, 0): degree=-4, word=(0, 1, 0, 1), rank=16
+  Koszul complex: 1.021556s
+  step 1 field B+H+S splitting: 0.027436s
+    field homology ranks by Ext degree: {0: 3, 1: 6, 2: 3}
+    field source ranks by Ext degree: {0: 13, 1: 13, 2: 0}
+  step 2 lifted cancellation/minimal complex: 12.690782s
+    minimal ranks by Ext degree: {0: 3, 1: 6, 2: 3}
+    cancelled S->B pairs by source degree: {0: 13, 1: 13, 2: 0}
+  step 3 certified free homology splitting: 0.005571s
+    split free Q-degrees by Ext degree: {0: [6, 6, 8], 1: [0, 2, 2, 2, 2, 4], 2: [-4, -2, -2]}
+    remaining ranks by Ext degree: {0: 0, 1: 0, 2: 0}
+  step 4 Groebner Hilbert series on remaining complex: 0.000179s
+  Ext^0: Hilb_Q=(Q**8 + 2*Q**6)/(Q**4 - 2*Q**2 + 1)
+    remaining contribution=0
+    split-free contribution=(Q**8 + 2*Q**6)/(Q**4 - 2*Q**2 + 1)
+  Ext^1: Hilb_Q=(Q**4 + 4*Q**2 + 1)/(Q**4 - 2*Q**2 + 1)
+    remaining contribution=0
+    split-free contribution=(Q**4 + 4*Q**2 + 1)/(Q**4 - 2*Q**2 + 1)
+  Ext^2: Hilb_Q=(2*Q**2 + 1)/(Q**8 - 2*Q**6 + Q**4)
+    remaining contribution=0
+    split-free contribution=(2*Q**2 + 1)/(Q**8 - 2*Q**6 + Q**4)
+term (1, 1, 0, 1, 1, 0) total: 13.754196s
+
+term (1, 1, 1, 0, 0, 1): degree=-4, word=(0, 1, 2, 2), rank=16
+  Koszul complex: 0.330294s
+  step 1 field B+H+S splitting: 0.018304s
+    field homology ranks by Ext degree: {0: 4, 1: 8, 2: 4}
+    field source ranks by Ext degree: {0: 12, 1: 12, 2: 0}
+  step 2 lifted cancellation/minimal complex: 1.610142s
+    minimal ranks by Ext degree: {0: 4, 1: 8, 2: 4}
+    cancelled S->B pairs by source degree: {0: 12, 1: 12, 2: 0}
+  step 3 certified free homology splitting: 0.087622s
+    split free Q-degrees by Ext degree: {1: [0, 2, 2, 4]}
+    remaining ranks by Ext degree: {0: 4, 1: 4, 2: 4}
+  step 4 Groebner Hilbert series on remaining complex: 0.034386s
+  Ext^0: Hilb_Q=(Q**8 + Q**6)/(Q**4 - 2*Q**2 + 1)
+    remaining contribution=(Q**8 + Q**6)/(Q**4 - 2*Q**2 + 1)
+    split-free contribution=0
+  Ext^1: Hilb_Q=(-Q**6 + Q**4 + 3*Q**2 + 1)/(Q**4 - 2*Q**2 + 1)
+    remaining contribution=(-Q**4 - Q**2)/(Q**2 - 1)
+    split-free contribution=(Q**4 + 2*Q**2 + 1)/(Q**4 - 2*Q**2 + 1)
+  Ext^2: Hilb_Q=(-Q**6 + 2*Q**2 + 1)/(Q**8 - 2*Q**6 + Q**4)
+    remaining contribution=(-Q**6 + 2*Q**2 + 1)/(Q**8 - 2*Q**6 + Q**4)
+    split-free contribution=0
+term (1, 1, 1, 0, 0, 1) total: 2.088065s
+
+term (1, 1, 1, 0, 1, 0): degree=-4, word=(0, 1, 2, 1), rank=16
+  Koszul complex: 0.994950s
+  step 1 field B+H+S splitting: 0.027321s
+    field homology ranks by Ext degree: {0: 3, 1: 6, 2: 3}
+    field source ranks by Ext degree: {0: 13, 1: 13, 2: 0}
+  step 2 lifted cancellation/minimal complex: 12.567607s
+    minimal ranks by Ext degree: {0: 3, 1: 6, 2: 3}
+    cancelled S->B pairs by source degree: {0: 13, 1: 13, 2: 0}
+  step 3 certified free homology splitting: 0.005552s
+    split free Q-degrees by Ext degree: {0: [6, 6, 8], 1: [0, 2, 2, 2, 2, 4], 2: [-4, -2, -2]}
+    remaining ranks by Ext degree: {0: 0, 1: 0, 2: 0}
+  step 4 Groebner Hilbert series on remaining complex: 0.000175s
+  Ext^0: Hilb_Q=(Q**8 + 2*Q**6)/(Q**4 - 2*Q**2 + 1)
+    remaining contribution=0
+    split-free contribution=(Q**8 + 2*Q**6)/(Q**4 - 2*Q**2 + 1)
+  Ext^1: Hilb_Q=(Q**4 + 4*Q**2 + 1)/(Q**4 - 2*Q**2 + 1)
+    remaining contribution=0
+    split-free contribution=(Q**4 + 4*Q**2 + 1)/(Q**4 - 2*Q**2 + 1)
+  Ext^2: Hilb_Q=(2*Q**2 + 1)/(Q**8 - 2*Q**6 + Q**4)
+    remaining contribution=0
+    split-free contribution=(2*Q**2 + 1)/(Q**8 - 2*Q**6 + Q**4)
+term (1, 1, 1, 0, 1, 0) total: 13.604324s
+
+term (1, 1, 1, 1, 0, 0): degree=-4, word=(0, 1, 2, 0), rank=16
+  Koszul complex: 0.802132s
+  step 1 field B+H+S splitting: 0.021775s
+    field homology ranks by Ext degree: {0: 3, 1: 6, 2: 3}
+    field source ranks by Ext degree: {0: 13, 1: 13, 2: 0}
+  step 2 lifted cancellation/minimal complex: 10.766787s
+    minimal ranks by Ext degree: {0: 3, 1: 6, 2: 3}
+    cancelled S->B pairs by source degree: {0: 13, 1: 13, 2: 0}
+  step 3 certified free homology splitting: 0.066600s
+    split free Q-degrees by Ext degree: {0: [6], 1: [2, 2], 2: [-2]}
+    remaining ranks by Ext degree: {0: 2, 1: 4, 2: 2}
+  step 4 Groebner Hilbert series on remaining complex: 0.025845s
+  Ext^0: Hilb_Q=(Q**8 + Q**6)/(Q**4 - 2*Q**2 + 1)
+    remaining contribution=Q**8/(Q**4 - 2*Q**2 + 1)
+    split-free contribution=Q**6/(Q**4 - 2*Q**2 + 1)
+  Ext^1: Hilb_Q=(-Q**6 + Q**4 + 3*Q**2 + 1)/(Q**4 - 2*Q**2 + 1)
+    remaining contribution=(-Q**6 + Q**4 + Q**2 + 1)/(Q**4 - 2*Q**2 + 1)
+    split-free contribution=2*Q**2/(Q**4 - 2*Q**2 + 1)
+  Ext^2: Hilb_Q=(-Q**6 + 2*Q**2 + 1)/(Q**8 - 2*Q**6 + Q**4)
+    remaining contribution=(-Q**6 + Q**2 + 1)/(Q**8 - 2*Q**6 + Q**4)
+    split-free contribution=1/(Q**6 - 2*Q**4 + Q**2)
+term (1, 1, 1, 1, 0, 0) total: 11.692433s
+
+term (0, 0, 0, 1, 1, 1): degree=-3, word=(0, 1, 2), rank=8
+  Koszul complex: 0.137679s
+  step 1 field B+H+S splitting: 0.008508s
+    field homology ranks by Ext degree: {0: 2, 1: 4, 2: 2}
+    field source ranks by Ext degree: {0: 6, 1: 6, 2: 0}
+  step 2 lifted cancellation/minimal complex: 0.751634s
+    minimal ranks by Ext degree: {0: 2, 1: 4, 2: 2}
+    cancelled S->B pairs by source degree: {0: 6, 1: 6, 2: 0}
+  step 3 certified free homology splitting: 0.033654s
+    split free Q-degrees by Ext degree: {1: [0, 2]}
+    remaining ranks by Ext degree: {0: 2, 1: 2, 2: 2}
+  step 4 Groebner Hilbert series on remaining complex: 0.020853s
+  Ext^0: Hilb_Q=Q**6/(Q**4 - 2*Q**2 + 1)
+    remaining contribution=Q**6/(Q**4 - 2*Q**2 + 1)
+    split-free contribution=0
+  Ext^1: Hilb_Q=(-Q**4 + 2*Q**2 + 1)/(Q**4 - 2*Q**2 + 1)
+    remaining contribution=-Q**2/(Q**2 - 1)
+    split-free contribution=(Q**2 + 1)/(Q**4 - 2*Q**2 + 1)
+  Ext^2: Hilb_Q=(-Q**4 + Q**2 + 1)/(Q**8 - 2*Q**6 + Q**4)
+    remaining contribution=(-Q**4 + Q**2 + 1)/(Q**8 - 2*Q**6 + Q**4)
+    split-free contribution=0
+term (0, 0, 0, 1, 1, 1) total: 0.957979s
+
+term (0, 0, 1, 0, 1, 1): degree=-3, word=(2, 1, 2), rank=8
+  Koszul complex: 0.137146s
+  step 1 field B+H+S splitting: 0.007955s
+    field homology ranks by Ext degree: {0: 2, 1: 4, 2: 2}
+    field source ranks by Ext degree: {0: 6, 1: 6, 2: 0}
+  step 2 lifted cancellation/minimal complex: 0.643862s
+    minimal ranks by Ext degree: {0: 2, 1: 4, 2: 2}
+    cancelled S->B pairs by source degree: {0: 6, 1: 6, 2: 0}
+  step 3 certified free homology splitting: 0.003105s
+    split free Q-degrees by Ext degree: {0: [4, 6], 1: [0, 0, 2, 2], 2: [-4, -2]}
+    remaining ranks by Ext degree: {0: 0, 1: 0, 2: 0}
+  step 4 Groebner Hilbert series on remaining complex: 0.000177s
+  Ext^0: Hilb_Q=(Q**6 + Q**4)/(Q**4 - 2*Q**2 + 1)
+    remaining contribution=0
+    split-free contribution=(Q**6 + Q**4)/(Q**4 - 2*Q**2 + 1)
+  Ext^1: Hilb_Q=(2*Q**2 + 2)/(Q**4 - 2*Q**2 + 1)
+    remaining contribution=0
+    split-free contribution=(2*Q**2 + 2)/(Q**4 - 2*Q**2 + 1)
+  Ext^2: Hilb_Q=(Q**2 + 1)/(Q**8 - 2*Q**6 + Q**4)
+    remaining contribution=0
+    split-free contribution=(Q**2 + 1)/(Q**8 - 2*Q**6 + Q**4)
+term (0, 0, 1, 0, 1, 1) total: 0.799184s
+
+term (0, 0, 1, 1, 0, 1): degree=-3, word=(2, 0, 2), rank=8
+  Koszul complex: 0.130872s
+  step 1 field B+H+S splitting: 0.009087s
+    field homology ranks by Ext degree: {0: 2, 1: 4, 2: 2}
+    field source ranks by Ext degree: {0: 6, 1: 6, 2: 0}
+  step 2 lifted cancellation/minimal complex: 0.578880s
+    minimal ranks by Ext degree: {0: 2, 1: 4, 2: 2}
+    cancelled S->B pairs by source degree: {0: 6, 1: 6, 2: 0}
+  step 3 certified free homology splitting: 0.003114s
+    split free Q-degrees by Ext degree: {0: [4, 6], 1: [0, 0, 2, 2], 2: [-4, -2]}
+    remaining ranks by Ext degree: {0: 0, 1: 0, 2: 0}
+  step 4 Groebner Hilbert series on remaining complex: 0.000177s
+  Ext^0: Hilb_Q=(Q**6 + Q**4)/(Q**4 - 2*Q**2 + 1)
+    remaining contribution=0
+    split-free contribution=(Q**6 + Q**4)/(Q**4 - 2*Q**2 + 1)
+  Ext^1: Hilb_Q=(2*Q**2 + 2)/(Q**4 - 2*Q**2 + 1)
+    remaining contribution=0
+    split-free contribution=(2*Q**2 + 2)/(Q**4 - 2*Q**2 + 1)
+  Ext^2: Hilb_Q=(Q**2 + 1)/(Q**8 - 2*Q**6 + Q**4)
+    remaining contribution=0
+    split-free contribution=(Q**2 + 1)/(Q**8 - 2*Q**6 + Q**4)
+term (0, 0, 1, 1, 0, 1) total: 0.729365s
+
+term (0, 0, 1, 1, 1, 0): degree=-3, word=(2, 0, 1), rank=8
+  Koszul complex: 0.162337s
+  step 1 field B+H+S splitting: 0.009488s
+    field homology ranks by Ext degree: {0: 2, 1: 4, 2: 2}
+    field source ranks by Ext degree: {0: 6, 1: 6, 2: 0}
+  step 2 lifted cancellation/minimal complex: 1.382235s
+    minimal ranks by Ext degree: {0: 2, 1: 4, 2: 2}
+    cancelled S->B pairs by source degree: {0: 6, 1: 6, 2: 0}
+  step 3 certified free homology splitting: 0.015965s
+    split free Q-degrees by Ext degree: {1: [0, 2]}
+    remaining ranks by Ext degree: {0: 2, 1: 2, 2: 2}
+  step 4 Groebner Hilbert series on remaining complex: 0.021733s
+  Ext^0: Hilb_Q=Q**6/(Q**4 - 2*Q**2 + 1)
+    remaining contribution=Q**6/(Q**4 - 2*Q**2 + 1)
+    split-free contribution=0
+  Ext^1: Hilb_Q=(-Q**4 + 2*Q**2 + 1)/(Q**4 - 2*Q**2 + 1)
+    remaining contribution=-Q**2/(Q**2 - 1)
+    split-free contribution=(Q**2 + 1)/(Q**4 - 2*Q**2 + 1)
+  Ext^2: Hilb_Q=(-Q**4 + Q**2 + 1)/(Q**8 - 2*Q**6 + Q**4)
+    remaining contribution=(-Q**4 + Q**2 + 1)/(Q**8 - 2*Q**6 + Q**4)
+    split-free contribution=0
+term (0, 0, 1, 1, 1, 0) total: 1.597572s
+
+term (0, 1, 0, 0, 1, 1): degree=-3, word=(1, 1, 2), rank=8
+  Koszul complex: 0.078258s
+  step 1 field B+H+S splitting: 0.006444s
+    field homology ranks by Ext degree: {0: 2, 1: 4, 2: 2}
+    field source ranks by Ext degree: {0: 6, 1: 6, 2: 0}
+  step 2 lifted cancellation/minimal complex: 0.163553s
+    minimal ranks by Ext degree: {0: 2, 1: 4, 2: 2}
+    cancelled S->B pairs by source degree: {0: 6, 1: 6, 2: 0}
+  step 3 certified free homology splitting: 0.003043s
+    split free Q-degrees by Ext degree: {0: [4, 6], 1: [0, 0, 2, 2], 2: [-4, -2]}
+    remaining ranks by Ext degree: {0: 0, 1: 0, 2: 0}
+  step 4 Groebner Hilbert series on remaining complex: 0.000170s
+  Ext^0: Hilb_Q=(Q**6 + Q**4)/(Q**4 - 2*Q**2 + 1)
+    remaining contribution=0
+    split-free contribution=(Q**6 + Q**4)/(Q**4 - 2*Q**2 + 1)
+  Ext^1: Hilb_Q=(2*Q**2 + 2)/(Q**4 - 2*Q**2 + 1)
+    remaining contribution=0
+    split-free contribution=(2*Q**2 + 2)/(Q**4 - 2*Q**2 + 1)
+  Ext^2: Hilb_Q=(Q**2 + 1)/(Q**8 - 2*Q**6 + Q**4)
+    remaining contribution=0
+    split-free contribution=(Q**2 + 1)/(Q**8 - 2*Q**6 + Q**4)
+term (0, 1, 0, 0, 1, 1) total: 0.258149s
+
+term (0, 1, 0, 1, 0, 1): degree=-3, word=(1, 0, 2), rank=8
+  Koszul complex: 0.148129s
+  step 1 field B+H+S splitting: 0.008775s
+    field homology ranks by Ext degree: {0: 2, 1: 4, 2: 2}
+    field source ranks by Ext degree: {0: 6, 1: 6, 2: 0}
+  step 2 lifted cancellation/minimal complex: 0.722658s
+    minimal ranks by Ext degree: {0: 2, 1: 4, 2: 2}
+    cancelled S->B pairs by source degree: {0: 6, 1: 6, 2: 0}
+  step 3 certified free homology splitting: 0.022588s
+    split free Q-degrees by Ext degree: {1: [0, 2]}
+    remaining ranks by Ext degree: {0: 2, 1: 2, 2: 2}
+  step 4 Groebner Hilbert series on remaining complex: 0.019696s
+  Ext^0: Hilb_Q=Q**6/(Q**4 - 2*Q**2 + 1)
+    remaining contribution=Q**6/(Q**4 - 2*Q**2 + 1)
+    split-free contribution=0
+  Ext^1: Hilb_Q=(-Q**4 + 2*Q**2 + 1)/(Q**4 - 2*Q**2 + 1)
+    remaining contribution=-Q**2/(Q**2 - 1)
+    split-free contribution=(Q**2 + 1)/(Q**4 - 2*Q**2 + 1)
+  Ext^2: Hilb_Q=(-Q**4 + Q**2 + 1)/(Q**8 - 2*Q**6 + Q**4)
+    remaining contribution=(-Q**4 + Q**2 + 1)/(Q**8 - 2*Q**6 + Q**4)
+    split-free contribution=0
+term (0, 1, 0, 1, 0, 1) total: 0.927271s
+
+term (0, 1, 0, 1, 1, 0): degree=-3, word=(1, 0, 1), rank=8
+  Koszul complex: 0.236774s
+  step 1 field B+H+S splitting: 0.009671s
+    field homology ranks by Ext degree: {0: 2, 1: 4, 2: 2}
+    field source ranks by Ext degree: {0: 6, 1: 6, 2: 0}
+  step 2 lifted cancellation/minimal complex: 1.253595s
+    minimal ranks by Ext degree: {0: 2, 1: 4, 2: 2}
+    cancelled S->B pairs by source degree: {0: 6, 1: 6, 2: 0}
+  step 3 certified free homology splitting: 0.003083s
+    split free Q-degrees by Ext degree: {0: [4, 6], 1: [0, 0, 2, 2], 2: [-4, -2]}
+    remaining ranks by Ext degree: {0: 0, 1: 0, 2: 0}
+  step 4 Groebner Hilbert series on remaining complex: 0.000179s
+  Ext^0: Hilb_Q=(Q**6 + Q**4)/(Q**4 - 2*Q**2 + 1)
+    remaining contribution=0
+    split-free contribution=(Q**6 + Q**4)/(Q**4 - 2*Q**2 + 1)
+  Ext^1: Hilb_Q=(2*Q**2 + 2)/(Q**4 - 2*Q**2 + 1)
+    remaining contribution=0
+    split-free contribution=(2*Q**2 + 2)/(Q**4 - 2*Q**2 + 1)
+  Ext^2: Hilb_Q=(Q**2 + 1)/(Q**8 - 2*Q**6 + Q**4)
+    remaining contribution=0
+    split-free contribution=(Q**2 + 1)/(Q**8 - 2*Q**6 + Q**4)
+term (0, 1, 0, 1, 1, 0) total: 1.510724s
+
+term (0, 1, 1, 0, 0, 1): degree=-3, word=(1, 2, 2), rank=8
+  Koszul complex: 0.075429s
+  step 1 field B+H+S splitting: 0.006517s
+    field homology ranks by Ext degree: {0: 2, 1: 4, 2: 2}
+    field source ranks by Ext degree: {0: 6, 1: 6, 2: 0}
+  step 2 lifted cancellation/minimal complex: 0.173893s
+    minimal ranks by Ext degree: {0: 2, 1: 4, 2: 2}
+    cancelled S->B pairs by source degree: {0: 6, 1: 6, 2: 0}
+  step 3 certified free homology splitting: 0.003058s
+    split free Q-degrees by Ext degree: {0: [4, 6], 1: [0, 0, 2, 2], 2: [-4, -2]}
+    remaining ranks by Ext degree: {0: 0, 1: 0, 2: 0}
+  step 4 Groebner Hilbert series on remaining complex: 0.000175s
+  Ext^0: Hilb_Q=(Q**6 + Q**4)/(Q**4 - 2*Q**2 + 1)
+    remaining contribution=0
+    split-free contribution=(Q**6 + Q**4)/(Q**4 - 2*Q**2 + 1)
+  Ext^1: Hilb_Q=(2*Q**2 + 2)/(Q**4 - 2*Q**2 + 1)
+    remaining contribution=0
+    split-free contribution=(2*Q**2 + 2)/(Q**4 - 2*Q**2 + 1)
+  Ext^2: Hilb_Q=(Q**2 + 1)/(Q**8 - 2*Q**6 + Q**4)
+    remaining contribution=0
+    split-free contribution=(Q**2 + 1)/(Q**8 - 2*Q**6 + Q**4)
+term (0, 1, 1, 0, 0, 1) total: 0.265873s
+
+term (0, 1, 1, 0, 1, 0): degree=-3, word=(1, 2, 1), rank=8
+  Koszul complex: 0.170771s
+  step 1 field B+H+S splitting: 0.009731s
+    field homology ranks by Ext degree: {0: 2, 1: 4, 2: 2}
+    field source ranks by Ext degree: {0: 6, 1: 6, 2: 0}
+  step 2 lifted cancellation/minimal complex: 1.119727s
+    minimal ranks by Ext degree: {0: 2, 1: 4, 2: 2}
+    cancelled S->B pairs by source degree: {0: 6, 1: 6, 2: 0}
+  step 3 certified free homology splitting: 0.003094s
+    split free Q-degrees by Ext degree: {0: [4, 6], 1: [0, 0, 2, 2], 2: [-4, -2]}
+    remaining ranks by Ext degree: {0: 0, 1: 0, 2: 0}
+  step 4 Groebner Hilbert series on remaining complex: 0.000179s
+  Ext^0: Hilb_Q=(Q**6 + Q**4)/(Q**4 - 2*Q**2 + 1)
+    remaining contribution=0
+    split-free contribution=(Q**6 + Q**4)/(Q**4 - 2*Q**2 + 1)
+  Ext^1: Hilb_Q=(2*Q**2 + 2)/(Q**4 - 2*Q**2 + 1)
+    remaining contribution=0
+    split-free contribution=(2*Q**2 + 2)/(Q**4 - 2*Q**2 + 1)
+  Ext^2: Hilb_Q=(Q**2 + 1)/(Q**8 - 2*Q**6 + Q**4)
+    remaining contribution=0
+    split-free contribution=(Q**2 + 1)/(Q**8 - 2*Q**6 + Q**4)
+term (0, 1, 1, 0, 1, 0) total: 1.310968s
+
+term (0, 1, 1, 1, 0, 0): degree=-3, word=(1, 2, 0), rank=8
+  Koszul complex: 0.146267s
+  step 1 field B+H+S splitting: 0.008799s
+    field homology ranks by Ext degree: {0: 2, 1: 4, 2: 2}
+    field source ranks by Ext degree: {0: 6, 1: 6, 2: 0}
+  step 2 lifted cancellation/minimal complex: 1.138815s
+    minimal ranks by Ext degree: {0: 2, 1: 4, 2: 2}
+    cancelled S->B pairs by source degree: {0: 6, 1: 6, 2: 0}
+  step 3 certified free homology splitting: 0.015439s
+    split free Q-degrees by Ext degree: {1: [0, 2]}
+    remaining ranks by Ext degree: {0: 2, 1: 2, 2: 2}
+  step 4 Groebner Hilbert series on remaining complex: 0.021419s
+  Ext^0: Hilb_Q=Q**6/(Q**4 - 2*Q**2 + 1)
+    remaining contribution=Q**6/(Q**4 - 2*Q**2 + 1)
+    split-free contribution=0
+  Ext^1: Hilb_Q=(-Q**4 + 2*Q**2 + 1)/(Q**4 - 2*Q**2 + 1)
+    remaining contribution=-Q**2/(Q**2 - 1)
+    split-free contribution=(Q**2 + 1)/(Q**4 - 2*Q**2 + 1)
+  Ext^2: Hilb_Q=(-Q**4 + Q**2 + 1)/(Q**8 - 2*Q**6 + Q**4)
+    remaining contribution=(-Q**4 + Q**2 + 1)/(Q**8 - 2*Q**6 + Q**4)
+    split-free contribution=0
+term (0, 1, 1, 1, 0, 0) total: 1.336490s
+
+term (1, 0, 0, 0, 1, 1): degree=-3, word=(0, 1, 2), rank=8
+  Koszul complex: 0.138209s
+  step 1 field B+H+S splitting: 0.008187s
+    field homology ranks by Ext degree: {0: 2, 1: 4, 2: 2}
+    field source ranks by Ext degree: {0: 6, 1: 6, 2: 0}
+  step 2 lifted cancellation/minimal complex: 0.753115s
+    minimal ranks by Ext degree: {0: 2, 1: 4, 2: 2}
+    cancelled S->B pairs by source degree: {0: 6, 1: 6, 2: 0}
+  step 3 certified free homology splitting: 0.033438s
+    split free Q-degrees by Ext degree: {1: [0, 2]}
+    remaining ranks by Ext degree: {0: 2, 1: 2, 2: 2}
+  step 4 Groebner Hilbert series on remaining complex: 0.018025s
+  Ext^0: Hilb_Q=Q**6/(Q**4 - 2*Q**2 + 1)
+    remaining contribution=Q**6/(Q**4 - 2*Q**2 + 1)
+    split-free contribution=0
+  Ext^1: Hilb_Q=(-Q**4 + 2*Q**2 + 1)/(Q**4 - 2*Q**2 + 1)
+    remaining contribution=-Q**2/(Q**2 - 1)
+    split-free contribution=(Q**2 + 1)/(Q**4 - 2*Q**2 + 1)
+  Ext^2: Hilb_Q=(-Q**4 + Q**2 + 1)/(Q**8 - 2*Q**6 + Q**4)
+    remaining contribution=(-Q**4 + Q**2 + 1)/(Q**8 - 2*Q**6 + Q**4)
+    split-free contribution=0
+term (1, 0, 0, 0, 1, 1) total: 0.956879s
+
+term (1, 0, 0, 1, 0, 1): degree=-3, word=(0, 0, 2), rank=8
+  Koszul complex: 0.070967s
+  step 1 field B+H+S splitting: 0.006398s
+    field homology ranks by Ext degree: {0: 2, 1: 4, 2: 2}
+    field source ranks by Ext degree: {0: 6, 1: 6, 2: 0}
+  step 2 lifted cancellation/minimal complex: 0.128718s
+    minimal ranks by Ext degree: {0: 2, 1: 4, 2: 2}
+    cancelled S->B pairs by source degree: {0: 6, 1: 6, 2: 0}
+  step 3 certified free homology splitting: 0.003026s
+    split free Q-degrees by Ext degree: {0: [4, 6], 1: [0, 0, 2, 2], 2: [-4, -2]}
+    remaining ranks by Ext degree: {0: 0, 1: 0, 2: 0}
+  step 4 Groebner Hilbert series on remaining complex: 0.000170s
+  Ext^0: Hilb_Q=(Q**6 + Q**4)/(Q**4 - 2*Q**2 + 1)
+    remaining contribution=0
+    split-free contribution=(Q**6 + Q**4)/(Q**4 - 2*Q**2 + 1)
+  Ext^1: Hilb_Q=(2*Q**2 + 2)/(Q**4 - 2*Q**2 + 1)
+    remaining contribution=0
+    split-free contribution=(2*Q**2 + 2)/(Q**4 - 2*Q**2 + 1)
+  Ext^2: Hilb_Q=(Q**2 + 1)/(Q**8 - 2*Q**6 + Q**4)
+    remaining contribution=0
+    split-free contribution=(Q**2 + 1)/(Q**8 - 2*Q**6 + Q**4)
+term (1, 0, 0, 1, 0, 1) total: 0.216053s
+
+term (1, 0, 0, 1, 1, 0): degree=-3, word=(0, 0, 1), rank=8
+  Koszul complex: 0.080906s
+  step 1 field B+H+S splitting: 0.007392s
+    field homology ranks by Ext degree: {0: 2, 1: 4, 2: 2}
+    field source ranks by Ext degree: {0: 6, 1: 6, 2: 0}
+  step 2 lifted cancellation/minimal complex: 0.254643s
+    minimal ranks by Ext degree: {0: 2, 1: 4, 2: 2}
+    cancelled S->B pairs by source degree: {0: 6, 1: 6, 2: 0}
+  step 3 certified free homology splitting: 0.003056s
+    split free Q-degrees by Ext degree: {0: [4, 6], 1: [0, 0, 2, 2], 2: [-4, -2]}
+    remaining ranks by Ext degree: {0: 0, 1: 0, 2: 0}
+  step 4 Groebner Hilbert series on remaining complex: 0.000175s
+  Ext^0: Hilb_Q=(Q**6 + Q**4)/(Q**4 - 2*Q**2 + 1)
+    remaining contribution=0
+    split-free contribution=(Q**6 + Q**4)/(Q**4 - 2*Q**2 + 1)
+  Ext^1: Hilb_Q=(2*Q**2 + 2)/(Q**4 - 2*Q**2 + 1)
+    remaining contribution=0
+    split-free contribution=(2*Q**2 + 2)/(Q**4 - 2*Q**2 + 1)
+  Ext^2: Hilb_Q=(Q**2 + 1)/(Q**8 - 2*Q**6 + Q**4)
+    remaining contribution=0
+    split-free contribution=(Q**2 + 1)/(Q**8 - 2*Q**6 + Q**4)
+term (1, 0, 0, 1, 1, 0) total: 0.352797s
+
+term (1, 0, 1, 0, 0, 1): degree=-3, word=(0, 2, 2), rank=8
+  Koszul complex: 0.069273s
+  step 1 field B+H+S splitting: 0.006398s
+    field homology ranks by Ext degree: {0: 2, 1: 4, 2: 2}
+    field source ranks by Ext degree: {0: 6, 1: 6, 2: 0}
+  step 2 lifted cancellation/minimal complex: 0.119027s
+    minimal ranks by Ext degree: {0: 2, 1: 4, 2: 2}
+    cancelled S->B pairs by source degree: {0: 6, 1: 6, 2: 0}
+  step 3 certified free homology splitting: 0.002997s
+    split free Q-degrees by Ext degree: {0: [4, 6], 1: [0, 0, 2, 2], 2: [-4, -2]}
+    remaining ranks by Ext degree: {0: 0, 1: 0, 2: 0}
+  step 4 Groebner Hilbert series on remaining complex: 0.000165s
+  Ext^0: Hilb_Q=(Q**6 + Q**4)/(Q**4 - 2*Q**2 + 1)
+    remaining contribution=0
+    split-free contribution=(Q**6 + Q**4)/(Q**4 - 2*Q**2 + 1)
+  Ext^1: Hilb_Q=(2*Q**2 + 2)/(Q**4 - 2*Q**2 + 1)
+    remaining contribution=0
+    split-free contribution=(2*Q**2 + 2)/(Q**4 - 2*Q**2 + 1)
+  Ext^2: Hilb_Q=(Q**2 + 1)/(Q**8 - 2*Q**6 + Q**4)
+    remaining contribution=0
+    split-free contribution=(Q**2 + 1)/(Q**8 - 2*Q**6 + Q**4)
+term (1, 0, 1, 0, 0, 1) total: 0.204391s
+
+term (1, 0, 1, 0, 1, 0): degree=-3, word=(0, 2, 1), rank=8
+  Koszul complex: 0.162938s
+  step 1 field B+H+S splitting: 0.010428s
+    field homology ranks by Ext degree: {0: 2, 1: 4, 2: 2}
+    field source ranks by Ext degree: {0: 6, 1: 6, 2: 0}
+  step 2 lifted cancellation/minimal complex: 1.437231s
+    minimal ranks by Ext degree: {0: 2, 1: 4, 2: 2}
+    cancelled S->B pairs by source degree: {0: 6, 1: 6, 2: 0}
+  step 3 certified free homology splitting: 0.016724s
+    split free Q-degrees by Ext degree: {1: [0, 2]}
+    remaining ranks by Ext degree: {0: 2, 1: 2, 2: 2}
+  step 4 Groebner Hilbert series on remaining complex: 0.021526s
+  Ext^0: Hilb_Q=Q**6/(Q**4 - 2*Q**2 + 1)
+    remaining contribution=Q**6/(Q**4 - 2*Q**2 + 1)
+    split-free contribution=0
+  Ext^1: Hilb_Q=(-Q**4 + 2*Q**2 + 1)/(Q**4 - 2*Q**2 + 1)
+    remaining contribution=-Q**2/(Q**2 - 1)
+    split-free contribution=(Q**2 + 1)/(Q**4 - 2*Q**2 + 1)
+  Ext^2: Hilb_Q=(-Q**4 + Q**2 + 1)/(Q**8 - 2*Q**6 + Q**4)
+    remaining contribution=(-Q**4 + Q**2 + 1)/(Q**8 - 2*Q**6 + Q**4)
+    split-free contribution=0
+term (1, 0, 1, 0, 1, 0) total: 1.654626s
+
+term (1, 0, 1, 1, 0, 0): degree=-3, word=(0, 2, 0), rank=8
+  Koszul complex: 0.133444s
+  step 1 field B+H+S splitting: 0.008473s
+    field homology ranks by Ext degree: {0: 2, 1: 4, 2: 2}
+    field source ranks by Ext degree: {0: 6, 1: 6, 2: 0}
+  step 2 lifted cancellation/minimal complex: 1.007414s
+    minimal ranks by Ext degree: {0: 2, 1: 4, 2: 2}
+    cancelled S->B pairs by source degree: {0: 6, 1: 6, 2: 0}
+  step 3 certified free homology splitting: 0.003136s
+    split free Q-degrees by Ext degree: {0: [4, 6], 1: [0, 0, 2, 2], 2: [-4, -2]}
+    remaining ranks by Ext degree: {0: 0, 1: 0, 2: 0}
+  step 4 Groebner Hilbert series on remaining complex: 0.000177s
+  Ext^0: Hilb_Q=(Q**6 + Q**4)/(Q**4 - 2*Q**2 + 1)
+    remaining contribution=0
+    split-free contribution=(Q**6 + Q**4)/(Q**4 - 2*Q**2 + 1)
+  Ext^1: Hilb_Q=(2*Q**2 + 2)/(Q**4 - 2*Q**2 + 1)
+    remaining contribution=0
+    split-free contribution=(2*Q**2 + 2)/(Q**4 - 2*Q**2 + 1)
+  Ext^2: Hilb_Q=(Q**2 + 1)/(Q**8 - 2*Q**6 + Q**4)
+    remaining contribution=0
+    split-free contribution=(Q**2 + 1)/(Q**8 - 2*Q**6 + Q**4)
+term (1, 0, 1, 1, 0, 0) total: 1.160022s
+
+term (1, 1, 0, 0, 0, 1): degree=-3, word=(0, 1, 2), rank=8
+  Koszul complex: 0.132421s
+  step 1 field B+H+S splitting: 0.008077s
+    field homology ranks by Ext degree: {0: 2, 1: 4, 2: 2}
+    field source ranks by Ext degree: {0: 6, 1: 6, 2: 0}
+  step 2 lifted cancellation/minimal complex: 0.742460s
+    minimal ranks by Ext degree: {0: 2, 1: 4, 2: 2}
+    cancelled S->B pairs by source degree: {0: 6, 1: 6, 2: 0}
+  step 3 certified free homology splitting: 0.034101s
+    split free Q-degrees by Ext degree: {1: [0, 2]}
+    remaining ranks by Ext degree: {0: 2, 1: 2, 2: 2}
+  step 4 Groebner Hilbert series on remaining complex: 0.019769s
+  Ext^0: Hilb_Q=Q**6/(Q**4 - 2*Q**2 + 1)
+    remaining contribution=Q**6/(Q**4 - 2*Q**2 + 1)
+    split-free contribution=0
+  Ext^1: Hilb_Q=(-Q**4 + 2*Q**2 + 1)/(Q**4 - 2*Q**2 + 1)
+    remaining contribution=-Q**2/(Q**2 - 1)
+    split-free contribution=(Q**2 + 1)/(Q**4 - 2*Q**2 + 1)
+  Ext^2: Hilb_Q=(-Q**4 + Q**2 + 1)/(Q**8 - 2*Q**6 + Q**4)
+    remaining contribution=(-Q**4 + Q**2 + 1)/(Q**8 - 2*Q**6 + Q**4)
+    split-free contribution=0
+term (1, 1, 0, 0, 0, 1) total: 0.942256s
+
+term (1, 1, 0, 0, 1, 0): degree=-3, word=(0, 1, 1), rank=8
+  Koszul complex: 0.084605s
+  step 1 field B+H+S splitting: 0.008681s
+    field homology ranks by Ext degree: {0: 2, 1: 4, 2: 2}
+    field source ranks by Ext degree: {0: 6, 1: 6, 2: 0}
+  step 2 lifted cancellation/minimal complex: 0.251235s
+    minimal ranks by Ext degree: {0: 2, 1: 4, 2: 2}
+    cancelled S->B pairs by source degree: {0: 6, 1: 6, 2: 0}
+  step 3 certified free homology splitting: 0.003069s
+    split free Q-degrees by Ext degree: {0: [4, 6], 1: [0, 0, 2, 2], 2: [-4, -2]}
+    remaining ranks by Ext degree: {0: 0, 1: 0, 2: 0}
+  step 4 Groebner Hilbert series on remaining complex: 0.000181s
+  Ext^0: Hilb_Q=(Q**6 + Q**4)/(Q**4 - 2*Q**2 + 1)
+    remaining contribution=0
+    split-free contribution=(Q**6 + Q**4)/(Q**4 - 2*Q**2 + 1)
+  Ext^1: Hilb_Q=(2*Q**2 + 2)/(Q**4 - 2*Q**2 + 1)
+    remaining contribution=0
+    split-free contribution=(2*Q**2 + 2)/(Q**4 - 2*Q**2 + 1)
+  Ext^2: Hilb_Q=(Q**2 + 1)/(Q**8 - 2*Q**6 + Q**4)
+    remaining contribution=0
+    split-free contribution=(Q**2 + 1)/(Q**8 - 2*Q**6 + Q**4)
+term (1, 1, 0, 0, 1, 0) total: 0.354532s
+
+term (1, 1, 0, 1, 0, 0): degree=-3, word=(0, 1, 0), rank=8
+  Koszul complex: 0.135740s
+  step 1 field B+H+S splitting: 0.008155s
+    field homology ranks by Ext degree: {0: 2, 1: 4, 2: 2}
+    field source ranks by Ext degree: {0: 6, 1: 6, 2: 0}
+  step 2 lifted cancellation/minimal complex: 0.992892s
+    minimal ranks by Ext degree: {0: 2, 1: 4, 2: 2}
+    cancelled S->B pairs by source degree: {0: 6, 1: 6, 2: 0}
+  step 3 certified free homology splitting: 0.003048s
+    split free Q-degrees by Ext degree: {0: [4, 6], 1: [0, 0, 2, 2], 2: [-4, -2]}
+    remaining ranks by Ext degree: {0: 0, 1: 0, 2: 0}
+  step 4 Groebner Hilbert series on remaining complex: 0.000175s
+  Ext^0: Hilb_Q=(Q**6 + Q**4)/(Q**4 - 2*Q**2 + 1)
+    remaining contribution=0
+    split-free contribution=(Q**6 + Q**4)/(Q**4 - 2*Q**2 + 1)
+  Ext^1: Hilb_Q=(2*Q**2 + 2)/(Q**4 - 2*Q**2 + 1)
+    remaining contribution=0
+    split-free contribution=(2*Q**2 + 2)/(Q**4 - 2*Q**2 + 1)
+  Ext^2: Hilb_Q=(Q**2 + 1)/(Q**8 - 2*Q**6 + Q**4)
+    remaining contribution=0
+    split-free contribution=(Q**2 + 1)/(Q**8 - 2*Q**6 + Q**4)
+term (1, 1, 0, 1, 0, 0) total: 1.147368s
+
+term (1, 1, 1, 0, 0, 0): degree=-3, word=(0, 1, 2), rank=8
+  Koszul complex: 0.132738s
+  step 1 field B+H+S splitting: 0.008310s
+    field homology ranks by Ext degree: {0: 2, 1: 4, 2: 2}
+    field source ranks by Ext degree: {0: 6, 1: 6, 2: 0}
+  step 2 lifted cancellation/minimal complex: 0.724287s
+    minimal ranks by Ext degree: {0: 2, 1: 4, 2: 2}
+    cancelled S->B pairs by source degree: {0: 6, 1: 6, 2: 0}
+  step 3 certified free homology splitting: 0.033311s
+    split free Q-degrees by Ext degree: {1: [0, 2]}
+    remaining ranks by Ext degree: {0: 2, 1: 2, 2: 2}
+  step 4 Groebner Hilbert series on remaining complex: 0.021166s
+  Ext^0: Hilb_Q=Q**6/(Q**4 - 2*Q**2 + 1)
+    remaining contribution=Q**6/(Q**4 - 2*Q**2 + 1)
+    split-free contribution=0
+  Ext^1: Hilb_Q=(-Q**4 + 2*Q**2 + 1)/(Q**4 - 2*Q**2 + 1)
+    remaining contribution=-Q**2/(Q**2 - 1)
+    split-free contribution=(Q**2 + 1)/(Q**4 - 2*Q**2 + 1)
+  Ext^2: Hilb_Q=(-Q**4 + Q**2 + 1)/(Q**8 - 2*Q**6 + Q**4)
+    remaining contribution=(-Q**4 + Q**2 + 1)/(Q**8 - 2*Q**6 + Q**4)
+    split-free contribution=0
+term (1, 1, 1, 0, 0, 0) total: 0.925572s
+
+term (0, 0, 0, 0, 1, 1): degree=-2, word=(1, 2), rank=4
+  Koszul complex: 0.034665s
+  step 1 field B+H+S splitting: 0.003325s
+    field homology ranks by Ext degree: {0: 1, 1: 2, 2: 1}
+    field source ranks by Ext degree: {0: 3, 1: 3, 2: 0}
+  step 2 lifted cancellation/minimal complex: 0.104744s
+    minimal ranks by Ext degree: {0: 1, 1: 2, 2: 1}
+    cancelled S->B pairs by source degree: {0: 3, 1: 3, 2: 0}
+  step 3 certified free homology splitting: 0.001598s
+    split free Q-degrees by Ext degree: {0: [4], 1: [0, 0], 2: [-4]}
+    remaining ranks by Ext degree: {0: 0, 1: 0, 2: 0}
+  step 4 Groebner Hilbert series on remaining complex: 0.000175s
+  Ext^0: Hilb_Q=Q**4/(Q**4 - 2*Q**2 + 1)
+    remaining contribution=0
+    split-free contribution=Q**4/(Q**4 - 2*Q**2 + 1)
+  Ext^1: Hilb_Q=2/(Q**4 - 2*Q**2 + 1)
+    remaining contribution=0
+    split-free contribution=2/(Q**4 - 2*Q**2 + 1)
+  Ext^2: Hilb_Q=1/(Q**8 - 2*Q**6 + Q**4)
+    remaining contribution=0
+    split-free contribution=1/(Q**8 - 2*Q**6 + Q**4)
+term (0, 0, 0, 0, 1, 1) total: 0.148811s
+
+term (0, 0, 0, 1, 0, 1): degree=-2, word=(0, 2), rank=4
+  Koszul complex: 0.029026s
+  step 1 field B+H+S splitting: 0.003253s
+    field homology ranks by Ext degree: {0: 1, 1: 2, 2: 1}
+    field source ranks by Ext degree: {0: 3, 1: 3, 2: 0}
+  step 2 lifted cancellation/minimal complex: 0.080779s
+    minimal ranks by Ext degree: {0: 1, 1: 2, 2: 1}
+    cancelled S->B pairs by source degree: {0: 3, 1: 3, 2: 0}
+  step 3 certified free homology splitting: 0.001593s
+    split free Q-degrees by Ext degree: {0: [4], 1: [0, 0], 2: [-4]}
+    remaining ranks by Ext degree: {0: 0, 1: 0, 2: 0}
+  step 4 Groebner Hilbert series on remaining complex: 0.000163s
+  Ext^0: Hilb_Q=Q**4/(Q**4 - 2*Q**2 + 1)
+    remaining contribution=0
+    split-free contribution=Q**4/(Q**4 - 2*Q**2 + 1)
+  Ext^1: Hilb_Q=2/(Q**4 - 2*Q**2 + 1)
+    remaining contribution=0
+    split-free contribution=2/(Q**4 - 2*Q**2 + 1)
+  Ext^2: Hilb_Q=1/(Q**8 - 2*Q**6 + Q**4)
+    remaining contribution=0
+    split-free contribution=1/(Q**8 - 2*Q**6 + Q**4)
+term (0, 0, 0, 1, 0, 1) total: 0.119092s
+
+term (0, 0, 0, 1, 1, 0): degree=-2, word=(0, 1), rank=4
+  Koszul complex: 0.032914s
+  step 1 field B+H+S splitting: 0.003395s
+    field homology ranks by Ext degree: {0: 1, 1: 2, 2: 1}
+    field source ranks by Ext degree: {0: 3, 1: 3, 2: 0}
+  step 2 lifted cancellation/minimal complex: 0.164049s
+    minimal ranks by Ext degree: {0: 1, 1: 2, 2: 1}
+    cancelled S->B pairs by source degree: {0: 3, 1: 3, 2: 0}
+  step 3 certified free homology splitting: 0.001608s
+    split free Q-degrees by Ext degree: {0: [4], 1: [0, 0], 2: [-4]}
+    remaining ranks by Ext degree: {0: 0, 1: 0, 2: 0}
+  step 4 Groebner Hilbert series on remaining complex: 0.000168s
+  Ext^0: Hilb_Q=Q**4/(Q**4 - 2*Q**2 + 1)
+    remaining contribution=0
+    split-free contribution=Q**4/(Q**4 - 2*Q**2 + 1)
+  Ext^1: Hilb_Q=2/(Q**4 - 2*Q**2 + 1)
+    remaining contribution=0
+    split-free contribution=2/(Q**4 - 2*Q**2 + 1)
+  Ext^2: Hilb_Q=1/(Q**8 - 2*Q**6 + Q**4)
+    remaining contribution=0
+    split-free contribution=1/(Q**8 - 2*Q**6 + Q**4)
+term (0, 0, 0, 1, 1, 0) total: 0.206535s
+
+term (0, 0, 1, 0, 0, 1): degree=-2, word=(2, 2), rank=4
+  Koszul complex: 0.011636s
+  step 1 field B+H+S splitting: 0.002885s
+    field homology ranks by Ext degree: {0: 2, 1: 4, 2: 2}
+    field source ranks by Ext degree: {0: 2, 1: 2, 2: 0}
+  step 2 lifted cancellation/minimal complex: 0.005005s
+    minimal ranks by Ext degree: {0: 2, 1: 4, 2: 2}
+    cancelled S->B pairs by source degree: {0: 2, 1: 2, 2: 0}
+  step 3 certified free homology splitting: 0.002821s
+    split free Q-degrees by Ext degree: {0: [2, 4], 1: [-2, 0, 0, 2], 2: [-4, -2]}
+    remaining ranks by Ext degree: {0: 0, 1: 0, 2: 0}
+  step 4 Groebner Hilbert series on remaining complex: 0.000126s
+  Ext^0: Hilb_Q=(Q**4 + Q**2)/(Q**4 - 2*Q**2 + 1)
+    remaining contribution=0
+    split-free contribution=(Q**4 + Q**2)/(Q**4 - 2*Q**2 + 1)
+  Ext^1: Hilb_Q=(Q**4 + 2*Q**2 + 1)/(Q**6 - 2*Q**4 + Q**2)
+    remaining contribution=0
+    split-free contribution=(Q**4 + 2*Q**2 + 1)/(Q**6 - 2*Q**4 + Q**2)
+  Ext^2: Hilb_Q=(Q**2 + 1)/(Q**8 - 2*Q**6 + Q**4)
+    remaining contribution=0
+    split-free contribution=(Q**2 + 1)/(Q**8 - 2*Q**6 + Q**4)
+term (0, 0, 1, 0, 0, 1) total: 0.030379s
+
+term (0, 0, 1, 0, 1, 0): degree=-2, word=(2, 1), rank=4
+  Koszul complex: 0.037010s
+  step 1 field B+H+S splitting: 0.004127s
+    field homology ranks by Ext degree: {0: 1, 1: 2, 2: 1}
+    field source ranks by Ext degree: {0: 3, 1: 3, 2: 0}
+  step 2 lifted cancellation/minimal complex: 0.177849s
+    minimal ranks by Ext degree: {0: 1, 1: 2, 2: 1}
+    cancelled S->B pairs by source degree: {0: 3, 1: 3, 2: 0}
+  step 3 certified free homology splitting: 0.001599s
+    split free Q-degrees by Ext degree: {0: [4], 1: [0, 0], 2: [-4]}
+    remaining ranks by Ext degree: {0: 0, 1: 0, 2: 0}
+  step 4 Groebner Hilbert series on remaining complex: 0.000168s
+  Ext^0: Hilb_Q=Q**4/(Q**4 - 2*Q**2 + 1)
+    remaining contribution=0
+    split-free contribution=Q**4/(Q**4 - 2*Q**2 + 1)
+  Ext^1: Hilb_Q=2/(Q**4 - 2*Q**2 + 1)
+    remaining contribution=0
+    split-free contribution=2/(Q**4 - 2*Q**2 + 1)
+  Ext^2: Hilb_Q=1/(Q**8 - 2*Q**6 + Q**4)
+    remaining contribution=0
+    split-free contribution=1/(Q**8 - 2*Q**6 + Q**4)
+term (0, 0, 1, 0, 1, 0) total: 0.225147s
+
+term (0, 0, 1, 1, 0, 0): degree=-2, word=(2, 0), rank=4
+  Koszul complex: 0.029579s
+  step 1 field B+H+S splitting: 0.003291s
+    field homology ranks by Ext degree: {0: 1, 1: 2, 2: 1}
+    field source ranks by Ext degree: {0: 3, 1: 3, 2: 0}
+  step 2 lifted cancellation/minimal complex: 0.134401s
+    minimal ranks by Ext degree: {0: 1, 1: 2, 2: 1}
+    cancelled S->B pairs by source degree: {0: 3, 1: 3, 2: 0}
+  step 3 certified free homology splitting: 0.001605s
+    split free Q-degrees by Ext degree: {0: [4], 1: [0, 0], 2: [-4]}
+    remaining ranks by Ext degree: {0: 0, 1: 0, 2: 0}
+  step 4 Groebner Hilbert series on remaining complex: 0.000169s
+  Ext^0: Hilb_Q=Q**4/(Q**4 - 2*Q**2 + 1)
+    remaining contribution=0
+    split-free contribution=Q**4/(Q**4 - 2*Q**2 + 1)
+  Ext^1: Hilb_Q=2/(Q**4 - 2*Q**2 + 1)
+    remaining contribution=0
+    split-free contribution=2/(Q**4 - 2*Q**2 + 1)
+  Ext^2: Hilb_Q=1/(Q**8 - 2*Q**6 + Q**4)
+    remaining contribution=0
+    split-free contribution=1/(Q**8 - 2*Q**6 + Q**4)
+term (0, 0, 1, 1, 0, 0) total: 0.173471s
+
+term (0, 1, 0, 0, 0, 1): degree=-2, word=(1, 2), rank=4
+  Koszul complex: 0.031340s
+  step 1 field B+H+S splitting: 0.003339s
+    field homology ranks by Ext degree: {0: 1, 1: 2, 2: 1}
+    field source ranks by Ext degree: {0: 3, 1: 3, 2: 0}
+  step 2 lifted cancellation/minimal complex: 0.082061s
+    minimal ranks by Ext degree: {0: 1, 1: 2, 2: 1}
+    cancelled S->B pairs by source degree: {0: 3, 1: 3, 2: 0}
+  step 3 certified free homology splitting: 0.001596s
+    split free Q-degrees by Ext degree: {0: [4], 1: [0, 0], 2: [-4]}
+    remaining ranks by Ext degree: {0: 0, 1: 0, 2: 0}
+  step 4 Groebner Hilbert series on remaining complex: 0.000168s
+  Ext^0: Hilb_Q=Q**4/(Q**4 - 2*Q**2 + 1)
+    remaining contribution=0
+    split-free contribution=Q**4/(Q**4 - 2*Q**2 + 1)
+  Ext^1: Hilb_Q=2/(Q**4 - 2*Q**2 + 1)
+    remaining contribution=0
+    split-free contribution=2/(Q**4 - 2*Q**2 + 1)
+  Ext^2: Hilb_Q=1/(Q**8 - 2*Q**6 + Q**4)
+    remaining contribution=0
+    split-free contribution=1/(Q**8 - 2*Q**6 + Q**4)
+term (0, 1, 0, 0, 0, 1) total: 0.122870s
+
+term (0, 1, 0, 0, 1, 0): degree=-2, word=(1, 1), rank=4
+  Koszul complex: 0.019672s
+  step 1 field B+H+S splitting: 0.002954s
+    field homology ranks by Ext degree: {0: 2, 1: 4, 2: 2}
+    field source ranks by Ext degree: {0: 2, 1: 2, 2: 0}
+  step 2 lifted cancellation/minimal complex: 0.015898s
+    minimal ranks by Ext degree: {0: 2, 1: 4, 2: 2}
+    cancelled S->B pairs by source degree: {0: 2, 1: 2, 2: 0}
+  step 3 certified free homology splitting: 0.002852s
+    split free Q-degrees by Ext degree: {0: [2, 4], 1: [-2, 0, 0, 2], 2: [-4, -2]}
+    remaining ranks by Ext degree: {0: 0, 1: 0, 2: 0}
+  step 4 Groebner Hilbert series on remaining complex: 0.000126s
+  Ext^0: Hilb_Q=(Q**4 + Q**2)/(Q**4 - 2*Q**2 + 1)
+    remaining contribution=0
+    split-free contribution=(Q**4 + Q**2)/(Q**4 - 2*Q**2 + 1)
+  Ext^1: Hilb_Q=(Q**4 + 2*Q**2 + 1)/(Q**6 - 2*Q**4 + Q**2)
+    remaining contribution=0
+    split-free contribution=(Q**4 + 2*Q**2 + 1)/(Q**6 - 2*Q**4 + Q**2)
+  Ext^2: Hilb_Q=(Q**2 + 1)/(Q**8 - 2*Q**6 + Q**4)
+    remaining contribution=0
+    split-free contribution=(Q**2 + 1)/(Q**8 - 2*Q**6 + Q**4)
+term (0, 1, 0, 0, 1, 0) total: 0.048340s
+
+term (0, 1, 0, 1, 0, 0): degree=-2, word=(1, 0), rank=4
+  Koszul complex: 0.031755s
+  step 1 field B+H+S splitting: 0.003295s
+    field homology ranks by Ext degree: {0: 1, 1: 2, 2: 1}
+    field source ranks by Ext degree: {0: 3, 1: 3, 2: 0}
+  step 2 lifted cancellation/minimal complex: 0.139737s
+    minimal ranks by Ext degree: {0: 1, 1: 2, 2: 1}
+    cancelled S->B pairs by source degree: {0: 3, 1: 3, 2: 0}
+  step 3 certified free homology splitting: 0.001619s
+    split free Q-degrees by Ext degree: {0: [4], 1: [0, 0], 2: [-4]}
+    remaining ranks by Ext degree: {0: 0, 1: 0, 2: 0}
+  step 4 Groebner Hilbert series on remaining complex: 0.000177s
+  Ext^0: Hilb_Q=Q**4/(Q**4 - 2*Q**2 + 1)
+    remaining contribution=0
+    split-free contribution=Q**4/(Q**4 - 2*Q**2 + 1)
+  Ext^1: Hilb_Q=2/(Q**4 - 2*Q**2 + 1)
+    remaining contribution=0
+    split-free contribution=2/(Q**4 - 2*Q**2 + 1)
+  Ext^2: Hilb_Q=1/(Q**8 - 2*Q**6 + Q**4)
+    remaining contribution=0
+    split-free contribution=1/(Q**8 - 2*Q**6 + Q**4)
+term (0, 1, 0, 1, 0, 0) total: 0.181042s
+
+term (0, 1, 1, 0, 0, 0): degree=-2, word=(1, 2), rank=4
+  Koszul complex: 0.030864s
+  step 1 field B+H+S splitting: 0.003308s
+    field homology ranks by Ext degree: {0: 1, 1: 2, 2: 1}
+    field source ranks by Ext degree: {0: 3, 1: 3, 2: 0}
+  step 2 lifted cancellation/minimal complex: 0.140446s
+    minimal ranks by Ext degree: {0: 1, 1: 2, 2: 1}
+    cancelled S->B pairs by source degree: {0: 3, 1: 3, 2: 0}
+  step 3 certified free homology splitting: 0.001604s
+    split free Q-degrees by Ext degree: {0: [4], 1: [0, 0], 2: [-4]}
+    remaining ranks by Ext degree: {0: 0, 1: 0, 2: 0}
+  step 4 Groebner Hilbert series on remaining complex: 0.000173s
+  Ext^0: Hilb_Q=Q**4/(Q**4 - 2*Q**2 + 1)
+    remaining contribution=0
+    split-free contribution=Q**4/(Q**4 - 2*Q**2 + 1)
+  Ext^1: Hilb_Q=2/(Q**4 - 2*Q**2 + 1)
+    remaining contribution=0
+    split-free contribution=2/(Q**4 - 2*Q**2 + 1)
+  Ext^2: Hilb_Q=1/(Q**8 - 2*Q**6 + Q**4)
+    remaining contribution=0
+    split-free contribution=1/(Q**8 - 2*Q**6 + Q**4)
+term (0, 1, 1, 0, 0, 0) total: 0.180851s
+
+term (1, 0, 0, 0, 0, 1): degree=-2, word=(0, 2), rank=4
+  Koszul complex: 0.026960s
+  step 1 field B+H+S splitting: 0.003276s
+    field homology ranks by Ext degree: {0: 1, 1: 2, 2: 1}
+    field source ranks by Ext degree: {0: 3, 1: 3, 2: 0}
+  step 2 lifted cancellation/minimal complex: 0.067216s
+    minimal ranks by Ext degree: {0: 1, 1: 2, 2: 1}
+    cancelled S->B pairs by source degree: {0: 3, 1: 3, 2: 0}
+  step 3 certified free homology splitting: 0.001601s
+    split free Q-degrees by Ext degree: {0: [4], 1: [0, 0], 2: [-4]}
+    remaining ranks by Ext degree: {0: 0, 1: 0, 2: 0}
+  step 4 Groebner Hilbert series on remaining complex: 0.000163s
+  Ext^0: Hilb_Q=Q**4/(Q**4 - 2*Q**2 + 1)
+    remaining contribution=0
+    split-free contribution=Q**4/(Q**4 - 2*Q**2 + 1)
+  Ext^1: Hilb_Q=2/(Q**4 - 2*Q**2 + 1)
+    remaining contribution=0
+    split-free contribution=2/(Q**4 - 2*Q**2 + 1)
+  Ext^2: Hilb_Q=1/(Q**8 - 2*Q**6 + Q**4)
+    remaining contribution=0
+    split-free contribution=1/(Q**8 - 2*Q**6 + Q**4)
+term (1, 0, 0, 0, 0, 1) total: 0.103601s
+
+term (1, 0, 0, 0, 1, 0): degree=-2, word=(0, 1), rank=4
+  Koszul complex: 0.031931s
+  step 1 field B+H+S splitting: 0.003420s
+    field homology ranks by Ext degree: {0: 1, 1: 2, 2: 1}
+    field source ranks by Ext degree: {0: 3, 1: 3, 2: 0}
+  step 2 lifted cancellation/minimal complex: 0.121446s
+    minimal ranks by Ext degree: {0: 1, 1: 2, 2: 1}
+    cancelled S->B pairs by source degree: {0: 3, 1: 3, 2: 0}
+  step 3 certified free homology splitting: 0.001581s
+    split free Q-degrees by Ext degree: {0: [4], 1: [0, 0], 2: [-4]}
+    remaining ranks by Ext degree: {0: 0, 1: 0, 2: 0}
+  step 4 Groebner Hilbert series on remaining complex: 0.000169s
+  Ext^0: Hilb_Q=Q**4/(Q**4 - 2*Q**2 + 1)
+    remaining contribution=0
+    split-free contribution=Q**4/(Q**4 - 2*Q**2 + 1)
+  Ext^1: Hilb_Q=2/(Q**4 - 2*Q**2 + 1)
+    remaining contribution=0
+    split-free contribution=2/(Q**4 - 2*Q**2 + 1)
+  Ext^2: Hilb_Q=1/(Q**8 - 2*Q**6 + Q**4)
+    remaining contribution=0
+    split-free contribution=1/(Q**8 - 2*Q**6 + Q**4)
+term (1, 0, 0, 0, 1, 0) total: 0.162920s
+
+term (1, 0, 0, 1, 0, 0): degree=-2, word=(0, 0), rank=4
+  Koszul complex: 0.011428s
+  step 1 field B+H+S splitting: 0.002871s
+    field homology ranks by Ext degree: {0: 2, 1: 4, 2: 2}
+    field source ranks by Ext degree: {0: 2, 1: 2, 2: 0}
+  step 2 lifted cancellation/minimal complex: 0.005678s
+    minimal ranks by Ext degree: {0: 2, 1: 4, 2: 2}
+    cancelled S->B pairs by source degree: {0: 2, 1: 2, 2: 0}
+  step 3 certified free homology splitting: 0.002806s
+    split free Q-degrees by Ext degree: {0: [2, 4], 1: [-2, 0, 0, 2], 2: [-4, -2]}
+    remaining ranks by Ext degree: {0: 0, 1: 0, 2: 0}
+  step 4 Groebner Hilbert series on remaining complex: 0.000126s
+  Ext^0: Hilb_Q=(Q**4 + Q**2)/(Q**4 - 2*Q**2 + 1)
+    remaining contribution=0
+    split-free contribution=(Q**4 + Q**2)/(Q**4 - 2*Q**2 + 1)
+  Ext^1: Hilb_Q=(Q**4 + 2*Q**2 + 1)/(Q**6 - 2*Q**4 + Q**2)
+    remaining contribution=0
+    split-free contribution=(Q**4 + 2*Q**2 + 1)/(Q**6 - 2*Q**4 + Q**2)
+  Ext^2: Hilb_Q=(Q**2 + 1)/(Q**8 - 2*Q**6 + Q**4)
+    remaining contribution=0
+    split-free contribution=(Q**2 + 1)/(Q**8 - 2*Q**6 + Q**4)
+term (1, 0, 0, 1, 0, 0) total: 0.029822s
+
+term (1, 0, 1, 0, 0, 0): degree=-2, word=(0, 2), rank=4
+  Koszul complex: 0.026607s
+  step 1 field B+H+S splitting: 0.003191s
+    field homology ranks by Ext degree: {0: 1, 1: 2, 2: 1}
+    field source ranks by Ext degree: {0: 3, 1: 3, 2: 0}
+  step 2 lifted cancellation/minimal complex: 0.066541s
+    minimal ranks by Ext degree: {0: 1, 1: 2, 2: 1}
+    cancelled S->B pairs by source degree: {0: 3, 1: 3, 2: 0}
+  step 3 certified free homology splitting: 0.001587s
+    split free Q-degrees by Ext degree: {0: [4], 1: [0, 0], 2: [-4]}
+    remaining ranks by Ext degree: {0: 0, 1: 0, 2: 0}
+  step 4 Groebner Hilbert series on remaining complex: 0.000160s
+  Ext^0: Hilb_Q=Q**4/(Q**4 - 2*Q**2 + 1)
+    remaining contribution=0
+    split-free contribution=Q**4/(Q**4 - 2*Q**2 + 1)
+  Ext^1: Hilb_Q=2/(Q**4 - 2*Q**2 + 1)
+    remaining contribution=0
+    split-free contribution=2/(Q**4 - 2*Q**2 + 1)
+  Ext^2: Hilb_Q=1/(Q**8 - 2*Q**6 + Q**4)
+    remaining contribution=0
+    split-free contribution=1/(Q**8 - 2*Q**6 + Q**4)
+term (1, 0, 1, 0, 0, 0) total: 0.102432s
+
+term (1, 1, 0, 0, 0, 0): degree=-2, word=(0, 1), rank=4
+  Koszul complex: 0.032474s
+  step 1 field B+H+S splitting: 0.003348s
+    field homology ranks by Ext degree: {0: 1, 1: 2, 2: 1}
+    field source ranks by Ext degree: {0: 3, 1: 3, 2: 0}
+  step 2 lifted cancellation/minimal complex: 0.122998s
+    minimal ranks by Ext degree: {0: 1, 1: 2, 2: 1}
+    cancelled S->B pairs by source degree: {0: 3, 1: 3, 2: 0}
+  step 3 certified free homology splitting: 0.001593s
+    split free Q-degrees by Ext degree: {0: [4], 1: [0, 0], 2: [-4]}
+    remaining ranks by Ext degree: {0: 0, 1: 0, 2: 0}
+  step 4 Groebner Hilbert series on remaining complex: 0.000164s
+  Ext^0: Hilb_Q=Q**4/(Q**4 - 2*Q**2 + 1)
+    remaining contribution=0
+    split-free contribution=Q**4/(Q**4 - 2*Q**2 + 1)
+  Ext^1: Hilb_Q=2/(Q**4 - 2*Q**2 + 1)
+    remaining contribution=0
+    split-free contribution=2/(Q**4 - 2*Q**2 + 1)
+  Ext^2: Hilb_Q=1/(Q**8 - 2*Q**6 + Q**4)
+    remaining contribution=0
+    split-free contribution=1/(Q**8 - 2*Q**6 + Q**4)
+term (1, 1, 0, 0, 0, 0) total: 0.164987s
+
+term (0, 0, 0, 0, 0, 1): degree=-1, word=(2,), rank=2
+  Koszul complex: 0.004245s
+  step 1 field B+H+S splitting: 0.001450s
+    field homology ranks by Ext degree: {0: 1, 1: 2, 2: 1}
+    field source ranks by Ext degree: {0: 1, 1: 1, 2: 0}
+  step 2 lifted cancellation/minimal complex: 0.002969s
+    minimal ranks by Ext degree: {0: 1, 1: 2, 2: 1}
+    cancelled S->B pairs by source degree: {0: 1, 1: 1, 2: 0}
+  step 3 certified free homology splitting: 0.001378s
+    split free Q-degrees by Ext degree: {0: [2], 1: [-2, 0], 2: [-4]}
+    remaining ranks by Ext degree: {0: 0, 1: 0, 2: 0}
+  step 4 Groebner Hilbert series on remaining complex: 0.000126s
+  Ext^0: Hilb_Q=Q**2/(Q**4 - 2*Q**2 + 1)
+    remaining contribution=0
+    split-free contribution=Q**2/(Q**4 - 2*Q**2 + 1)
+  Ext^1: Hilb_Q=(Q**2 + 1)/(Q**6 - 2*Q**4 + Q**2)
+    remaining contribution=0
+    split-free contribution=(Q**2 + 1)/(Q**6 - 2*Q**4 + Q**2)
+  Ext^2: Hilb_Q=1/(Q**8 - 2*Q**6 + Q**4)
+    remaining contribution=0
+    split-free contribution=1/(Q**8 - 2*Q**6 + Q**4)
+term (0, 0, 0, 0, 0, 1) total: 0.015349s
+
+term (0, 0, 0, 0, 1, 0): degree=-1, word=(1,), rank=2
+  Koszul complex: 0.007733s
+  step 1 field B+H+S splitting: 0.001461s
+    field homology ranks by Ext degree: {0: 1, 1: 2, 2: 1}
+    field source ranks by Ext degree: {0: 1, 1: 1, 2: 0}
+  step 2 lifted cancellation/minimal complex: 0.009047s
+    minimal ranks by Ext degree: {0: 1, 1: 2, 2: 1}
+    cancelled S->B pairs by source degree: {0: 1, 1: 1, 2: 0}
+  step 3 certified free homology splitting: 0.001383s
+    split free Q-degrees by Ext degree: {0: [2], 1: [-2, 0], 2: [-4]}
+    remaining ranks by Ext degree: {0: 0, 1: 0, 2: 0}
+  step 4 Groebner Hilbert series on remaining complex: 0.000123s
+  Ext^0: Hilb_Q=Q**2/(Q**4 - 2*Q**2 + 1)
+    remaining contribution=0
+    split-free contribution=Q**2/(Q**4 - 2*Q**2 + 1)
+  Ext^1: Hilb_Q=(Q**2 + 1)/(Q**6 - 2*Q**4 + Q**2)
+    remaining contribution=0
+    split-free contribution=(Q**2 + 1)/(Q**6 - 2*Q**4 + Q**2)
+  Ext^2: Hilb_Q=1/(Q**8 - 2*Q**6 + Q**4)
+    remaining contribution=0
+    split-free contribution=1/(Q**8 - 2*Q**6 + Q**4)
+term (0, 0, 0, 0, 1, 0) total: 0.024121s
+
+term (0, 0, 0, 1, 0, 0): degree=-1, word=(0,), rank=2
+  Koszul complex: 0.003774s
+  step 1 field B+H+S splitting: 0.001360s
+    field homology ranks by Ext degree: {0: 1, 1: 2, 2: 1}
+    field source ranks by Ext degree: {0: 1, 1: 1, 2: 0}
+  step 2 lifted cancellation/minimal complex: 0.003342s
+    minimal ranks by Ext degree: {0: 1, 1: 2, 2: 1}
+    cancelled S->B pairs by source degree: {0: 1, 1: 1, 2: 0}
+  step 3 certified free homology splitting: 0.001356s
+    split free Q-degrees by Ext degree: {0: [2], 1: [-2, 0], 2: [-4]}
+    remaining ranks by Ext degree: {0: 0, 1: 0, 2: 0}
+  step 4 Groebner Hilbert series on remaining complex: 0.000125s
+  Ext^0: Hilb_Q=Q**2/(Q**4 - 2*Q**2 + 1)
+    remaining contribution=0
+    split-free contribution=Q**2/(Q**4 - 2*Q**2 + 1)
+  Ext^1: Hilb_Q=(Q**2 + 1)/(Q**6 - 2*Q**4 + Q**2)
+    remaining contribution=0
+    split-free contribution=(Q**2 + 1)/(Q**6 - 2*Q**4 + Q**2)
+  Ext^2: Hilb_Q=1/(Q**8 - 2*Q**6 + Q**4)
+    remaining contribution=0
+    split-free contribution=1/(Q**8 - 2*Q**6 + Q**4)
+term (0, 0, 0, 1, 0, 0) total: 0.014338s
+
+term (0, 0, 1, 0, 0, 0): degree=-1, word=(2,), rank=2
+  Koszul complex: 0.003659s
+  step 1 field B+H+S splitting: 0.001384s
+    field homology ranks by Ext degree: {0: 1, 1: 2, 2: 1}
+    field source ranks by Ext degree: {0: 1, 1: 1, 2: 0}
+  step 2 lifted cancellation/minimal complex: 0.002476s
+    minimal ranks by Ext degree: {0: 1, 1: 2, 2: 1}
+    cancelled S->B pairs by source degree: {0: 1, 1: 1, 2: 0}
+  step 3 certified free homology splitting: 0.001392s
+    split free Q-degrees by Ext degree: {0: [2], 1: [-2, 0], 2: [-4]}
+    remaining ranks by Ext degree: {0: 0, 1: 0, 2: 0}
+  step 4 Groebner Hilbert series on remaining complex: 0.000123s
+  Ext^0: Hilb_Q=Q**2/(Q**4 - 2*Q**2 + 1)
+    remaining contribution=0
+    split-free contribution=Q**2/(Q**4 - 2*Q**2 + 1)
+  Ext^1: Hilb_Q=(Q**2 + 1)/(Q**6 - 2*Q**4 + Q**2)
+    remaining contribution=0
+    split-free contribution=(Q**2 + 1)/(Q**6 - 2*Q**4 + Q**2)
+  Ext^2: Hilb_Q=1/(Q**8 - 2*Q**6 + Q**4)
+    remaining contribution=0
+    split-free contribution=1/(Q**8 - 2*Q**6 + Q**4)
+term (0, 0, 1, 0, 0, 0) total: 0.013625s
+
+term (0, 1, 0, 0, 0, 0): degree=-1, word=(1,), rank=2
+  Koszul complex: 0.005646s
+  step 1 field B+H+S splitting: 0.001404s
+    field homology ranks by Ext degree: {0: 1, 1: 2, 2: 1}
+    field source ranks by Ext degree: {0: 1, 1: 1, 2: 0}
+  step 2 lifted cancellation/minimal complex: 0.006562s
+    minimal ranks by Ext degree: {0: 1, 1: 2, 2: 1}
+    cancelled S->B pairs by source degree: {0: 1, 1: 1, 2: 0}
+  step 3 certified free homology splitting: 0.001365s
+    split free Q-degrees by Ext degree: {0: [2], 1: [-2, 0], 2: [-4]}
+    remaining ranks by Ext degree: {0: 0, 1: 0, 2: 0}
+  step 4 Groebner Hilbert series on remaining complex: 0.000124s
+  Ext^0: Hilb_Q=Q**2/(Q**4 - 2*Q**2 + 1)
+    remaining contribution=0
+    split-free contribution=Q**2/(Q**4 - 2*Q**2 + 1)
+  Ext^1: Hilb_Q=(Q**2 + 1)/(Q**6 - 2*Q**4 + Q**2)
+    remaining contribution=0
+    split-free contribution=(Q**2 + 1)/(Q**6 - 2*Q**4 + Q**2)
+  Ext^2: Hilb_Q=1/(Q**8 - 2*Q**6 + Q**4)
+    remaining contribution=0
+    split-free contribution=1/(Q**8 - 2*Q**6 + Q**4)
+term (0, 1, 0, 0, 0, 0) total: 0.019625s
+
+term (1, 0, 0, 0, 0, 0): degree=-1, word=(0,), rank=2
+  Koszul complex: 0.003656s
+  step 1 field B+H+S splitting: 0.001370s
+    field homology ranks by Ext degree: {0: 1, 1: 2, 2: 1}
+    field source ranks by Ext degree: {0: 1, 1: 1, 2: 0}
+  step 2 lifted cancellation/minimal complex: 0.002804s
+    minimal ranks by Ext degree: {0: 1, 1: 2, 2: 1}
+    cancelled S->B pairs by source degree: {0: 1, 1: 1, 2: 0}
+  step 3 certified free homology splitting: 0.001395s
+    split free Q-degrees by Ext degree: {0: [2], 1: [-2, 0], 2: [-4]}
+    remaining ranks by Ext degree: {0: 0, 1: 0, 2: 0}
+  step 4 Groebner Hilbert series on remaining complex: 0.000125s
+  Ext^0: Hilb_Q=Q**2/(Q**4 - 2*Q**2 + 1)
+    remaining contribution=0
+    split-free contribution=Q**2/(Q**4 - 2*Q**2 + 1)
+  Ext^1: Hilb_Q=(Q**2 + 1)/(Q**6 - 2*Q**4 + Q**2)
+    remaining contribution=0
+    split-free contribution=(Q**2 + 1)/(Q**6 - 2*Q**4 + Q**2)
+  Ext^2: Hilb_Q=1/(Q**8 - 2*Q**6 + Q**4)
+    remaining contribution=0
+    split-free contribution=1/(Q**8 - 2*Q**6 + Q**4)
+term (1, 0, 0, 0, 0, 0) total: 0.013660s
+
+term (0, 0, 0, 0, 0, 0): degree=0, word=(), rank=1
+  Koszul complex: 0.000189s
+  step 1 field B+H+S splitting: 0.000581s
+    field homology ranks by Ext degree: {0: 1, 1: 2, 2: 1}
+    field source ranks by Ext degree: {0: 0, 1: 0, 2: 0}
+  step 2 lifted cancellation/minimal complex: 0.000439s
+    minimal ranks by Ext degree: {0: 1, 1: 2, 2: 1}
+    cancelled S->B pairs by source degree: {0: 0, 1: 0, 2: 0}
+  step 3 certified free homology splitting: 0.001498s
+    split free Q-degrees by Ext degree: {0: [0], 1: [-2, -2], 2: [-4]}
+    remaining ranks by Ext degree: {0: 0, 1: 0, 2: 0}
+  step 4 Groebner Hilbert series on remaining complex: 0.000124s
+  Ext^0: Hilb_Q=1/(Q**4 - 2*Q**2 + 1)
+    remaining contribution=0
+    split-free contribution=1/(Q**4 - 2*Q**2 + 1)
+  Ext^1: Hilb_Q=2/(Q**6 - 2*Q**4 + Q**2)
+    remaining contribution=0
+    split-free contribution=2/(Q**6 - 2*Q**4 + Q**2)
+  Ext^2: Hilb_Q=1/(Q**8 - 2*Q**6 + Q**4)
+    remaining contribution=0
+    split-free contribution=1/(Q**8 - 2*Q**6 + Q**4)
+term (0, 0, 0, 0, 0, 0) total: 0.006743s
+
+simplify final Euler trace: 0.036951s
+
+Final affine A2 geometric 2D s0s1s2s0s1s2 Euler trace 2.0:
+(A**2*Q**4 + A**2*Q**2 - A**2 + A*Q**10 - A*Q**8 + 3*A*Q**6 - 2*A*Q**4 + 2*A*Q**2 - A + Q**14 - 2*Q**12 + 2*Q**10 - Q**8 + 3*Q**6 - 3*Q**4 + Q**2)/(Q**2*(Q - 1)**2*(Q + 1)**2)
+
+Timing summary:
+  Koszul complex total: 65.419040s
+  step 1 field B+H+S total: 2891.537362s
+  step 2 lifted cancellation/minimal total: 4779.649928s
+  step 3 certified free split total: 3.948262s
+  step 4 Groebner Hilbert-series total: 0.553922s
+  Overall wall time: 7790.731193s
+  Recorded term data entries: 64

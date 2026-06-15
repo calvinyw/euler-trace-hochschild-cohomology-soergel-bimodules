@@ -1,0 +1,23 @@
+Type A2 Euler trace
+Braid: s1 s2 s1 s2
+Diagram vertices: (1, 2)
+Diagram edges: [(1, 2)]
+
+Definition:
+  sum_a A^a sum_j (-1)^j Hilb_Q Ext^a_{R-R}(R, C^j)
+  (equivalently T = -1 in the unreduced A,Q,T Euler characteristic)
+
+Left polynomial ring R = QQ[x_0,x_1]
+Rouquier terms: 16
+
+Timing (seconds):
+  build Rouquier complex:        0.423
+  termwise Koszul/Ext/Hilb:      3.517
+  assemble Euler trace:          0.016
+  total:                         3.955
+
+Euler trace:
+A + Q**4 + 1
+
+Expanded:
+A + Q**4 + 1

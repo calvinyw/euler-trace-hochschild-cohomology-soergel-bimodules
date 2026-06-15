@@ -1,0 +1,1131 @@
+Affine A2 Kac-Moody 5D Euler-trace computation (Ext-free)
+Python: 3.11.7
+Output file: /Users/calvinyost-wolff/Documents/my math papers/acyclicClusterAlgebras/computations/euler_trace_outputs/affine_a2_kac_moody_extfree_euler_trace_output.txt
+Timeout seconds: 10800
+Validate specialized homology representatives: True
+Check d^2=0 before Ext computations: True
+
+setup Kac-Moody ambient realization: 0.002049s
+basis: epsilon_1, epsilon_2, epsilon_3, delta, Lambda_0
+diagram vertices: (0, 1, 2)
+diagram edges: [(0, 1), (0, 2), (1, 2)]
+braid: ((0, '+'), (1, '+'), (2, '+'), (0, '+'), (1, '+'), (2, '+'))
+realization dimension: 5
+s0 action on V^* used by R:
+Matrix([[0, 0, 1, 0, 1], [0, 1, 0, 0, 0], [1, 0, 0, 0, -1], [1, 0, -1, 1, -1], [0, 0, 0, 0, 1]])
+alpha_0: [-1, 0, 1, 1, 0]
+s1 action on V^* used by R:
+Matrix([[0, 1, 0, 0, 0], [1, 0, 0, 0, 0], [0, 0, 1, 0, 0], [0, 0, 0, 1, 0], [0, 0, 0, 0, 1]])
+alpha_1: [-1, 1, 0, 0, 0]
+s2 action on V^* used by R:
+Matrix([[1, 0, 0, 0, 0], [0, 0, 1, 0, 0], [0, 1, 0, 0, 0], [0, 0, 0, 1, 0], [0, 0, 0, 0, 1]])
+alpha_2: [0, -1, 1, 0, 0]
+
+build Rouquier complex as free left R-modules: 45.788731s
+R variables: (x_0, x_1, x_2, x_3, x_4)
+Rouquier degrees: [-6, -5, -4, -3, -2, -1, 0]
+number of Rouquier terms: 64
+number of Rouquier arrows: 192
+d^2=0 on free-left-R Rouquier complex: True
+check d^2=0: 169.227735s
+
+construct left polynomial ring: 0.001363s
+ring: QQ[x_0,x_1,x_2,x_3,x_4]
+
+term (1, 1, 1, 1, 1, 1): degree=-6, word=(0, 1, 2, 0, 1, 2), rank=64
+  Koszul complex: 280.012502s
+  k tensor Ext generator degrees: 9.607388s
+  Ext^0 free generator Q-degrees=[8, 10, 10, 10, 12]
+  Ext^0: Hilb_Q=(-Q**12 - 3*Q**10 - Q**8)/(Q**10 - 5*Q**8 + 10*Q**6 - 10*Q**4 + 5*Q**2 - 1)
+  Ext^1 free generator Q-degrees=[4, 4, 4, 4, 4, 4, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 8, 8, 8, 8, 8, 8, 8, 10, 10]
+  Ext^1: Hilb_Q=(-2*Q**10 - 7*Q**8 - 10*Q**6 - 6*Q**4)/(Q**10 - 5*Q**8 + 10*Q**6 - 10*Q**4 + 5*Q**2 - 1)
+  Ext^2 free generator Q-degrees=[-2, 0, 0, 0, 0, 0, 0, 0, 0, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 6, 6, 6, 6, 6, 8]
+  Ext^2: Hilb_Q=(-Q**10 - 5*Q**8 - 17*Q**6 - 18*Q**4 - 8*Q**2 - 1)/(Q**12 - 5*Q**10 + 10*Q**8 - 10*Q**6 + 5*Q**4 - Q**2)
+  Ext^3 free generator Q-degrees=[-6, -4, -4, -4, -4, -4, -2, -2, -2, -2, -2, -2, -2, -2, -2, -2, -2, -2, -2, -2, -2, -2, -2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2, 2, 2, 2, 2, 2, 2, 2, 4]
+  Ext^3: Hilb_Q=(-Q**10 - 8*Q**8 - 18*Q**6 - 17*Q**4 - 5*Q**2 - 1)/(Q**16 - 5*Q**14 + 10*Q**12 - 10*Q**10 + 5*Q**8 - Q**6)
+  Ext^4 free generator Q-degrees=[-8, -8, -6, -6, -6, -6, -6, -6, -6, -4, -4, -4, -4, -4, -4, -4, -4, -4, -4, -2, -2, -2, -2, -2, -2]
+  Ext^4: Hilb_Q=(-6*Q**6 - 10*Q**4 - 7*Q**2 - 2)/(Q**18 - 5*Q**16 + 10*Q**14 - 10*Q**12 + 5*Q**10 - Q**8)
+  Ext^5 free generator Q-degrees=[-10, -8, -8, -8, -6]
+  Ext^5: Hilb_Q=(-Q**4 - 3*Q**2 - 1)/(Q**20 - 5*Q**18 + 10*Q**16 - 10*Q**14 + 5*Q**12 - Q**10)
+term (1, 1, 1, 1, 1, 1) total: 289.658074s
+
+term (0, 1, 1, 1, 1, 1): degree=-5, word=(1, 2, 0, 1, 2), rank=32
+  Koszul complex: 33.399581s
+  k tensor Ext generator degrees: 1.848536s
+  Ext^0 free generator Q-degrees=[8, 8, 10]
+  Ext^0: Hilb_Q=(-Q**10 - 2*Q**8)/(Q**10 - 5*Q**8 + 10*Q**6 - 10*Q**4 + 5*Q**2 - 1)
+  Ext^1 free generator Q-degrees=[2, 4, 4, 4, 4, 4, 4, 6, 6, 6, 6, 6, 6, 8, 8]
+  Ext^1: Hilb_Q=(-2*Q**8 - 6*Q**6 - 6*Q**4 - Q**2)/(Q**10 - 5*Q**8 + 10*Q**6 - 10*Q**4 + 5*Q**2 - 1)
+  Ext^2 free generator Q-degrees=[-2, -2, 0, 0, 0, 0, 0, 0, 0, 0, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 4, 4, 4, 4, 4, 4, 6]
+  Ext^2: Hilb_Q=(-Q**8 - 6*Q**6 - 13*Q**4 - 8*Q**2 - 2)/(Q**12 - 5*Q**10 + 10*Q**8 - 10*Q**6 + 5*Q**4 - Q**2)
+  Ext^3 free generator Q-degrees=[-6, -4, -4, -4, -4, -4, -4, -2, -2, -2, -2, -2, -2, -2, -2, -2, -2, -2, -2, -2, 0, 0, 0, 0, 0, 0, 0, 0, 2, 2]
+  Ext^3: Hilb_Q=(-2*Q**8 - 8*Q**6 - 13*Q**4 - 6*Q**2 - 1)/(Q**16 - 5*Q**14 + 10*Q**12 - 10*Q**10 + 5*Q**8 - Q**6)
+  Ext^4 free generator Q-degrees=[-8, -8, -6, -6, -6, -6, -6, -6, -4, -4, -4, -4, -4, -4, -2]
+  Ext^4: Hilb_Q=(-Q**6 - 6*Q**4 - 6*Q**2 - 2)/(Q**18 - 5*Q**16 + 10*Q**14 - 10*Q**12 + 5*Q**10 - Q**8)
+  Ext^5 free generator Q-degrees=[-10, -8, -8]
+  Ext^5: Hilb_Q=(-2*Q**2 - 1)/(Q**20 - 5*Q**18 + 10*Q**16 - 10*Q**14 + 5*Q**12 - Q**10)
+term (0, 1, 1, 1, 1, 1) total: 35.268495s
+
+term (1, 0, 1, 1, 1, 1): degree=-5, word=(0, 2, 0, 1, 2), rank=32
+  Koszul complex: 38.762125s
+  k tensor Ext generator degrees: 1.995262s
+  Ext^0 free generator Q-degrees=[8, 8, 10]
+  Ext^0: Hilb_Q=(-Q**10 - 2*Q**8)/(Q**10 - 5*Q**8 + 10*Q**6 - 10*Q**4 + 5*Q**2 - 1)
+  Ext^1 free generator Q-degrees=[2, 4, 4, 4, 4, 4, 4, 6, 6, 6, 6, 6, 6, 8, 8]
+  Ext^1: Hilb_Q=(-2*Q**8 - 6*Q**6 - 6*Q**4 - Q**2)/(Q**10 - 5*Q**8 + 10*Q**6 - 10*Q**4 + 5*Q**2 - 1)
+  Ext^2 free generator Q-degrees=[-2, -2, 0, 0, 0, 0, 0, 0, 0, 0, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 4, 4, 4, 4, 4, 4, 6]
+  Ext^2: Hilb_Q=(-Q**8 - 6*Q**6 - 13*Q**4 - 8*Q**2 - 2)/(Q**12 - 5*Q**10 + 10*Q**8 - 10*Q**6 + 5*Q**4 - Q**2)
+  Ext^3 free generator Q-degrees=[-6, -4, -4, -4, -4, -4, -4, -2, -2, -2, -2, -2, -2, -2, -2, -2, -2, -2, -2, -2, 0, 0, 0, 0, 0, 0, 0, 0, 2, 2]
+  Ext^3: Hilb_Q=(-2*Q**8 - 8*Q**6 - 13*Q**4 - 6*Q**2 - 1)/(Q**16 - 5*Q**14 + 10*Q**12 - 10*Q**10 + 5*Q**8 - Q**6)
+  Ext^4 free generator Q-degrees=[-8, -8, -6, -6, -6, -6, -6, -6, -4, -4, -4, -4, -4, -4, -2]
+  Ext^4: Hilb_Q=(-Q**6 - 6*Q**4 - 6*Q**2 - 2)/(Q**18 - 5*Q**16 + 10*Q**14 - 10*Q**12 + 5*Q**10 - Q**8)
+  Ext^5 free generator Q-degrees=[-10, -8, -8]
+  Ext^5: Hilb_Q=(-2*Q**2 - 1)/(Q**20 - 5*Q**18 + 10*Q**16 - 10*Q**14 + 5*Q**12 - Q**10)
+term (1, 0, 1, 1, 1, 1) total: 40.776402s
+
+term (1, 1, 0, 1, 1, 1): degree=-5, word=(0, 1, 0, 1, 2), rank=32
+  Koszul complex: 38.466633s
+  k tensor Ext generator degrees: 1.993158s
+  Ext^0 free generator Q-degrees=[8, 8, 10]
+  Ext^0: Hilb_Q=(-Q**10 - 2*Q**8)/(Q**10 - 5*Q**8 + 10*Q**6 - 10*Q**4 + 5*Q**2 - 1)
+  Ext^1 free generator Q-degrees=[2, 4, 4, 4, 4, 4, 4, 6, 6, 6, 6, 6, 6, 8, 8]
+  Ext^1: Hilb_Q=(-2*Q**8 - 6*Q**6 - 6*Q**4 - Q**2)/(Q**10 - 5*Q**8 + 10*Q**6 - 10*Q**4 + 5*Q**2 - 1)
+  Ext^2 free generator Q-degrees=[-2, -2, 0, 0, 0, 0, 0, 0, 0, 0, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 4, 4, 4, 4, 4, 4, 6]
+  Ext^2: Hilb_Q=(-Q**8 - 6*Q**6 - 13*Q**4 - 8*Q**2 - 2)/(Q**12 - 5*Q**10 + 10*Q**8 - 10*Q**6 + 5*Q**4 - Q**2)
+  Ext^3 free generator Q-degrees=[-6, -4, -4, -4, -4, -4, -4, -2, -2, -2, -2, -2, -2, -2, -2, -2, -2, -2, -2, -2, 0, 0, 0, 0, 0, 0, 0, 0, 2, 2]
+  Ext^3: Hilb_Q=(-2*Q**8 - 8*Q**6 - 13*Q**4 - 6*Q**2 - 1)/(Q**16 - 5*Q**14 + 10*Q**12 - 10*Q**10 + 5*Q**8 - Q**6)
+  Ext^4 free generator Q-degrees=[-8, -8, -6, -6, -6, -6, -6, -6, -4, -4, -4, -4, -4, -4, -2]
+  Ext^4: Hilb_Q=(-Q**6 - 6*Q**4 - 6*Q**2 - 2)/(Q**18 - 5*Q**16 + 10*Q**14 - 10*Q**12 + 5*Q**10 - Q**8)
+  Ext^5 free generator Q-degrees=[-10, -8, -8]
+  Ext^5: Hilb_Q=(-2*Q**2 - 1)/(Q**20 - 5*Q**18 + 10*Q**16 - 10*Q**14 + 5*Q**12 - Q**10)
+term (1, 1, 0, 1, 1, 1) total: 40.480058s
+
+term (1, 1, 1, 0, 1, 1): degree=-5, word=(0, 1, 2, 1, 2), rank=32
+  Koszul complex: 36.787552s
+  k tensor Ext generator degrees: 1.963094s
+  Ext^0 free generator Q-degrees=[8, 8, 10]
+  Ext^0: Hilb_Q=(-Q**10 - 2*Q**8)/(Q**10 - 5*Q**8 + 10*Q**6 - 10*Q**4 + 5*Q**2 - 1)
+  Ext^1 free generator Q-degrees=[2, 4, 4, 4, 4, 4, 4, 6, 6, 6, 6, 6, 6, 8, 8]
+  Ext^1: Hilb_Q=(-2*Q**8 - 6*Q**6 - 6*Q**4 - Q**2)/(Q**10 - 5*Q**8 + 10*Q**6 - 10*Q**4 + 5*Q**2 - 1)
+  Ext^2 free generator Q-degrees=[-2, -2, 0, 0, 0, 0, 0, 0, 0, 0, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 4, 4, 4, 4, 4, 4, 6]
+  Ext^2: Hilb_Q=(-Q**8 - 6*Q**6 - 13*Q**4 - 8*Q**2 - 2)/(Q**12 - 5*Q**10 + 10*Q**8 - 10*Q**6 + 5*Q**4 - Q**2)
+  Ext^3 free generator Q-degrees=[-6, -4, -4, -4, -4, -4, -4, -2, -2, -2, -2, -2, -2, -2, -2, -2, -2, -2, -2, -2, 0, 0, 0, 0, 0, 0, 0, 0, 2, 2]
+  Ext^3: Hilb_Q=(-2*Q**8 - 8*Q**6 - 13*Q**4 - 6*Q**2 - 1)/(Q**16 - 5*Q**14 + 10*Q**12 - 10*Q**10 + 5*Q**8 - Q**6)
+  Ext^4 free generator Q-degrees=[-8, -8, -6, -6, -6, -6, -6, -6, -4, -4, -4, -4, -4, -4, -2]
+  Ext^4: Hilb_Q=(-Q**6 - 6*Q**4 - 6*Q**2 - 2)/(Q**18 - 5*Q**16 + 10*Q**14 - 10*Q**12 + 5*Q**10 - Q**8)
+  Ext^5 free generator Q-degrees=[-10, -8, -8]
+  Ext^5: Hilb_Q=(-2*Q**2 - 1)/(Q**20 - 5*Q**18 + 10*Q**16 - 10*Q**14 + 5*Q**12 - Q**10)
+term (1, 1, 1, 0, 1, 1) total: 38.772814s
+
+term (1, 1, 1, 1, 0, 1): degree=-5, word=(0, 1, 2, 0, 2), rank=32
+  Koszul complex: 43.766247s
+  k tensor Ext generator degrees: 2.202019s
+  Ext^0 free generator Q-degrees=[8, 8, 10]
+  Ext^0: Hilb_Q=(-Q**10 - 2*Q**8)/(Q**10 - 5*Q**8 + 10*Q**6 - 10*Q**4 + 5*Q**2 - 1)
+  Ext^1 free generator Q-degrees=[2, 4, 4, 4, 4, 4, 4, 6, 6, 6, 6, 6, 6, 8, 8]
+  Ext^1: Hilb_Q=(-2*Q**8 - 6*Q**6 - 6*Q**4 - Q**2)/(Q**10 - 5*Q**8 + 10*Q**6 - 10*Q**4 + 5*Q**2 - 1)
+  Ext^2 free generator Q-degrees=[-2, -2, 0, 0, 0, 0, 0, 0, 0, 0, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 4, 4, 4, 4, 4, 4, 6]
+  Ext^2: Hilb_Q=(-Q**8 - 6*Q**6 - 13*Q**4 - 8*Q**2 - 2)/(Q**12 - 5*Q**10 + 10*Q**8 - 10*Q**6 + 5*Q**4 - Q**2)
+  Ext^3 free generator Q-degrees=[-6, -4, -4, -4, -4, -4, -4, -2, -2, -2, -2, -2, -2, -2, -2, -2, -2, -2, -2, -2, 0, 0, 0, 0, 0, 0, 0, 0, 2, 2]
+  Ext^3: Hilb_Q=(-2*Q**8 - 8*Q**6 - 13*Q**4 - 6*Q**2 - 1)/(Q**16 - 5*Q**14 + 10*Q**12 - 10*Q**10 + 5*Q**8 - Q**6)
+  Ext^4 free generator Q-degrees=[-8, -8, -6, -6, -6, -6, -6, -6, -4, -4, -4, -4, -4, -4, -2]
+  Ext^4: Hilb_Q=(-Q**6 - 6*Q**4 - 6*Q**2 - 2)/(Q**18 - 5*Q**16 + 10*Q**14 - 10*Q**12 + 5*Q**10 - Q**8)
+  Ext^5 free generator Q-degrees=[-10, -8, -8]
+  Ext^5: Hilb_Q=(-2*Q**2 - 1)/(Q**20 - 5*Q**18 + 10*Q**16 - 10*Q**14 + 5*Q**12 - Q**10)
+term (1, 1, 1, 1, 0, 1) total: 45.988696s
+
+term (1, 1, 1, 1, 1, 0): degree=-5, word=(0, 1, 2, 0, 1), rank=32
+  Koszul complex: 44.559593s
+  k tensor Ext generator degrees: 2.258052s
+  Ext^0 free generator Q-degrees=[8, 8, 10]
+  Ext^0: Hilb_Q=(-Q**10 - 2*Q**8)/(Q**10 - 5*Q**8 + 10*Q**6 - 10*Q**4 + 5*Q**2 - 1)
+  Ext^1 free generator Q-degrees=[2, 4, 4, 4, 4, 4, 4, 6, 6, 6, 6, 6, 6, 8, 8]
+  Ext^1: Hilb_Q=(-2*Q**8 - 6*Q**6 - 6*Q**4 - Q**2)/(Q**10 - 5*Q**8 + 10*Q**6 - 10*Q**4 + 5*Q**2 - 1)
+  Ext^2 free generator Q-degrees=[-2, -2, 0, 0, 0, 0, 0, 0, 0, 0, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 4, 4, 4, 4, 4, 4, 6]
+  Ext^2: Hilb_Q=(-Q**8 - 6*Q**6 - 13*Q**4 - 8*Q**2 - 2)/(Q**12 - 5*Q**10 + 10*Q**8 - 10*Q**6 + 5*Q**4 - Q**2)
+  Ext^3 free generator Q-degrees=[-6, -4, -4, -4, -4, -4, -4, -2, -2, -2, -2, -2, -2, -2, -2, -2, -2, -2, -2, -2, 0, 0, 0, 0, 0, 0, 0, 0, 2, 2]
+  Ext^3: Hilb_Q=(-2*Q**8 - 8*Q**6 - 13*Q**4 - 6*Q**2 - 1)/(Q**16 - 5*Q**14 + 10*Q**12 - 10*Q**10 + 5*Q**8 - Q**6)
+  Ext^4 free generator Q-degrees=[-8, -8, -6, -6, -6, -6, -6, -6, -4, -4, -4, -4, -4, -4, -2]
+  Ext^4: Hilb_Q=(-Q**6 - 6*Q**4 - 6*Q**2 - 2)/(Q**18 - 5*Q**16 + 10*Q**14 - 10*Q**12 + 5*Q**10 - Q**8)
+  Ext^5 free generator Q-degrees=[-10, -8, -8]
+  Ext^5: Hilb_Q=(-2*Q**2 - 1)/(Q**20 - 5*Q**18 + 10*Q**16 - 10*Q**14 + 5*Q**12 - Q**10)
+term (1, 1, 1, 1, 1, 0) total: 46.841461s
+
+term (0, 0, 1, 1, 1, 1): degree=-4, word=(2, 0, 1, 2), rank=16
+  Koszul complex: 5.596975s
+  k tensor Ext generator degrees: 0.575467s
+  Ext^0 free generator Q-degrees=[6, 8]
+  Ext^0: Hilb_Q=(-Q**8 - Q**6)/(Q**10 - 5*Q**8 + 10*Q**6 - 10*Q**4 + 5*Q**2 - 1)
+  Ext^1 free generator Q-degrees=[2, 2, 2, 4, 4, 4, 4, 4, 6, 6]
+  Ext^1: Hilb_Q=(-2*Q**6 - 5*Q**4 - 3*Q**2)/(Q**10 - 5*Q**8 + 10*Q**6 - 10*Q**4 + 5*Q**2 - 1)
+  Ext^2 free generator Q-degrees=[-2, -2, -2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2, 2, 2, 2, 2, 2, 2, 4]
+  Ext^2: Hilb_Q=(-Q**6 - 7*Q**4 - 9*Q**2 - 3)/(Q**12 - 5*Q**10 + 10*Q**8 - 10*Q**6 + 5*Q**4 - Q**2)
+  Ext^3 free generator Q-degrees=[-6, -4, -4, -4, -4, -4, -4, -4, -2, -2, -2, -2, -2, -2, -2, -2, -2, 0, 0, 0]
+  Ext^3: Hilb_Q=(-3*Q**6 - 9*Q**4 - 7*Q**2 - 1)/(Q**16 - 5*Q**14 + 10*Q**12 - 10*Q**10 + 5*Q**8 - Q**6)
+  Ext^4 free generator Q-degrees=[-8, -8, -6, -6, -6, -6, -6, -4, -4, -4]
+  Ext^4: Hilb_Q=(-3*Q**4 - 5*Q**2 - 2)/(Q**18 - 5*Q**16 + 10*Q**14 - 10*Q**12 + 5*Q**10 - Q**8)
+  Ext^5 free generator Q-degrees=[-10, -8]
+  Ext^5: Hilb_Q=(-Q**2 - 1)/(Q**20 - 5*Q**18 + 10*Q**16 - 10*Q**14 + 5*Q**12 - Q**10)
+term (0, 0, 1, 1, 1, 1) total: 6.187564s
+
+term (0, 1, 0, 1, 1, 1): degree=-4, word=(1, 0, 1, 2), rank=16
+  Koszul complex: 5.563220s
+  k tensor Ext generator degrees: 0.444566s
+  Ext^0 free generator Q-degrees=[6, 8]
+  Ext^0: Hilb_Q=(-Q**8 - Q**6)/(Q**10 - 5*Q**8 + 10*Q**6 - 10*Q**4 + 5*Q**2 - 1)
+  Ext^1 free generator Q-degrees=[2, 2, 2, 4, 4, 4, 4, 4, 6, 6]
+  Ext^1: Hilb_Q=(-2*Q**6 - 5*Q**4 - 3*Q**2)/(Q**10 - 5*Q**8 + 10*Q**6 - 10*Q**4 + 5*Q**2 - 1)
+  Ext^2 free generator Q-degrees=[-2, -2, -2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2, 2, 2, 2, 2, 2, 2, 4]
+  Ext^2: Hilb_Q=(-Q**6 - 7*Q**4 - 9*Q**2 - 3)/(Q**12 - 5*Q**10 + 10*Q**8 - 10*Q**6 + 5*Q**4 - Q**2)
+  Ext^3 free generator Q-degrees=[-6, -4, -4, -4, -4, -4, -4, -4, -2, -2, -2, -2, -2, -2, -2, -2, -2, 0, 0, 0]
+  Ext^3: Hilb_Q=(-3*Q**6 - 9*Q**4 - 7*Q**2 - 1)/(Q**16 - 5*Q**14 + 10*Q**12 - 10*Q**10 + 5*Q**8 - Q**6)
+  Ext^4 free generator Q-degrees=[-8, -8, -6, -6, -6, -6, -6, -4, -4, -4]
+  Ext^4: Hilb_Q=(-3*Q**4 - 5*Q**2 - 2)/(Q**18 - 5*Q**16 + 10*Q**14 - 10*Q**12 + 5*Q**10 - Q**8)
+  Ext^5 free generator Q-degrees=[-10, -8]
+  Ext^5: Hilb_Q=(-Q**2 - 1)/(Q**20 - 5*Q**18 + 10*Q**16 - 10*Q**14 + 5*Q**12 - Q**10)
+term (0, 1, 0, 1, 1, 1) total: 6.021167s
+
+term (0, 1, 1, 0, 1, 1): degree=-4, word=(1, 2, 1, 2), rank=16
+  Koszul complex: 3.234043s
+  k tensor Ext generator degrees: 0.394198s
+  Ext^0 free generator Q-degrees=[6, 6, 8]
+  Ext^0: Hilb_Q=(-Q**8 - 2*Q**6)/(Q**10 - 5*Q**8 + 10*Q**6 - 10*Q**4 + 5*Q**2 - 1)
+  Ext^1 free generator Q-degrees=[0, 2, 2, 2, 2, 4, 4, 4, 4, 4, 4, 4, 6, 6, 6]
+  Ext^1: Hilb_Q=(-3*Q**6 - 7*Q**4 - 4*Q**2 - 1)/(Q**10 - 5*Q**8 + 10*Q**6 - 10*Q**4 + 5*Q**2 - 1)
+  Ext^2 free generator Q-degrees=[-4, -2, -2, -2, -2, -2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2, 2, 2, 2, 2, 2, 2, 2, 2, 4, 4, 4]
+  Ext^2: Hilb_Q=(-3*Q**8 - 9*Q**6 - 12*Q**4 - 5*Q**2 - 1)/(Q**14 - 5*Q**12 + 10*Q**10 - 10*Q**8 + 5*Q**6 - Q**4)
+  Ext^3 free generator Q-degrees=[-6, -6, -6, -4, -4, -4, -4, -4, -4, -4, -4, -4, -2, -2, -2, -2, -2, -2, -2, -2, -2, -2, -2, -2, 0, 0, 0, 0, 0, 2]
+  Ext^3: Hilb_Q=(-Q**8 - 5*Q**6 - 12*Q**4 - 9*Q**2 - 3)/(Q**16 - 5*Q**14 + 10*Q**12 - 10*Q**10 + 5*Q**8 - Q**6)
+  Ext^4 free generator Q-degrees=[-8, -8, -8, -6, -6, -6, -6, -6, -6, -6, -4, -4, -4, -4, -2]
+  Ext^4: Hilb_Q=(-Q**6 - 4*Q**4 - 7*Q**2 - 3)/(Q**18 - 5*Q**16 + 10*Q**14 - 10*Q**12 + 5*Q**10 - Q**8)
+  Ext^5 free generator Q-degrees=[-10, -8, -8]
+  Ext^5: Hilb_Q=(-2*Q**2 - 1)/(Q**20 - 5*Q**18 + 10*Q**16 - 10*Q**14 + 5*Q**12 - Q**10)
+term (0, 1, 1, 0, 1, 1) total: 3.647866s
+
+term (0, 1, 1, 1, 0, 1): degree=-4, word=(1, 2, 0, 2), rank=16
+  Koszul complex: 5.559284s
+  k tensor Ext generator degrees: 0.478115s
+  Ext^0 free generator Q-degrees=[6, 8]
+  Ext^0: Hilb_Q=(-Q**8 - Q**6)/(Q**10 - 5*Q**8 + 10*Q**6 - 10*Q**4 + 5*Q**2 - 1)
+  Ext^1 free generator Q-degrees=[2, 2, 2, 4, 4, 4, 4, 4, 6, 6]
+  Ext^1: Hilb_Q=(-2*Q**6 - 5*Q**4 - 3*Q**2)/(Q**10 - 5*Q**8 + 10*Q**6 - 10*Q**4 + 5*Q**2 - 1)
+  Ext^2 free generator Q-degrees=[-2, -2, -2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2, 2, 2, 2, 2, 2, 2, 4]
+  Ext^2: Hilb_Q=(-Q**6 - 7*Q**4 - 9*Q**2 - 3)/(Q**12 - 5*Q**10 + 10*Q**8 - 10*Q**6 + 5*Q**4 - Q**2)
+  Ext^3 free generator Q-degrees=[-6, -4, -4, -4, -4, -4, -4, -4, -2, -2, -2, -2, -2, -2, -2, -2, -2, 0, 0, 0]
+  Ext^3: Hilb_Q=(-3*Q**6 - 9*Q**4 - 7*Q**2 - 1)/(Q**16 - 5*Q**14 + 10*Q**12 - 10*Q**10 + 5*Q**8 - Q**6)
+  Ext^4 free generator Q-degrees=[-8, -8, -6, -6, -6, -6, -6, -4, -4, -4]
+  Ext^4: Hilb_Q=(-3*Q**4 - 5*Q**2 - 2)/(Q**18 - 5*Q**16 + 10*Q**14 - 10*Q**12 + 5*Q**10 - Q**8)
+  Ext^5 free generator Q-degrees=[-10, -8]
+  Ext^5: Hilb_Q=(-Q**2 - 1)/(Q**20 - 5*Q**18 + 10*Q**16 - 10*Q**14 + 5*Q**12 - Q**10)
+term (0, 1, 1, 1, 0, 1) total: 6.052779s
+
+term (0, 1, 1, 1, 1, 0): degree=-4, word=(1, 2, 0, 1), rank=16
+  Koszul complex: 5.156938s
+  k tensor Ext generator degrees: 0.460766s
+  Ext^0 free generator Q-degrees=[6, 8]
+  Ext^0: Hilb_Q=(-Q**8 - Q**6)/(Q**10 - 5*Q**8 + 10*Q**6 - 10*Q**4 + 5*Q**2 - 1)
+  Ext^1 free generator Q-degrees=[2, 2, 2, 4, 4, 4, 4, 4, 6, 6]
+  Ext^1: Hilb_Q=(-2*Q**6 - 5*Q**4 - 3*Q**2)/(Q**10 - 5*Q**8 + 10*Q**6 - 10*Q**4 + 5*Q**2 - 1)
+  Ext^2 free generator Q-degrees=[-2, -2, -2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2, 2, 2, 2, 2, 2, 2, 4]
+  Ext^2: Hilb_Q=(-Q**6 - 7*Q**4 - 9*Q**2 - 3)/(Q**12 - 5*Q**10 + 10*Q**8 - 10*Q**6 + 5*Q**4 - Q**2)
+  Ext^3 free generator Q-degrees=[-6, -4, -4, -4, -4, -4, -4, -4, -2, -2, -2, -2, -2, -2, -2, -2, -2, 0, 0, 0]
+  Ext^3: Hilb_Q=(-3*Q**6 - 9*Q**4 - 7*Q**2 - 1)/(Q**16 - 5*Q**14 + 10*Q**12 - 10*Q**10 + 5*Q**8 - Q**6)
+  Ext^4 free generator Q-degrees=[-8, -8, -6, -6, -6, -6, -6, -4, -4, -4]
+  Ext^4: Hilb_Q=(-3*Q**4 - 5*Q**2 - 2)/(Q**18 - 5*Q**16 + 10*Q**14 - 10*Q**12 + 5*Q**10 - Q**8)
+  Ext^5 free generator Q-degrees=[-10, -8]
+  Ext^5: Hilb_Q=(-Q**2 - 1)/(Q**20 - 5*Q**18 + 10*Q**16 - 10*Q**14 + 5*Q**12 - Q**10)
+term (0, 1, 1, 1, 1, 0) total: 5.631690s
+
+term (1, 0, 0, 1, 1, 1): degree=-4, word=(0, 0, 1, 2), rank=16
+  Koszul complex: 2.823809s
+  k tensor Ext generator degrees: 0.322831s
+  Ext^0 free generator Q-degrees=[6, 8]
+  Ext^0: Hilb_Q=(-Q**8 - Q**6)/(Q**10 - 5*Q**8 + 10*Q**6 - 10*Q**4 + 5*Q**2 - 1)
+  Ext^1 free generator Q-degrees=[2, 2, 2, 4, 4, 4, 4, 4, 6, 6]
+  Ext^1: Hilb_Q=(-2*Q**6 - 5*Q**4 - 3*Q**2)/(Q**10 - 5*Q**8 + 10*Q**6 - 10*Q**4 + 5*Q**2 - 1)
+  Ext^2 free generator Q-degrees=[-2, -2, -2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2, 2, 2, 2, 2, 2, 2, 4]
+  Ext^2: Hilb_Q=(-Q**6 - 7*Q**4 - 9*Q**2 - 3)/(Q**12 - 5*Q**10 + 10*Q**8 - 10*Q**6 + 5*Q**4 - Q**2)
+  Ext^3 free generator Q-degrees=[-6, -4, -4, -4, -4, -4, -4, -4, -2, -2, -2, -2, -2, -2, -2, -2, -2, 0, 0, 0]
+  Ext^3: Hilb_Q=(-3*Q**6 - 9*Q**4 - 7*Q**2 - 1)/(Q**16 - 5*Q**14 + 10*Q**12 - 10*Q**10 + 5*Q**8 - Q**6)
+  Ext^4 free generator Q-degrees=[-8, -8, -6, -6, -6, -6, -6, -4, -4, -4]
+  Ext^4: Hilb_Q=(-3*Q**4 - 5*Q**2 - 2)/(Q**18 - 5*Q**16 + 10*Q**14 - 10*Q**12 + 5*Q**10 - Q**8)
+  Ext^5 free generator Q-degrees=[-10, -8]
+  Ext^5: Hilb_Q=(-Q**2 - 1)/(Q**20 - 5*Q**18 + 10*Q**16 - 10*Q**14 + 5*Q**12 - Q**10)
+term (1, 0, 0, 1, 1, 1) total: 3.159827s
+
+term (1, 0, 1, 0, 1, 1): degree=-4, word=(0, 2, 1, 2), rank=16
+  Koszul complex: 5.788614s
+  k tensor Ext generator degrees: 0.478467s
+  Ext^0 free generator Q-degrees=[6, 8]
+  Ext^0: Hilb_Q=(-Q**8 - Q**6)/(Q**10 - 5*Q**8 + 10*Q**6 - 10*Q**4 + 5*Q**2 - 1)
+  Ext^1 free generator Q-degrees=[2, 2, 2, 4, 4, 4, 4, 4, 6, 6]
+  Ext^1: Hilb_Q=(-2*Q**6 - 5*Q**4 - 3*Q**2)/(Q**10 - 5*Q**8 + 10*Q**6 - 10*Q**4 + 5*Q**2 - 1)
+  Ext^2 free generator Q-degrees=[-2, -2, -2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2, 2, 2, 2, 2, 2, 2, 4]
+  Ext^2: Hilb_Q=(-Q**6 - 7*Q**4 - 9*Q**2 - 3)/(Q**12 - 5*Q**10 + 10*Q**8 - 10*Q**6 + 5*Q**4 - Q**2)
+  Ext^3 free generator Q-degrees=[-6, -4, -4, -4, -4, -4, -4, -4, -2, -2, -2, -2, -2, -2, -2, -2, -2, 0, 0, 0]
+  Ext^3: Hilb_Q=(-3*Q**6 - 9*Q**4 - 7*Q**2 - 1)/(Q**16 - 5*Q**14 + 10*Q**12 - 10*Q**10 + 5*Q**8 - Q**6)
+  Ext^4 free generator Q-degrees=[-8, -8, -6, -6, -6, -6, -6, -4, -4, -4]
+  Ext^4: Hilb_Q=(-3*Q**4 - 5*Q**2 - 2)/(Q**18 - 5*Q**16 + 10*Q**14 - 10*Q**12 + 5*Q**10 - Q**8)
+  Ext^5 free generator Q-degrees=[-10, -8]
+  Ext^5: Hilb_Q=(-Q**2 - 1)/(Q**20 - 5*Q**18 + 10*Q**16 - 10*Q**14 + 5*Q**12 - Q**10)
+term (1, 0, 1, 0, 1, 1) total: 6.280318s
+
+term (1, 0, 1, 1, 0, 1): degree=-4, word=(0, 2, 0, 2), rank=16
+  Koszul complex: 6.485190s
+  k tensor Ext generator degrees: 0.502436s
+  Ext^0 free generator Q-degrees=[6, 6, 8]
+  Ext^0: Hilb_Q=(-Q**8 - 2*Q**6)/(Q**10 - 5*Q**8 + 10*Q**6 - 10*Q**4 + 5*Q**2 - 1)
+  Ext^1 free generator Q-degrees=[0, 2, 2, 2, 2, 4, 4, 4, 4, 4, 4, 4, 6, 6, 6]
+  Ext^1: Hilb_Q=(-3*Q**6 - 7*Q**4 - 4*Q**2 - 1)/(Q**10 - 5*Q**8 + 10*Q**6 - 10*Q**4 + 5*Q**2 - 1)
+  Ext^2 free generator Q-degrees=[-4, -2, -2, -2, -2, -2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2, 2, 2, 2, 2, 2, 2, 2, 2, 4, 4, 4]
+  Ext^2: Hilb_Q=(-3*Q**8 - 9*Q**6 - 12*Q**4 - 5*Q**2 - 1)/(Q**14 - 5*Q**12 + 10*Q**10 - 10*Q**8 + 5*Q**6 - Q**4)
+  Ext^3 free generator Q-degrees=[-6, -6, -6, -4, -4, -4, -4, -4, -4, -4, -4, -4, -2, -2, -2, -2, -2, -2, -2, -2, -2, -2, -2, -2, 0, 0, 0, 0, 0, 2]
+  Ext^3: Hilb_Q=(-Q**8 - 5*Q**6 - 12*Q**4 - 9*Q**2 - 3)/(Q**16 - 5*Q**14 + 10*Q**12 - 10*Q**10 + 5*Q**8 - Q**6)
+  Ext^4 free generator Q-degrees=[-8, -8, -8, -6, -6, -6, -6, -6, -6, -6, -4, -4, -4, -4, -2]
+  Ext^4: Hilb_Q=(-Q**6 - 4*Q**4 - 7*Q**2 - 3)/(Q**18 - 5*Q**16 + 10*Q**14 - 10*Q**12 + 5*Q**10 - Q**8)
+  Ext^5 free generator Q-degrees=[-10, -8, -8]
+  Ext^5: Hilb_Q=(-2*Q**2 - 1)/(Q**20 - 5*Q**18 + 10*Q**16 - 10*Q**14 + 5*Q**12 - Q**10)
+term (1, 0, 1, 1, 0, 1) total: 7.005424s
+
+term (1, 0, 1, 1, 1, 0): degree=-4, word=(0, 2, 0, 1), rank=16
+  Koszul complex: 6.783761s
+  k tensor Ext generator degrees: 0.537613s
+  Ext^0 free generator Q-degrees=[6, 8]
+  Ext^0: Hilb_Q=(-Q**8 - Q**6)/(Q**10 - 5*Q**8 + 10*Q**6 - 10*Q**4 + 5*Q**2 - 1)
+  Ext^1 free generator Q-degrees=[2, 2, 2, 4, 4, 4, 4, 4, 6, 6]
+  Ext^1: Hilb_Q=(-2*Q**6 - 5*Q**4 - 3*Q**2)/(Q**10 - 5*Q**8 + 10*Q**6 - 10*Q**4 + 5*Q**2 - 1)
+  Ext^2 free generator Q-degrees=[-2, -2, -2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2, 2, 2, 2, 2, 2, 2, 4]
+  Ext^2: Hilb_Q=(-Q**6 - 7*Q**4 - 9*Q**2 - 3)/(Q**12 - 5*Q**10 + 10*Q**8 - 10*Q**6 + 5*Q**4 - Q**2)
+  Ext^3 free generator Q-degrees=[-6, -4, -4, -4, -4, -4, -4, -4, -2, -2, -2, -2, -2, -2, -2, -2, -2, 0, 0, 0]
+  Ext^3: Hilb_Q=(-3*Q**6 - 9*Q**4 - 7*Q**2 - 1)/(Q**16 - 5*Q**14 + 10*Q**12 - 10*Q**10 + 5*Q**8 - Q**6)
+  Ext^4 free generator Q-degrees=[-8, -8, -6, -6, -6, -6, -6, -4, -4, -4]
+  Ext^4: Hilb_Q=(-3*Q**4 - 5*Q**2 - 2)/(Q**18 - 5*Q**16 + 10*Q**14 - 10*Q**12 + 5*Q**10 - Q**8)
+  Ext^5 free generator Q-degrees=[-10, -8]
+  Ext^5: Hilb_Q=(-Q**2 - 1)/(Q**20 - 5*Q**18 + 10*Q**16 - 10*Q**14 + 5*Q**12 - Q**10)
+term (1, 0, 1, 1, 1, 0) total: 7.340579s
+
+term (1, 1, 0, 0, 1, 1): degree=-4, word=(0, 1, 1, 2), rank=16
+  Koszul complex: 2.498071s
+  k tensor Ext generator degrees: 0.323608s
+  Ext^0 free generator Q-degrees=[6, 8]
+  Ext^0: Hilb_Q=(-Q**8 - Q**6)/(Q**10 - 5*Q**8 + 10*Q**6 - 10*Q**4 + 5*Q**2 - 1)
+  Ext^1 free generator Q-degrees=[2, 2, 2, 4, 4, 4, 4, 4, 6, 6]
+  Ext^1: Hilb_Q=(-2*Q**6 - 5*Q**4 - 3*Q**2)/(Q**10 - 5*Q**8 + 10*Q**6 - 10*Q**4 + 5*Q**2 - 1)
+  Ext^2 free generator Q-degrees=[-2, -2, -2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2, 2, 2, 2, 2, 2, 2, 4]
+  Ext^2: Hilb_Q=(-Q**6 - 7*Q**4 - 9*Q**2 - 3)/(Q**12 - 5*Q**10 + 10*Q**8 - 10*Q**6 + 5*Q**4 - Q**2)
+  Ext^3 free generator Q-degrees=[-6, -4, -4, -4, -4, -4, -4, -4, -2, -2, -2, -2, -2, -2, -2, -2, -2, 0, 0, 0]
+  Ext^3: Hilb_Q=(-3*Q**6 - 9*Q**4 - 7*Q**2 - 1)/(Q**16 - 5*Q**14 + 10*Q**12 - 10*Q**10 + 5*Q**8 - Q**6)
+  Ext^4 free generator Q-degrees=[-8, -8, -6, -6, -6, -6, -6, -4, -4, -4]
+  Ext^4: Hilb_Q=(-3*Q**4 - 5*Q**2 - 2)/(Q**18 - 5*Q**16 + 10*Q**14 - 10*Q**12 + 5*Q**10 - Q**8)
+  Ext^5 free generator Q-degrees=[-10, -8]
+  Ext^5: Hilb_Q=(-Q**2 - 1)/(Q**20 - 5*Q**18 + 10*Q**16 - 10*Q**14 + 5*Q**12 - Q**10)
+term (1, 1, 0, 0, 1, 1) total: 2.835037s
+
+term (1, 1, 0, 1, 0, 1): degree=-4, word=(0, 1, 0, 2), rank=16
+  Koszul complex: 6.917496s
+  k tensor Ext generator degrees: 0.507145s
+  Ext^0 free generator Q-degrees=[6, 8]
+  Ext^0: Hilb_Q=(-Q**8 - Q**6)/(Q**10 - 5*Q**8 + 10*Q**6 - 10*Q**4 + 5*Q**2 - 1)
+  Ext^1 free generator Q-degrees=[2, 2, 2, 4, 4, 4, 4, 4, 6, 6]
+  Ext^1: Hilb_Q=(-2*Q**6 - 5*Q**4 - 3*Q**2)/(Q**10 - 5*Q**8 + 10*Q**6 - 10*Q**4 + 5*Q**2 - 1)
+  Ext^2 free generator Q-degrees=[-2, -2, -2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2, 2, 2, 2, 2, 2, 2, 4]
+  Ext^2: Hilb_Q=(-Q**6 - 7*Q**4 - 9*Q**2 - 3)/(Q**12 - 5*Q**10 + 10*Q**8 - 10*Q**6 + 5*Q**4 - Q**2)
+  Ext^3 free generator Q-degrees=[-6, -4, -4, -4, -4, -4, -4, -4, -2, -2, -2, -2, -2, -2, -2, -2, -2, 0, 0, 0]
+  Ext^3: Hilb_Q=(-3*Q**6 - 9*Q**4 - 7*Q**2 - 1)/(Q**16 - 5*Q**14 + 10*Q**12 - 10*Q**10 + 5*Q**8 - Q**6)
+  Ext^4 free generator Q-degrees=[-8, -8, -6, -6, -6, -6, -6, -4, -4, -4]
+  Ext^4: Hilb_Q=(-3*Q**4 - 5*Q**2 - 2)/(Q**18 - 5*Q**16 + 10*Q**14 - 10*Q**12 + 5*Q**10 - Q**8)
+  Ext^5 free generator Q-degrees=[-10, -8]
+  Ext^5: Hilb_Q=(-Q**2 - 1)/(Q**20 - 5*Q**18 + 10*Q**16 - 10*Q**14 + 5*Q**12 - Q**10)
+term (1, 1, 0, 1, 0, 1) total: 7.438069s
+
+term (1, 1, 0, 1, 1, 0): degree=-4, word=(0, 1, 0, 1), rank=16
+  Koszul complex: 6.000381s
+  k tensor Ext generator degrees: 0.506336s
+  Ext^0 free generator Q-degrees=[6, 6, 8]
+  Ext^0: Hilb_Q=(-Q**8 - 2*Q**6)/(Q**10 - 5*Q**8 + 10*Q**6 - 10*Q**4 + 5*Q**2 - 1)
+  Ext^1 free generator Q-degrees=[0, 2, 2, 2, 2, 4, 4, 4, 4, 4, 4, 4, 6, 6, 6]
+  Ext^1: Hilb_Q=(-3*Q**6 - 7*Q**4 - 4*Q**2 - 1)/(Q**10 - 5*Q**8 + 10*Q**6 - 10*Q**4 + 5*Q**2 - 1)
+  Ext^2 free generator Q-degrees=[-4, -2, -2, -2, -2, -2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2, 2, 2, 2, 2, 2, 2, 2, 2, 4, 4, 4]
+  Ext^2: Hilb_Q=(-3*Q**8 - 9*Q**6 - 12*Q**4 - 5*Q**2 - 1)/(Q**14 - 5*Q**12 + 10*Q**10 - 10*Q**8 + 5*Q**6 - Q**4)
+  Ext^3 free generator Q-degrees=[-6, -6, -6, -4, -4, -4, -4, -4, -4, -4, -4, -4, -2, -2, -2, -2, -2, -2, -2, -2, -2, -2, -2, -2, 0, 0, 0, 0, 0, 2]
+  Ext^3: Hilb_Q=(-Q**8 - 5*Q**6 - 12*Q**4 - 9*Q**2 - 3)/(Q**16 - 5*Q**14 + 10*Q**12 - 10*Q**10 + 5*Q**8 - Q**6)
+  Ext^4 free generator Q-degrees=[-8, -8, -8, -6, -6, -6, -6, -6, -6, -6, -4, -4, -4, -4, -2]
+  Ext^4: Hilb_Q=(-Q**6 - 4*Q**4 - 7*Q**2 - 3)/(Q**18 - 5*Q**16 + 10*Q**14 - 10*Q**12 + 5*Q**10 - Q**8)
+  Ext^5 free generator Q-degrees=[-10, -8, -8]
+  Ext^5: Hilb_Q=(-2*Q**2 - 1)/(Q**20 - 5*Q**18 + 10*Q**16 - 10*Q**14 + 5*Q**12 - Q**10)
+term (1, 1, 0, 1, 1, 0) total: 6.525286s
+
+term (1, 1, 1, 0, 0, 1): degree=-4, word=(0, 1, 2, 2), rank=16
+  Koszul complex: 2.329600s
+  k tensor Ext generator degrees: 0.325138s
+  Ext^0 free generator Q-degrees=[6, 8]
+  Ext^0: Hilb_Q=(-Q**8 - Q**6)/(Q**10 - 5*Q**8 + 10*Q**6 - 10*Q**4 + 5*Q**2 - 1)
+  Ext^1 free generator Q-degrees=[2, 2, 2, 4, 4, 4, 4, 4, 6, 6]
+  Ext^1: Hilb_Q=(-2*Q**6 - 5*Q**4 - 3*Q**2)/(Q**10 - 5*Q**8 + 10*Q**6 - 10*Q**4 + 5*Q**2 - 1)
+  Ext^2 free generator Q-degrees=[-2, -2, -2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2, 2, 2, 2, 2, 2, 2, 4]
+  Ext^2: Hilb_Q=(-Q**6 - 7*Q**4 - 9*Q**2 - 3)/(Q**12 - 5*Q**10 + 10*Q**8 - 10*Q**6 + 5*Q**4 - Q**2)
+  Ext^3 free generator Q-degrees=[-6, -4, -4, -4, -4, -4, -4, -4, -2, -2, -2, -2, -2, -2, -2, -2, -2, 0, 0, 0]
+  Ext^3: Hilb_Q=(-3*Q**6 - 9*Q**4 - 7*Q**2 - 1)/(Q**16 - 5*Q**14 + 10*Q**12 - 10*Q**10 + 5*Q**8 - Q**6)
+  Ext^4 free generator Q-degrees=[-8, -8, -6, -6, -6, -6, -6, -4, -4, -4]
+  Ext^4: Hilb_Q=(-3*Q**4 - 5*Q**2 - 2)/(Q**18 - 5*Q**16 + 10*Q**14 - 10*Q**12 + 5*Q**10 - Q**8)
+  Ext^5 free generator Q-degrees=[-10, -8]
+  Ext^5: Hilb_Q=(-Q**2 - 1)/(Q**20 - 5*Q**18 + 10*Q**16 - 10*Q**14 + 5*Q**12 - Q**10)
+term (1, 1, 1, 0, 0, 1) total: 2.670397s
+
+term (1, 1, 1, 0, 1, 0): degree=-4, word=(0, 1, 2, 1), rank=16
+  Koszul complex: 5.849539s
+  k tensor Ext generator degrees: 0.462514s
+  Ext^0 free generator Q-degrees=[6, 8]
+  Ext^0: Hilb_Q=(-Q**8 - Q**6)/(Q**10 - 5*Q**8 + 10*Q**6 - 10*Q**4 + 5*Q**2 - 1)
+  Ext^1 free generator Q-degrees=[2, 2, 2, 4, 4, 4, 4, 4, 6, 6]
+  Ext^1: Hilb_Q=(-2*Q**6 - 5*Q**4 - 3*Q**2)/(Q**10 - 5*Q**8 + 10*Q**6 - 10*Q**4 + 5*Q**2 - 1)
+  Ext^2 free generator Q-degrees=[-2, -2, -2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2, 2, 2, 2, 2, 2, 2, 4]
+  Ext^2: Hilb_Q=(-Q**6 - 7*Q**4 - 9*Q**2 - 3)/(Q**12 - 5*Q**10 + 10*Q**8 - 10*Q**6 + 5*Q**4 - Q**2)
+  Ext^3 free generator Q-degrees=[-6, -4, -4, -4, -4, -4, -4, -4, -2, -2, -2, -2, -2, -2, -2, -2, -2, 0, 0, 0]
+  Ext^3: Hilb_Q=(-3*Q**6 - 9*Q**4 - 7*Q**2 - 1)/(Q**16 - 5*Q**14 + 10*Q**12 - 10*Q**10 + 5*Q**8 - Q**6)
+  Ext^4 free generator Q-degrees=[-8, -8, -6, -6, -6, -6, -6, -4, -4, -4]
+  Ext^4: Hilb_Q=(-3*Q**4 - 5*Q**2 - 2)/(Q**18 - 5*Q**16 + 10*Q**14 - 10*Q**12 + 5*Q**10 - Q**8)
+  Ext^5 free generator Q-degrees=[-10, -8]
+  Ext^5: Hilb_Q=(-Q**2 - 1)/(Q**20 - 5*Q**18 + 10*Q**16 - 10*Q**14 + 5*Q**12 - Q**10)
+term (1, 1, 1, 0, 1, 0) total: 6.326101s
+
+term (1, 1, 1, 1, 0, 0): degree=-4, word=(0, 1, 2, 0), rank=16
+  Koszul complex: 8.092890s
+  k tensor Ext generator degrees: 0.721187s
+  Ext^0 free generator Q-degrees=[6, 8]
+  Ext^0: Hilb_Q=(-Q**8 - Q**6)/(Q**10 - 5*Q**8 + 10*Q**6 - 10*Q**4 + 5*Q**2 - 1)
+  Ext^1 free generator Q-degrees=[2, 2, 2, 4, 4, 4, 4, 4, 6, 6]
+  Ext^1: Hilb_Q=(-2*Q**6 - 5*Q**4 - 3*Q**2)/(Q**10 - 5*Q**8 + 10*Q**6 - 10*Q**4 + 5*Q**2 - 1)
+  Ext^2 free generator Q-degrees=[-2, -2, -2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2, 2, 2, 2, 2, 2, 2, 4]
+  Ext^2: Hilb_Q=(-Q**6 - 7*Q**4 - 9*Q**2 - 3)/(Q**12 - 5*Q**10 + 10*Q**8 - 10*Q**6 + 5*Q**4 - Q**2)
+  Ext^3 free generator Q-degrees=[-6, -4, -4, -4, -4, -4, -4, -4, -2, -2, -2, -2, -2, -2, -2, -2, -2, 0, 0, 0]
+  Ext^3: Hilb_Q=(-3*Q**6 - 9*Q**4 - 7*Q**2 - 1)/(Q**16 - 5*Q**14 + 10*Q**12 - 10*Q**10 + 5*Q**8 - Q**6)
+  Ext^4 free generator Q-degrees=[-8, -8, -6, -6, -6, -6, -6, -4, -4, -4]
+  Ext^4: Hilb_Q=(-3*Q**4 - 5*Q**2 - 2)/(Q**18 - 5*Q**16 + 10*Q**14 - 10*Q**12 + 5*Q**10 - Q**8)
+  Ext^5 free generator Q-degrees=[-10, -8]
+  Ext^5: Hilb_Q=(-Q**2 - 1)/(Q**20 - 5*Q**18 + 10*Q**16 - 10*Q**14 + 5*Q**12 - Q**10)
+term (1, 1, 1, 1, 0, 0) total: 8.832157s
+
+term (0, 0, 0, 1, 1, 1): degree=-3, word=(0, 1, 2), rank=8
+  Koszul complex: 1.148344s
+  k tensor Ext generator degrees: 0.118955s
+  Ext^0 free generator Q-degrees=[6]
+  Ext^0: Hilb_Q=-Q**6/(Q**10 - 5*Q**8 + 10*Q**6 - 10*Q**4 + 5*Q**2 - 1)
+  Ext^1 free generator Q-degrees=[2, 2, 2, 4, 4]
+  Ext^1: Hilb_Q=(-2*Q**4 - 3*Q**2)/(Q**10 - 5*Q**8 + 10*Q**6 - 10*Q**4 + 5*Q**2 - 1)
+  Ext^2 free generator Q-degrees=[-2, -2, -2, 0, 0, 0, 0, 0, 0, 2]
+  Ext^2: Hilb_Q=(-Q**4 - 6*Q**2 - 3)/(Q**12 - 5*Q**10 + 10*Q**8 - 10*Q**6 + 5*Q**4 - Q**2)
+  Ext^3 free generator Q-degrees=[-6, -4, -4, -4, -4, -4, -4, -2, -2, -2]
+  Ext^3: Hilb_Q=(-3*Q**4 - 6*Q**2 - 1)/(Q**16 - 5*Q**14 + 10*Q**12 - 10*Q**10 + 5*Q**8 - Q**6)
+  Ext^4 free generator Q-degrees=[-8, -8, -6, -6, -6]
+  Ext^4: Hilb_Q=(-3*Q**2 - 2)/(Q**18 - 5*Q**16 + 10*Q**14 - 10*Q**12 + 5*Q**10 - Q**8)
+  Ext^5 free generator Q-degrees=[-10]
+  Ext^5: Hilb_Q=-1/(Q**20 - 5*Q**18 + 10*Q**16 - 10*Q**14 + 5*Q**12 - Q**10)
+term (0, 0, 0, 1, 1, 1) total: 1.280948s
+
+term (0, 0, 1, 0, 1, 1): degree=-3, word=(2, 1, 2), rank=8
+  Koszul complex: 0.591163s
+  k tensor Ext generator degrees: 0.109408s
+  Ext^0 free generator Q-degrees=[4, 6]
+  Ext^0: Hilb_Q=(-Q**6 - Q**4)/(Q**10 - 5*Q**8 + 10*Q**6 - 10*Q**4 + 5*Q**2 - 1)
+  Ext^1 free generator Q-degrees=[0, 0, 2, 2, 2, 2, 2, 4, 4, 4]
+  Ext^1: Hilb_Q=(-3*Q**4 - 5*Q**2 - 2)/(Q**10 - 5*Q**8 + 10*Q**6 - 10*Q**4 + 5*Q**2 - 1)
+  Ext^2 free generator Q-degrees=[-4, -2, -2, -2, -2, -2, -2, -2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2, 2, 2]
+  Ext^2: Hilb_Q=(-3*Q**6 - 9*Q**4 - 7*Q**2 - 1)/(Q**14 - 5*Q**12 + 10*Q**10 - 10*Q**8 + 5*Q**6 - Q**4)
+  Ext^3 free generator Q-degrees=[-6, -6, -6, -4, -4, -4, -4, -4, -4, -4, -4, -4, -2, -2, -2, -2, -2, -2, -2, 0]
+  Ext^3: Hilb_Q=(-Q**6 - 7*Q**4 - 9*Q**2 - 3)/(Q**16 - 5*Q**14 + 10*Q**12 - 10*Q**10 + 5*Q**8 - Q**6)
+  Ext^4 free generator Q-degrees=[-8, -8, -8, -6, -6, -6, -6, -6, -4, -4]
+  Ext^4: Hilb_Q=(-2*Q**4 - 5*Q**2 - 3)/(Q**18 - 5*Q**16 + 10*Q**14 - 10*Q**12 + 5*Q**10 - Q**8)
+  Ext^5 free generator Q-degrees=[-10, -8]
+  Ext^5: Hilb_Q=(-Q**2 - 1)/(Q**20 - 5*Q**18 + 10*Q**16 - 10*Q**14 + 5*Q**12 - Q**10)
+term (0, 0, 1, 0, 1, 1) total: 0.717227s
+
+term (0, 0, 1, 1, 0, 1): degree=-3, word=(2, 0, 2), rank=8
+  Koszul complex: 0.927138s
+  k tensor Ext generator degrees: 0.120653s
+  Ext^0 free generator Q-degrees=[4, 6]
+  Ext^0: Hilb_Q=(-Q**6 - Q**4)/(Q**10 - 5*Q**8 + 10*Q**6 - 10*Q**4 + 5*Q**2 - 1)
+  Ext^1 free generator Q-degrees=[0, 0, 2, 2, 2, 2, 2, 4, 4, 4]
+  Ext^1: Hilb_Q=(-3*Q**4 - 5*Q**2 - 2)/(Q**10 - 5*Q**8 + 10*Q**6 - 10*Q**4 + 5*Q**2 - 1)
+  Ext^2 free generator Q-degrees=[-4, -2, -2, -2, -2, -2, -2, -2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2, 2, 2]
+  Ext^2: Hilb_Q=(-3*Q**6 - 9*Q**4 - 7*Q**2 - 1)/(Q**14 - 5*Q**12 + 10*Q**10 - 10*Q**8 + 5*Q**6 - Q**4)
+  Ext^3 free generator Q-degrees=[-6, -6, -6, -4, -4, -4, -4, -4, -4, -4, -4, -4, -2, -2, -2, -2, -2, -2, -2, 0]
+  Ext^3: Hilb_Q=(-Q**6 - 7*Q**4 - 9*Q**2 - 3)/(Q**16 - 5*Q**14 + 10*Q**12 - 10*Q**10 + 5*Q**8 - Q**6)
+  Ext^4 free generator Q-degrees=[-8, -8, -8, -6, -6, -6, -6, -6, -4, -4]
+  Ext^4: Hilb_Q=(-2*Q**4 - 5*Q**2 - 3)/(Q**18 - 5*Q**16 + 10*Q**14 - 10*Q**12 + 5*Q**10 - Q**8)
+  Ext^5 free generator Q-degrees=[-10, -8]
+  Ext^5: Hilb_Q=(-Q**2 - 1)/(Q**20 - 5*Q**18 + 10*Q**16 - 10*Q**14 + 5*Q**12 - Q**10)
+term (0, 0, 1, 1, 0, 1) total: 1.061933s
+
+term (0, 0, 1, 1, 1, 0): degree=-3, word=(2, 0, 1), rank=8
+  Koszul complex: 0.855053s
+  k tensor Ext generator degrees: 0.116250s
+  Ext^0 free generator Q-degrees=[6]
+  Ext^0: Hilb_Q=-Q**6/(Q**10 - 5*Q**8 + 10*Q**6 - 10*Q**4 + 5*Q**2 - 1)
+  Ext^1 free generator Q-degrees=[2, 2, 2, 4, 4]
+  Ext^1: Hilb_Q=(-2*Q**4 - 3*Q**2)/(Q**10 - 5*Q**8 + 10*Q**6 - 10*Q**4 + 5*Q**2 - 1)
+  Ext^2 free generator Q-degrees=[-2, -2, -2, 0, 0, 0, 0, 0, 0, 2]
+  Ext^2: Hilb_Q=(-Q**4 - 6*Q**2 - 3)/(Q**12 - 5*Q**10 + 10*Q**8 - 10*Q**6 + 5*Q**4 - Q**2)
+  Ext^3 free generator Q-degrees=[-6, -4, -4, -4, -4, -4, -4, -2, -2, -2]
+  Ext^3: Hilb_Q=(-3*Q**4 - 6*Q**2 - 1)/(Q**16 - 5*Q**14 + 10*Q**12 - 10*Q**10 + 5*Q**8 - Q**6)
+  Ext^4 free generator Q-degrees=[-8, -8, -6, -6, -6]
+  Ext^4: Hilb_Q=(-3*Q**2 - 2)/(Q**18 - 5*Q**16 + 10*Q**14 - 10*Q**12 + 5*Q**10 - Q**8)
+  Ext^5 free generator Q-degrees=[-10]
+  Ext^5: Hilb_Q=-1/(Q**20 - 5*Q**18 + 10*Q**16 - 10*Q**14 + 5*Q**12 - Q**10)
+term (0, 0, 1, 1, 1, 0) total: 0.982181s
+
+term (0, 1, 0, 0, 1, 1): degree=-3, word=(1, 1, 2), rank=8
+  Koszul complex: 0.264707s
+  k tensor Ext generator degrees: 0.081531s
+  Ext^0 free generator Q-degrees=[4, 6]
+  Ext^0: Hilb_Q=(-Q**6 - Q**4)/(Q**10 - 5*Q**8 + 10*Q**6 - 10*Q**4 + 5*Q**2 - 1)
+  Ext^1 free generator Q-degrees=[0, 0, 2, 2, 2, 2, 2, 4, 4, 4]
+  Ext^1: Hilb_Q=(-3*Q**4 - 5*Q**2 - 2)/(Q**10 - 5*Q**8 + 10*Q**6 - 10*Q**4 + 5*Q**2 - 1)
+  Ext^2 free generator Q-degrees=[-4, -2, -2, -2, -2, -2, -2, -2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2, 2, 2]
+  Ext^2: Hilb_Q=(-3*Q**6 - 9*Q**4 - 7*Q**2 - 1)/(Q**14 - 5*Q**12 + 10*Q**10 - 10*Q**8 + 5*Q**6 - Q**4)
+  Ext^3 free generator Q-degrees=[-6, -6, -6, -4, -4, -4, -4, -4, -4, -4, -4, -4, -2, -2, -2, -2, -2, -2, -2, 0]
+  Ext^3: Hilb_Q=(-Q**6 - 7*Q**4 - 9*Q**2 - 3)/(Q**16 - 5*Q**14 + 10*Q**12 - 10*Q**10 + 5*Q**8 - Q**6)
+  Ext^4 free generator Q-degrees=[-8, -8, -8, -6, -6, -6, -6, -6, -4, -4]
+  Ext^4: Hilb_Q=(-2*Q**4 - 5*Q**2 - 3)/(Q**18 - 5*Q**16 + 10*Q**14 - 10*Q**12 + 5*Q**10 - Q**8)
+  Ext^5 free generator Q-degrees=[-10, -8]
+  Ext^5: Hilb_Q=(-Q**2 - 1)/(Q**20 - 5*Q**18 + 10*Q**16 - 10*Q**14 + 5*Q**12 - Q**10)
+term (0, 1, 0, 0, 1, 1) total: 0.359885s
+
+term (0, 1, 0, 1, 0, 1): degree=-3, word=(1, 0, 2), rank=8
+  Koszul complex: 0.897478s
+  k tensor Ext generator degrees: 0.119986s
+  Ext^0 free generator Q-degrees=[6]
+  Ext^0: Hilb_Q=-Q**6/(Q**10 - 5*Q**8 + 10*Q**6 - 10*Q**4 + 5*Q**2 - 1)
+  Ext^1 free generator Q-degrees=[2, 2, 2, 4, 4]
+  Ext^1: Hilb_Q=(-2*Q**4 - 3*Q**2)/(Q**10 - 5*Q**8 + 10*Q**6 - 10*Q**4 + 5*Q**2 - 1)
+  Ext^2 free generator Q-degrees=[-2, -2, -2, 0, 0, 0, 0, 0, 0, 2]
+  Ext^2: Hilb_Q=(-Q**4 - 6*Q**2 - 3)/(Q**12 - 5*Q**10 + 10*Q**8 - 10*Q**6 + 5*Q**4 - Q**2)
+  Ext^3 free generator Q-degrees=[-6, -4, -4, -4, -4, -4, -4, -2, -2, -2]
+  Ext^3: Hilb_Q=(-3*Q**4 - 6*Q**2 - 1)/(Q**16 - 5*Q**14 + 10*Q**12 - 10*Q**10 + 5*Q**8 - Q**6)
+  Ext^4 free generator Q-degrees=[-8, -8, -6, -6, -6]
+  Ext^4: Hilb_Q=(-3*Q**2 - 2)/(Q**18 - 5*Q**16 + 10*Q**14 - 10*Q**12 + 5*Q**10 - Q**8)
+  Ext^5 free generator Q-degrees=[-10]
+  Ext^5: Hilb_Q=-1/(Q**20 - 5*Q**18 + 10*Q**16 - 10*Q**14 + 5*Q**12 - Q**10)
+term (0, 1, 0, 1, 0, 1) total: 1.029044s
+
+term (0, 1, 0, 1, 1, 0): degree=-3, word=(1, 0, 1), rank=8
+  Koszul complex: 0.861988s
+  k tensor Ext generator degrees: 0.124617s
+  Ext^0 free generator Q-degrees=[4, 6]
+  Ext^0: Hilb_Q=(-Q**6 - Q**4)/(Q**10 - 5*Q**8 + 10*Q**6 - 10*Q**4 + 5*Q**2 - 1)
+  Ext^1 free generator Q-degrees=[0, 0, 2, 2, 2, 2, 2, 4, 4, 4]
+  Ext^1: Hilb_Q=(-3*Q**4 - 5*Q**2 - 2)/(Q**10 - 5*Q**8 + 10*Q**6 - 10*Q**4 + 5*Q**2 - 1)
+  Ext^2 free generator Q-degrees=[-4, -2, -2, -2, -2, -2, -2, -2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2, 2, 2]
+  Ext^2: Hilb_Q=(-3*Q**6 - 9*Q**4 - 7*Q**2 - 1)/(Q**14 - 5*Q**12 + 10*Q**10 - 10*Q**8 + 5*Q**6 - Q**4)
+  Ext^3 free generator Q-degrees=[-6, -6, -6, -4, -4, -4, -4, -4, -4, -4, -4, -4, -2, -2, -2, -2, -2, -2, -2, 0]
+  Ext^3: Hilb_Q=(-Q**6 - 7*Q**4 - 9*Q**2 - 3)/(Q**16 - 5*Q**14 + 10*Q**12 - 10*Q**10 + 5*Q**8 - Q**6)
+  Ext^4 free generator Q-degrees=[-8, -8, -8, -6, -6, -6, -6, -6, -4, -4]
+  Ext^4: Hilb_Q=(-2*Q**4 - 5*Q**2 - 3)/(Q**18 - 5*Q**16 + 10*Q**14 - 10*Q**12 + 5*Q**10 - Q**8)
+  Ext^5 free generator Q-degrees=[-10, -8]
+  Ext^5: Hilb_Q=(-Q**2 - 1)/(Q**20 - 5*Q**18 + 10*Q**16 - 10*Q**14 + 5*Q**12 - Q**10)
+term (0, 1, 0, 1, 1, 0) total: 1.001517s
+
+term (0, 1, 1, 0, 0, 1): degree=-3, word=(1, 2, 2), rank=8
+  Koszul complex: 0.263100s
+  k tensor Ext generator degrees: 0.083028s
+  Ext^0 free generator Q-degrees=[4, 6]
+  Ext^0: Hilb_Q=(-Q**6 - Q**4)/(Q**10 - 5*Q**8 + 10*Q**6 - 10*Q**4 + 5*Q**2 - 1)
+  Ext^1 free generator Q-degrees=[0, 0, 2, 2, 2, 2, 2, 4, 4, 4]
+  Ext^1: Hilb_Q=(-3*Q**4 - 5*Q**2 - 2)/(Q**10 - 5*Q**8 + 10*Q**6 - 10*Q**4 + 5*Q**2 - 1)
+  Ext^2 free generator Q-degrees=[-4, -2, -2, -2, -2, -2, -2, -2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2, 2, 2]
+  Ext^2: Hilb_Q=(-3*Q**6 - 9*Q**4 - 7*Q**2 - 1)/(Q**14 - 5*Q**12 + 10*Q**10 - 10*Q**8 + 5*Q**6 - Q**4)
+  Ext^3 free generator Q-degrees=[-6, -6, -6, -4, -4, -4, -4, -4, -4, -4, -4, -4, -2, -2, -2, -2, -2, -2, -2, 0]
+  Ext^3: Hilb_Q=(-Q**6 - 7*Q**4 - 9*Q**2 - 3)/(Q**16 - 5*Q**14 + 10*Q**12 - 10*Q**10 + 5*Q**8 - Q**6)
+  Ext^4 free generator Q-degrees=[-8, -8, -8, -6, -6, -6, -6, -6, -4, -4]
+  Ext^4: Hilb_Q=(-2*Q**4 - 5*Q**2 - 3)/(Q**18 - 5*Q**16 + 10*Q**14 - 10*Q**12 + 5*Q**10 - Q**8)
+  Ext^5 free generator Q-degrees=[-10, -8]
+  Ext^5: Hilb_Q=(-Q**2 - 1)/(Q**20 - 5*Q**18 + 10*Q**16 - 10*Q**14 + 5*Q**12 - Q**10)
+term (0, 1, 1, 0, 0, 1) total: 0.360775s
+
+term (0, 1, 1, 0, 1, 0): degree=-3, word=(1, 2, 1), rank=8
+  Koszul complex: 0.561927s
+  k tensor Ext generator degrees: 0.098520s
+  Ext^0 free generator Q-degrees=[4, 6]
+  Ext^0: Hilb_Q=(-Q**6 - Q**4)/(Q**10 - 5*Q**8 + 10*Q**6 - 10*Q**4 + 5*Q**2 - 1)
+  Ext^1 free generator Q-degrees=[0, 0, 2, 2, 2, 2, 2, 4, 4, 4]
+  Ext^1: Hilb_Q=(-3*Q**4 - 5*Q**2 - 2)/(Q**10 - 5*Q**8 + 10*Q**6 - 10*Q**4 + 5*Q**2 - 1)
+  Ext^2 free generator Q-degrees=[-4, -2, -2, -2, -2, -2, -2, -2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2, 2, 2]
+  Ext^2: Hilb_Q=(-3*Q**6 - 9*Q**4 - 7*Q**2 - 1)/(Q**14 - 5*Q**12 + 10*Q**10 - 10*Q**8 + 5*Q**6 - Q**4)
+  Ext^3 free generator Q-degrees=[-6, -6, -6, -4, -4, -4, -4, -4, -4, -4, -4, -4, -2, -2, -2, -2, -2, -2, -2, 0]
+  Ext^3: Hilb_Q=(-Q**6 - 7*Q**4 - 9*Q**2 - 3)/(Q**16 - 5*Q**14 + 10*Q**12 - 10*Q**10 + 5*Q**8 - Q**6)
+  Ext^4 free generator Q-degrees=[-8, -8, -8, -6, -6, -6, -6, -6, -4, -4]
+  Ext^4: Hilb_Q=(-2*Q**4 - 5*Q**2 - 3)/(Q**18 - 5*Q**16 + 10*Q**14 - 10*Q**12 + 5*Q**10 - Q**8)
+  Ext^5 free generator Q-degrees=[-10, -8]
+  Ext^5: Hilb_Q=(-Q**2 - 1)/(Q**20 - 5*Q**18 + 10*Q**16 - 10*Q**14 + 5*Q**12 - Q**10)
+term (0, 1, 1, 0, 1, 0) total: 0.674135s
+
+term (0, 1, 1, 1, 0, 0): degree=-3, word=(1, 2, 0), rank=8
+  Koszul complex: 0.953881s
+  k tensor Ext generator degrees: 0.128807s
+  Ext^0 free generator Q-degrees=[6]
+  Ext^0: Hilb_Q=-Q**6/(Q**10 - 5*Q**8 + 10*Q**6 - 10*Q**4 + 5*Q**2 - 1)
+  Ext^1 free generator Q-degrees=[2, 2, 2, 4, 4]
+  Ext^1: Hilb_Q=(-2*Q**4 - 3*Q**2)/(Q**10 - 5*Q**8 + 10*Q**6 - 10*Q**4 + 5*Q**2 - 1)
+  Ext^2 free generator Q-degrees=[-2, -2, -2, 0, 0, 0, 0, 0, 0, 2]
+  Ext^2: Hilb_Q=(-Q**4 - 6*Q**2 - 3)/(Q**12 - 5*Q**10 + 10*Q**8 - 10*Q**6 + 5*Q**4 - Q**2)
+  Ext^3 free generator Q-degrees=[-6, -4, -4, -4, -4, -4, -4, -2, -2, -2]
+  Ext^3: Hilb_Q=(-3*Q**4 - 6*Q**2 - 1)/(Q**16 - 5*Q**14 + 10*Q**12 - 10*Q**10 + 5*Q**8 - Q**6)
+  Ext^4 free generator Q-degrees=[-8, -8, -6, -6, -6]
+  Ext^4: Hilb_Q=(-3*Q**2 - 2)/(Q**18 - 5*Q**16 + 10*Q**14 - 10*Q**12 + 5*Q**10 - Q**8)
+  Ext^5 free generator Q-degrees=[-10]
+  Ext^5: Hilb_Q=-1/(Q**20 - 5*Q**18 + 10*Q**16 - 10*Q**14 + 5*Q**12 - Q**10)
+term (0, 1, 1, 1, 0, 0) total: 1.094179s
+
+term (1, 0, 0, 0, 1, 1): degree=-3, word=(0, 1, 2), rank=8
+  Koszul complex: 0.979792s
+  k tensor Ext generator degrees: 0.123938s
+  Ext^0 free generator Q-degrees=[6]
+  Ext^0: Hilb_Q=-Q**6/(Q**10 - 5*Q**8 + 10*Q**6 - 10*Q**4 + 5*Q**2 - 1)
+  Ext^1 free generator Q-degrees=[2, 2, 2, 4, 4]
+  Ext^1: Hilb_Q=(-2*Q**4 - 3*Q**2)/(Q**10 - 5*Q**8 + 10*Q**6 - 10*Q**4 + 5*Q**2 - 1)
+  Ext^2 free generator Q-degrees=[-2, -2, -2, 0, 0, 0, 0, 0, 0, 2]
+  Ext^2: Hilb_Q=(-Q**4 - 6*Q**2 - 3)/(Q**12 - 5*Q**10 + 10*Q**8 - 10*Q**6 + 5*Q**4 - Q**2)
+  Ext^3 free generator Q-degrees=[-6, -4, -4, -4, -4, -4, -4, -2, -2, -2]
+  Ext^3: Hilb_Q=(-3*Q**4 - 6*Q**2 - 1)/(Q**16 - 5*Q**14 + 10*Q**12 - 10*Q**10 + 5*Q**8 - Q**6)
+  Ext^4 free generator Q-degrees=[-8, -8, -6, -6, -6]
+  Ext^4: Hilb_Q=(-3*Q**2 - 2)/(Q**18 - 5*Q**16 + 10*Q**14 - 10*Q**12 + 5*Q**10 - Q**8)
+  Ext^5 free generator Q-degrees=[-10]
+  Ext^5: Hilb_Q=-1/(Q**20 - 5*Q**18 + 10*Q**16 - 10*Q**14 + 5*Q**12 - Q**10)
+term (1, 0, 0, 0, 1, 1) total: 1.115730s
+
+term (1, 0, 0, 1, 0, 1): degree=-3, word=(0, 0, 2), rank=8
+  Koszul complex: 0.426179s
+  k tensor Ext generator degrees: 0.094147s
+  Ext^0 free generator Q-degrees=[4, 6]
+  Ext^0: Hilb_Q=(-Q**6 - Q**4)/(Q**10 - 5*Q**8 + 10*Q**6 - 10*Q**4 + 5*Q**2 - 1)
+  Ext^1 free generator Q-degrees=[0, 0, 2, 2, 2, 2, 2, 4, 4, 4]
+  Ext^1: Hilb_Q=(-3*Q**4 - 5*Q**2 - 2)/(Q**10 - 5*Q**8 + 10*Q**6 - 10*Q**4 + 5*Q**2 - 1)
+  Ext^2 free generator Q-degrees=[-4, -2, -2, -2, -2, -2, -2, -2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2, 2, 2]
+  Ext^2: Hilb_Q=(-3*Q**6 - 9*Q**4 - 7*Q**2 - 1)/(Q**14 - 5*Q**12 + 10*Q**10 - 10*Q**8 + 5*Q**6 - Q**4)
+  Ext^3 free generator Q-degrees=[-6, -6, -6, -4, -4, -4, -4, -4, -4, -4, -4, -4, -2, -2, -2, -2, -2, -2, -2, 0]
+  Ext^3: Hilb_Q=(-Q**6 - 7*Q**4 - 9*Q**2 - 3)/(Q**16 - 5*Q**14 + 10*Q**12 - 10*Q**10 + 5*Q**8 - Q**6)
+  Ext^4 free generator Q-degrees=[-8, -8, -8, -6, -6, -6, -6, -6, -4, -4]
+  Ext^4: Hilb_Q=(-2*Q**4 - 5*Q**2 - 3)/(Q**18 - 5*Q**16 + 10*Q**14 - 10*Q**12 + 5*Q**10 - Q**8)
+  Ext^5 free generator Q-degrees=[-10, -8]
+  Ext^5: Hilb_Q=(-Q**2 - 1)/(Q**20 - 5*Q**18 + 10*Q**16 - 10*Q**14 + 5*Q**12 - Q**10)
+term (1, 0, 0, 1, 0, 1) total: 0.535010s
+
+term (1, 0, 0, 1, 1, 0): degree=-3, word=(0, 0, 1), rank=8
+  Koszul complex: 0.376544s
+  k tensor Ext generator degrees: 0.091859s
+  Ext^0 free generator Q-degrees=[4, 6]
+  Ext^0: Hilb_Q=(-Q**6 - Q**4)/(Q**10 - 5*Q**8 + 10*Q**6 - 10*Q**4 + 5*Q**2 - 1)
+  Ext^1 free generator Q-degrees=[0, 0, 2, 2, 2, 2, 2, 4, 4, 4]
+  Ext^1: Hilb_Q=(-3*Q**4 - 5*Q**2 - 2)/(Q**10 - 5*Q**8 + 10*Q**6 - 10*Q**4 + 5*Q**2 - 1)
+  Ext^2 free generator Q-degrees=[-4, -2, -2, -2, -2, -2, -2, -2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2, 2, 2]
+  Ext^2: Hilb_Q=(-3*Q**6 - 9*Q**4 - 7*Q**2 - 1)/(Q**14 - 5*Q**12 + 10*Q**10 - 10*Q**8 + 5*Q**6 - Q**4)
+  Ext^3 free generator Q-degrees=[-6, -6, -6, -4, -4, -4, -4, -4, -4, -4, -4, -4, -2, -2, -2, -2, -2, -2, -2, 0]
+  Ext^3: Hilb_Q=(-Q**6 - 7*Q**4 - 9*Q**2 - 3)/(Q**16 - 5*Q**14 + 10*Q**12 - 10*Q**10 + 5*Q**8 - Q**6)
+  Ext^4 free generator Q-degrees=[-8, -8, -8, -6, -6, -6, -6, -6, -4, -4]
+  Ext^4: Hilb_Q=(-2*Q**4 - 5*Q**2 - 3)/(Q**18 - 5*Q**16 + 10*Q**14 - 10*Q**12 + 5*Q**10 - Q**8)
+  Ext^5 free generator Q-degrees=[-10, -8]
+  Ext^5: Hilb_Q=(-Q**2 - 1)/(Q**20 - 5*Q**18 + 10*Q**16 - 10*Q**14 + 5*Q**12 - Q**10)
+term (1, 0, 0, 1, 1, 0) total: 0.482770s
+
+term (1, 0, 1, 0, 0, 1): degree=-3, word=(0, 2, 2), rank=8
+  Koszul complex: 0.405621s
+  k tensor Ext generator degrees: 0.089103s
+  Ext^0 free generator Q-degrees=[4, 6]
+  Ext^0: Hilb_Q=(-Q**6 - Q**4)/(Q**10 - 5*Q**8 + 10*Q**6 - 10*Q**4 + 5*Q**2 - 1)
+  Ext^1 free generator Q-degrees=[0, 0, 2, 2, 2, 2, 2, 4, 4, 4]
+  Ext^1: Hilb_Q=(-3*Q**4 - 5*Q**2 - 2)/(Q**10 - 5*Q**8 + 10*Q**6 - 10*Q**4 + 5*Q**2 - 1)
+  Ext^2 free generator Q-degrees=[-4, -2, -2, -2, -2, -2, -2, -2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2, 2, 2]
+  Ext^2: Hilb_Q=(-3*Q**6 - 9*Q**4 - 7*Q**2 - 1)/(Q**14 - 5*Q**12 + 10*Q**10 - 10*Q**8 + 5*Q**6 - Q**4)
+  Ext^3 free generator Q-degrees=[-6, -6, -6, -4, -4, -4, -4, -4, -4, -4, -4, -4, -2, -2, -2, -2, -2, -2, -2, 0]
+  Ext^3: Hilb_Q=(-Q**6 - 7*Q**4 - 9*Q**2 - 3)/(Q**16 - 5*Q**14 + 10*Q**12 - 10*Q**10 + 5*Q**8 - Q**6)
+  Ext^4 free generator Q-degrees=[-8, -8, -8, -6, -6, -6, -6, -6, -4, -4]
+  Ext^4: Hilb_Q=(-2*Q**4 - 5*Q**2 - 3)/(Q**18 - 5*Q**16 + 10*Q**14 - 10*Q**12 + 5*Q**10 - Q**8)
+  Ext^5 free generator Q-degrees=[-10, -8]
+  Ext^5: Hilb_Q=(-Q**2 - 1)/(Q**20 - 5*Q**18 + 10*Q**16 - 10*Q**14 + 5*Q**12 - Q**10)
+term (1, 0, 1, 0, 0, 1) total: 0.508348s
+
+term (1, 0, 1, 0, 1, 0): degree=-3, word=(0, 2, 1), rank=8
+  Koszul complex: 0.923536s
+  k tensor Ext generator degrees: 0.116450s
+  Ext^0 free generator Q-degrees=[6]
+  Ext^0: Hilb_Q=-Q**6/(Q**10 - 5*Q**8 + 10*Q**6 - 10*Q**4 + 5*Q**2 - 1)
+  Ext^1 free generator Q-degrees=[2, 2, 2, 4, 4]
+  Ext^1: Hilb_Q=(-2*Q**4 - 3*Q**2)/(Q**10 - 5*Q**8 + 10*Q**6 - 10*Q**4 + 5*Q**2 - 1)
+  Ext^2 free generator Q-degrees=[-2, -2, -2, 0, 0, 0, 0, 0, 0, 2]
+  Ext^2: Hilb_Q=(-Q**4 - 6*Q**2 - 3)/(Q**12 - 5*Q**10 + 10*Q**8 - 10*Q**6 + 5*Q**4 - Q**2)
+  Ext^3 free generator Q-degrees=[-6, -4, -4, -4, -4, -4, -4, -2, -2, -2]
+  Ext^3: Hilb_Q=(-3*Q**4 - 6*Q**2 - 1)/(Q**16 - 5*Q**14 + 10*Q**12 - 10*Q**10 + 5*Q**8 - Q**6)
+  Ext^4 free generator Q-degrees=[-8, -8, -6, -6, -6]
+  Ext^4: Hilb_Q=(-3*Q**2 - 2)/(Q**18 - 5*Q**16 + 10*Q**14 - 10*Q**12 + 5*Q**10 - Q**8)
+  Ext^5 free generator Q-degrees=[-10]
+  Ext^5: Hilb_Q=-1/(Q**20 - 5*Q**18 + 10*Q**16 - 10*Q**14 + 5*Q**12 - Q**10)
+term (1, 0, 1, 0, 1, 0) total: 1.051091s
+
+term (1, 0, 1, 1, 0, 0): degree=-3, word=(0, 2, 0), rank=8
+  Koszul complex: 1.315997s
+  k tensor Ext generator degrees: 0.138005s
+  Ext^0 free generator Q-degrees=[4, 6]
+  Ext^0: Hilb_Q=(-Q**6 - Q**4)/(Q**10 - 5*Q**8 + 10*Q**6 - 10*Q**4 + 5*Q**2 - 1)
+  Ext^1 free generator Q-degrees=[0, 0, 2, 2, 2, 2, 2, 4, 4, 4]
+  Ext^1: Hilb_Q=(-3*Q**4 - 5*Q**2 - 2)/(Q**10 - 5*Q**8 + 10*Q**6 - 10*Q**4 + 5*Q**2 - 1)
+  Ext^2 free generator Q-degrees=[-4, -2, -2, -2, -2, -2, -2, -2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2, 2, 2]
+  Ext^2: Hilb_Q=(-3*Q**6 - 9*Q**4 - 7*Q**2 - 1)/(Q**14 - 5*Q**12 + 10*Q**10 - 10*Q**8 + 5*Q**6 - Q**4)
+  Ext^3 free generator Q-degrees=[-6, -6, -6, -4, -4, -4, -4, -4, -4, -4, -4, -4, -2, -2, -2, -2, -2, -2, -2, 0]
+  Ext^3: Hilb_Q=(-Q**6 - 7*Q**4 - 9*Q**2 - 3)/(Q**16 - 5*Q**14 + 10*Q**12 - 10*Q**10 + 5*Q**8 - Q**6)
+  Ext^4 free generator Q-degrees=[-8, -8, -8, -6, -6, -6, -6, -6, -4, -4]
+  Ext^4: Hilb_Q=(-2*Q**4 - 5*Q**2 - 3)/(Q**18 - 5*Q**16 + 10*Q**14 - 10*Q**12 + 5*Q**10 - Q**8)
+  Ext^5 free generator Q-degrees=[-10, -8]
+  Ext^5: Hilb_Q=(-Q**2 - 1)/(Q**20 - 5*Q**18 + 10*Q**16 - 10*Q**14 + 5*Q**12 - Q**10)
+term (1, 0, 1, 1, 0, 0) total: 1.467756s
+
+term (1, 1, 0, 0, 0, 1): degree=-3, word=(0, 1, 2), rank=8
+  Koszul complex: 0.934635s
+  k tensor Ext generator degrees: 0.119652s
+  Ext^0 free generator Q-degrees=[6]
+  Ext^0: Hilb_Q=-Q**6/(Q**10 - 5*Q**8 + 10*Q**6 - 10*Q**4 + 5*Q**2 - 1)
+  Ext^1 free generator Q-degrees=[2, 2, 2, 4, 4]
+  Ext^1: Hilb_Q=(-2*Q**4 - 3*Q**2)/(Q**10 - 5*Q**8 + 10*Q**6 - 10*Q**4 + 5*Q**2 - 1)
+  Ext^2 free generator Q-degrees=[-2, -2, -2, 0, 0, 0, 0, 0, 0, 2]
+  Ext^2: Hilb_Q=(-Q**4 - 6*Q**2 - 3)/(Q**12 - 5*Q**10 + 10*Q**8 - 10*Q**6 + 5*Q**4 - Q**2)
+  Ext^3 free generator Q-degrees=[-6, -4, -4, -4, -4, -4, -4, -2, -2, -2]
+  Ext^3: Hilb_Q=(-3*Q**4 - 6*Q**2 - 1)/(Q**16 - 5*Q**14 + 10*Q**12 - 10*Q**10 + 5*Q**8 - Q**6)
+  Ext^4 free generator Q-degrees=[-8, -8, -6, -6, -6]
+  Ext^4: Hilb_Q=(-3*Q**2 - 2)/(Q**18 - 5*Q**16 + 10*Q**14 - 10*Q**12 + 5*Q**10 - Q**8)
+  Ext^5 free generator Q-degrees=[-10]
+  Ext^5: Hilb_Q=-1/(Q**20 - 5*Q**18 + 10*Q**16 - 10*Q**14 + 5*Q**12 - Q**10)
+term (1, 1, 0, 0, 0, 1) total: 1.065284s
+
+term (1, 1, 0, 0, 1, 0): degree=-3, word=(0, 1, 1), rank=8
+  Koszul complex: 0.360506s
+  k tensor Ext generator degrees: 0.088594s
+  Ext^0 free generator Q-degrees=[4, 6]
+  Ext^0: Hilb_Q=(-Q**6 - Q**4)/(Q**10 - 5*Q**8 + 10*Q**6 - 10*Q**4 + 5*Q**2 - 1)
+  Ext^1 free generator Q-degrees=[0, 0, 2, 2, 2, 2, 2, 4, 4, 4]
+  Ext^1: Hilb_Q=(-3*Q**4 - 5*Q**2 - 2)/(Q**10 - 5*Q**8 + 10*Q**6 - 10*Q**4 + 5*Q**2 - 1)
+  Ext^2 free generator Q-degrees=[-4, -2, -2, -2, -2, -2, -2, -2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2, 2, 2]
+  Ext^2: Hilb_Q=(-3*Q**6 - 9*Q**4 - 7*Q**2 - 1)/(Q**14 - 5*Q**12 + 10*Q**10 - 10*Q**8 + 5*Q**6 - Q**4)
+  Ext^3 free generator Q-degrees=[-6, -6, -6, -4, -4, -4, -4, -4, -4, -4, -4, -4, -2, -2, -2, -2, -2, -2, -2, 0]
+  Ext^3: Hilb_Q=(-Q**6 - 7*Q**4 - 9*Q**2 - 3)/(Q**16 - 5*Q**14 + 10*Q**12 - 10*Q**10 + 5*Q**8 - Q**6)
+  Ext^4 free generator Q-degrees=[-8, -8, -8, -6, -6, -6, -6, -6, -4, -4]
+  Ext^4: Hilb_Q=(-2*Q**4 - 5*Q**2 - 3)/(Q**18 - 5*Q**16 + 10*Q**14 - 10*Q**12 + 5*Q**10 - Q**8)
+  Ext^5 free generator Q-degrees=[-10, -8]
+  Ext^5: Hilb_Q=(-Q**2 - 1)/(Q**20 - 5*Q**18 + 10*Q**16 - 10*Q**14 + 5*Q**12 - Q**10)
+term (1, 1, 0, 0, 1, 0) total: 0.462536s
+
+term (1, 1, 0, 1, 0, 0): degree=-3, word=(0, 1, 0), rank=8
+  Koszul complex: 1.022538s
+  k tensor Ext generator degrees: 0.137510s
+  Ext^0 free generator Q-degrees=[4, 6]
+  Ext^0: Hilb_Q=(-Q**6 - Q**4)/(Q**10 - 5*Q**8 + 10*Q**6 - 10*Q**4 + 5*Q**2 - 1)
+  Ext^1 free generator Q-degrees=[0, 0, 2, 2, 2, 2, 2, 4, 4, 4]
+  Ext^1: Hilb_Q=(-3*Q**4 - 5*Q**2 - 2)/(Q**10 - 5*Q**8 + 10*Q**6 - 10*Q**4 + 5*Q**2 - 1)
+  Ext^2 free generator Q-degrees=[-4, -2, -2, -2, -2, -2, -2, -2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2, 2, 2]
+  Ext^2: Hilb_Q=(-3*Q**6 - 9*Q**4 - 7*Q**2 - 1)/(Q**14 - 5*Q**12 + 10*Q**10 - 10*Q**8 + 5*Q**6 - Q**4)
+  Ext^3 free generator Q-degrees=[-6, -6, -6, -4, -4, -4, -4, -4, -4, -4, -4, -4, -2, -2, -2, -2, -2, -2, -2, 0]
+  Ext^3: Hilb_Q=(-Q**6 - 7*Q**4 - 9*Q**2 - 3)/(Q**16 - 5*Q**14 + 10*Q**12 - 10*Q**10 + 5*Q**8 - Q**6)
+  Ext^4 free generator Q-degrees=[-8, -8, -8, -6, -6, -6, -6, -6, -4, -4]
+  Ext^4: Hilb_Q=(-2*Q**4 - 5*Q**2 - 3)/(Q**18 - 5*Q**16 + 10*Q**14 - 10*Q**12 + 5*Q**10 - Q**8)
+  Ext^5 free generator Q-degrees=[-10, -8]
+  Ext^5: Hilb_Q=(-Q**2 - 1)/(Q**20 - 5*Q**18 + 10*Q**16 - 10*Q**14 + 5*Q**12 - Q**10)
+term (1, 1, 0, 1, 0, 0) total: 1.173791s
+
+term (1, 1, 1, 0, 0, 0): degree=-3, word=(0, 1, 2), rank=8
+  Koszul complex: 0.980546s
+  k tensor Ext generator degrees: 0.119172s
+  Ext^0 free generator Q-degrees=[6]
+  Ext^0: Hilb_Q=-Q**6/(Q**10 - 5*Q**8 + 10*Q**6 - 10*Q**4 + 5*Q**2 - 1)
+  Ext^1 free generator Q-degrees=[2, 2, 2, 4, 4]
+  Ext^1: Hilb_Q=(-2*Q**4 - 3*Q**2)/(Q**10 - 5*Q**8 + 10*Q**6 - 10*Q**4 + 5*Q**2 - 1)
+  Ext^2 free generator Q-degrees=[-2, -2, -2, 0, 0, 0, 0, 0, 0, 2]
+  Ext^2: Hilb_Q=(-Q**4 - 6*Q**2 - 3)/(Q**12 - 5*Q**10 + 10*Q**8 - 10*Q**6 + 5*Q**4 - Q**2)
+  Ext^3 free generator Q-degrees=[-6, -4, -4, -4, -4, -4, -4, -2, -2, -2]
+  Ext^3: Hilb_Q=(-3*Q**4 - 6*Q**2 - 1)/(Q**16 - 5*Q**14 + 10*Q**12 - 10*Q**10 + 5*Q**8 - Q**6)
+  Ext^4 free generator Q-degrees=[-8, -8, -6, -6, -6]
+  Ext^4: Hilb_Q=(-3*Q**2 - 2)/(Q**18 - 5*Q**16 + 10*Q**14 - 10*Q**12 + 5*Q**10 - Q**8)
+  Ext^5 free generator Q-degrees=[-10]
+  Ext^5: Hilb_Q=-1/(Q**20 - 5*Q**18 + 10*Q**16 - 10*Q**14 + 5*Q**12 - Q**10)
+term (1, 1, 1, 0, 0, 0) total: 1.111994s
+
+term (0, 0, 0, 0, 1, 1): degree=-2, word=(1, 2), rank=4
+  Koszul complex: 0.115833s
+  k tensor Ext generator degrees: 0.028389s
+  Ext^0 free generator Q-degrees=[4]
+  Ext^0: Hilb_Q=-Q**4/(Q**10 - 5*Q**8 + 10*Q**6 - 10*Q**4 + 5*Q**2 - 1)
+  Ext^1 free generator Q-degrees=[0, 0, 2, 2, 2]
+  Ext^1: Hilb_Q=(-3*Q**2 - 2)/(Q**10 - 5*Q**8 + 10*Q**6 - 10*Q**4 + 5*Q**2 - 1)
+  Ext^2 free generator Q-degrees=[-4, -2, -2, -2, -2, -2, -2, 0, 0, 0]
+  Ext^2: Hilb_Q=(-3*Q**4 - 6*Q**2 - 1)/(Q**14 - 5*Q**12 + 10*Q**10 - 10*Q**8 + 5*Q**6 - Q**4)
+  Ext^3 free generator Q-degrees=[-6, -6, -6, -4, -4, -4, -4, -4, -4, -2]
+  Ext^3: Hilb_Q=(-Q**4 - 6*Q**2 - 3)/(Q**16 - 5*Q**14 + 10*Q**12 - 10*Q**10 + 5*Q**8 - Q**6)
+  Ext^4 free generator Q-degrees=[-8, -8, -8, -6, -6]
+  Ext^4: Hilb_Q=(-2*Q**2 - 3)/(Q**18 - 5*Q**16 + 10*Q**14 - 10*Q**12 + 5*Q**10 - Q**8)
+  Ext^5 free generator Q-degrees=[-10]
+  Ext^5: Hilb_Q=-1/(Q**20 - 5*Q**18 + 10*Q**16 - 10*Q**14 + 5*Q**12 - Q**10)
+term (0, 0, 0, 0, 1, 1) total: 0.155256s
+
+term (0, 0, 0, 1, 0, 1): degree=-2, word=(0, 2), rank=4
+  Koszul complex: 0.168740s
+  k tensor Ext generator degrees: 0.032246s
+  Ext^0 free generator Q-degrees=[4]
+  Ext^0: Hilb_Q=-Q**4/(Q**10 - 5*Q**8 + 10*Q**6 - 10*Q**4 + 5*Q**2 - 1)
+  Ext^1 free generator Q-degrees=[0, 0, 2, 2, 2]
+  Ext^1: Hilb_Q=(-3*Q**2 - 2)/(Q**10 - 5*Q**8 + 10*Q**6 - 10*Q**4 + 5*Q**2 - 1)
+  Ext^2 free generator Q-degrees=[-4, -2, -2, -2, -2, -2, -2, 0, 0, 0]
+  Ext^2: Hilb_Q=(-3*Q**4 - 6*Q**2 - 1)/(Q**14 - 5*Q**12 + 10*Q**10 - 10*Q**8 + 5*Q**6 - Q**4)
+  Ext^3 free generator Q-degrees=[-6, -6, -6, -4, -4, -4, -4, -4, -4, -2]
+  Ext^3: Hilb_Q=(-Q**4 - 6*Q**2 - 3)/(Q**16 - 5*Q**14 + 10*Q**12 - 10*Q**10 + 5*Q**8 - Q**6)
+  Ext^4 free generator Q-degrees=[-8, -8, -8, -6, -6]
+  Ext^4: Hilb_Q=(-2*Q**2 - 3)/(Q**18 - 5*Q**16 + 10*Q**14 - 10*Q**12 + 5*Q**10 - Q**8)
+  Ext^5 free generator Q-degrees=[-10]
+  Ext^5: Hilb_Q=-1/(Q**20 - 5*Q**18 + 10*Q**16 - 10*Q**14 + 5*Q**12 - Q**10)
+term (0, 0, 0, 1, 0, 1) total: 0.211914s
+
+term (0, 0, 0, 1, 1, 0): degree=-2, word=(0, 1), rank=4
+  Koszul complex: 0.148104s
+  k tensor Ext generator degrees: 0.032127s
+  Ext^0 free generator Q-degrees=[4]
+  Ext^0: Hilb_Q=-Q**4/(Q**10 - 5*Q**8 + 10*Q**6 - 10*Q**4 + 5*Q**2 - 1)
+  Ext^1 free generator Q-degrees=[0, 0, 2, 2, 2]
+  Ext^1: Hilb_Q=(-3*Q**2 - 2)/(Q**10 - 5*Q**8 + 10*Q**6 - 10*Q**4 + 5*Q**2 - 1)
+  Ext^2 free generator Q-degrees=[-4, -2, -2, -2, -2, -2, -2, 0, 0, 0]
+  Ext^2: Hilb_Q=(-3*Q**4 - 6*Q**2 - 1)/(Q**14 - 5*Q**12 + 10*Q**10 - 10*Q**8 + 5*Q**6 - Q**4)
+  Ext^3 free generator Q-degrees=[-6, -6, -6, -4, -4, -4, -4, -4, -4, -2]
+  Ext^3: Hilb_Q=(-Q**4 - 6*Q**2 - 3)/(Q**16 - 5*Q**14 + 10*Q**12 - 10*Q**10 + 5*Q**8 - Q**6)
+  Ext^4 free generator Q-degrees=[-8, -8, -8, -6, -6]
+  Ext^4: Hilb_Q=(-2*Q**2 - 3)/(Q**18 - 5*Q**16 + 10*Q**14 - 10*Q**12 + 5*Q**10 - Q**8)
+  Ext^5 free generator Q-degrees=[-10]
+  Ext^5: Hilb_Q=-1/(Q**20 - 5*Q**18 + 10*Q**16 - 10*Q**14 + 5*Q**12 - Q**10)
+term (0, 0, 0, 1, 1, 0) total: 0.191052s
+
+term (0, 0, 1, 0, 0, 1): degree=-2, word=(2, 2), rank=4
+  Koszul complex: 0.047667s
+  k tensor Ext generator degrees: 0.024302s
+  Ext^0 free generator Q-degrees=[2, 4]
+  Ext^0: Hilb_Q=(-Q**4 - Q**2)/(Q**10 - 5*Q**8 + 10*Q**6 - 10*Q**4 + 5*Q**2 - 1)
+  Ext^1 free generator Q-degrees=[-2, 0, 0, 0, 0, 0, 2, 2, 2, 2]
+  Ext^1: Hilb_Q=(-4*Q**4 - 5*Q**2 - 1)/(Q**12 - 5*Q**10 + 10*Q**8 - 10*Q**6 + 5*Q**4 - Q**2)
+  Ext^2 free generator Q-degrees=[-4, -4, -4, -4, -2, -2, -2, -2, -2, -2, -2, -2, -2, -2, 0, 0, 0, 0, 0, 0]
+  Ext^2: Hilb_Q=(-6*Q**4 - 10*Q**2 - 4)/(Q**14 - 5*Q**12 + 10*Q**10 - 10*Q**8 + 5*Q**6 - Q**4)
+  Ext^3 free generator Q-degrees=[-6, -6, -6, -6, -6, -6, -4, -4, -4, -4, -4, -4, -4, -4, -4, -4, -2, -2, -2, -2]
+  Ext^3: Hilb_Q=(-4*Q**4 - 10*Q**2 - 6)/(Q**16 - 5*Q**14 + 10*Q**12 - 10*Q**10 + 5*Q**8 - Q**6)
+  Ext^4 free generator Q-degrees=[-8, -8, -8, -8, -6, -6, -6, -6, -6, -4]
+  Ext^4: Hilb_Q=(-Q**4 - 5*Q**2 - 4)/(Q**18 - 5*Q**16 + 10*Q**14 - 10*Q**12 + 5*Q**10 - Q**8)
+  Ext^5 free generator Q-degrees=[-10, -8]
+  Ext^5: Hilb_Q=(-Q**2 - 1)/(Q**20 - 5*Q**18 + 10*Q**16 - 10*Q**14 + 5*Q**12 - Q**10)
+term (0, 0, 1, 0, 0, 1) total: 0.086359s
+
+term (0, 0, 1, 0, 1, 0): degree=-2, word=(2, 1), rank=4
+  Koszul complex: 0.110571s
+  k tensor Ext generator degrees: 0.027395s
+  Ext^0 free generator Q-degrees=[4]
+  Ext^0: Hilb_Q=-Q**4/(Q**10 - 5*Q**8 + 10*Q**6 - 10*Q**4 + 5*Q**2 - 1)
+  Ext^1 free generator Q-degrees=[0, 0, 2, 2, 2]
+  Ext^1: Hilb_Q=(-3*Q**2 - 2)/(Q**10 - 5*Q**8 + 10*Q**6 - 10*Q**4 + 5*Q**2 - 1)
+  Ext^2 free generator Q-degrees=[-4, -2, -2, -2, -2, -2, -2, 0, 0, 0]
+  Ext^2: Hilb_Q=(-3*Q**4 - 6*Q**2 - 1)/(Q**14 - 5*Q**12 + 10*Q**10 - 10*Q**8 + 5*Q**6 - Q**4)
+  Ext^3 free generator Q-degrees=[-6, -6, -6, -4, -4, -4, -4, -4, -4, -2]
+  Ext^3: Hilb_Q=(-Q**4 - 6*Q**2 - 3)/(Q**16 - 5*Q**14 + 10*Q**12 - 10*Q**10 + 5*Q**8 - Q**6)
+  Ext^4 free generator Q-degrees=[-8, -8, -8, -6, -6]
+  Ext^4: Hilb_Q=(-2*Q**2 - 3)/(Q**18 - 5*Q**16 + 10*Q**14 - 10*Q**12 + 5*Q**10 - Q**8)
+  Ext^5 free generator Q-degrees=[-10]
+  Ext^5: Hilb_Q=-1/(Q**20 - 5*Q**18 + 10*Q**16 - 10*Q**14 + 5*Q**12 - Q**10)
+term (0, 0, 1, 0, 1, 0) total: 0.148336s
+
+term (0, 0, 1, 1, 0, 0): degree=-2, word=(2, 0), rank=4
+  Koszul complex: 0.164992s
+  k tensor Ext generator degrees: 0.035591s
+  Ext^0 free generator Q-degrees=[4]
+  Ext^0: Hilb_Q=-Q**4/(Q**10 - 5*Q**8 + 10*Q**6 - 10*Q**4 + 5*Q**2 - 1)
+  Ext^1 free generator Q-degrees=[0, 0, 2, 2, 2]
+  Ext^1: Hilb_Q=(-3*Q**2 - 2)/(Q**10 - 5*Q**8 + 10*Q**6 - 10*Q**4 + 5*Q**2 - 1)
+  Ext^2 free generator Q-degrees=[-4, -2, -2, -2, -2, -2, -2, 0, 0, 0]
+  Ext^2: Hilb_Q=(-3*Q**4 - 6*Q**2 - 1)/(Q**14 - 5*Q**12 + 10*Q**10 - 10*Q**8 + 5*Q**6 - Q**4)
+  Ext^3 free generator Q-degrees=[-6, -6, -6, -4, -4, -4, -4, -4, -4, -2]
+  Ext^3: Hilb_Q=(-Q**4 - 6*Q**2 - 3)/(Q**16 - 5*Q**14 + 10*Q**12 - 10*Q**10 + 5*Q**8 - Q**6)
+  Ext^4 free generator Q-degrees=[-8, -8, -8, -6, -6]
+  Ext^4: Hilb_Q=(-2*Q**2 - 3)/(Q**18 - 5*Q**16 + 10*Q**14 - 10*Q**12 + 5*Q**10 - Q**8)
+  Ext^5 free generator Q-degrees=[-10]
+  Ext^5: Hilb_Q=-1/(Q**20 - 5*Q**18 + 10*Q**16 - 10*Q**14 + 5*Q**12 - Q**10)
+term (0, 0, 1, 1, 0, 0) total: 0.212053s
+
+term (0, 1, 0, 0, 0, 1): degree=-2, word=(1, 2), rank=4
+  Koszul complex: 0.111030s
+  k tensor Ext generator degrees: 0.028093s
+  Ext^0 free generator Q-degrees=[4]
+  Ext^0: Hilb_Q=-Q**4/(Q**10 - 5*Q**8 + 10*Q**6 - 10*Q**4 + 5*Q**2 - 1)
+  Ext^1 free generator Q-degrees=[0, 0, 2, 2, 2]
+  Ext^1: Hilb_Q=(-3*Q**2 - 2)/(Q**10 - 5*Q**8 + 10*Q**6 - 10*Q**4 + 5*Q**2 - 1)
+  Ext^2 free generator Q-degrees=[-4, -2, -2, -2, -2, -2, -2, 0, 0, 0]
+  Ext^2: Hilb_Q=(-3*Q**4 - 6*Q**2 - 1)/(Q**14 - 5*Q**12 + 10*Q**10 - 10*Q**8 + 5*Q**6 - Q**4)
+  Ext^3 free generator Q-degrees=[-6, -6, -6, -4, -4, -4, -4, -4, -4, -2]
+  Ext^3: Hilb_Q=(-Q**4 - 6*Q**2 - 3)/(Q**16 - 5*Q**14 + 10*Q**12 - 10*Q**10 + 5*Q**8 - Q**6)
+  Ext^4 free generator Q-degrees=[-8, -8, -8, -6, -6]
+  Ext^4: Hilb_Q=(-2*Q**2 - 3)/(Q**18 - 5*Q**16 + 10*Q**14 - 10*Q**12 + 5*Q**10 - Q**8)
+  Ext^5 free generator Q-degrees=[-10]
+  Ext^5: Hilb_Q=-1/(Q**20 - 5*Q**18 + 10*Q**16 - 10*Q**14 + 5*Q**12 - Q**10)
+term (0, 1, 0, 0, 0, 1) total: 0.147622s
+
+term (0, 1, 0, 0, 1, 0): degree=-2, word=(1, 1), rank=4
+  Koszul complex: 0.049205s
+  k tensor Ext generator degrees: 0.025231s
+  Ext^0 free generator Q-degrees=[2, 4]
+  Ext^0: Hilb_Q=(-Q**4 - Q**2)/(Q**10 - 5*Q**8 + 10*Q**6 - 10*Q**4 + 5*Q**2 - 1)
+  Ext^1 free generator Q-degrees=[-2, 0, 0, 0, 0, 0, 2, 2, 2, 2]
+  Ext^1: Hilb_Q=(-4*Q**4 - 5*Q**2 - 1)/(Q**12 - 5*Q**10 + 10*Q**8 - 10*Q**6 + 5*Q**4 - Q**2)
+  Ext^2 free generator Q-degrees=[-4, -4, -4, -4, -2, -2, -2, -2, -2, -2, -2, -2, -2, -2, 0, 0, 0, 0, 0, 0]
+  Ext^2: Hilb_Q=(-6*Q**4 - 10*Q**2 - 4)/(Q**14 - 5*Q**12 + 10*Q**10 - 10*Q**8 + 5*Q**6 - Q**4)
+  Ext^3 free generator Q-degrees=[-6, -6, -6, -6, -6, -6, -4, -4, -4, -4, -4, -4, -4, -4, -4, -4, -2, -2, -2, -2]
+  Ext^3: Hilb_Q=(-4*Q**4 - 10*Q**2 - 6)/(Q**16 - 5*Q**14 + 10*Q**12 - 10*Q**10 + 5*Q**8 - Q**6)
+  Ext^4 free generator Q-degrees=[-8, -8, -8, -8, -6, -6, -6, -6, -6, -4]
+  Ext^4: Hilb_Q=(-Q**4 - 5*Q**2 - 4)/(Q**18 - 5*Q**16 + 10*Q**14 - 10*Q**12 + 5*Q**10 - Q**8)
+  Ext^5 free generator Q-degrees=[-10, -8]
+  Ext^5: Hilb_Q=(-Q**2 - 1)/(Q**20 - 5*Q**18 + 10*Q**16 - 10*Q**14 + 5*Q**12 - Q**10)
+term (0, 1, 0, 0, 1, 0) total: 0.087476s
+
+term (0, 1, 0, 1, 0, 0): degree=-2, word=(1, 0), rank=4
+  Koszul complex: 0.155917s
+  k tensor Ext generator degrees: 0.035742s
+  Ext^0 free generator Q-degrees=[4]
+  Ext^0: Hilb_Q=-Q**4/(Q**10 - 5*Q**8 + 10*Q**6 - 10*Q**4 + 5*Q**2 - 1)
+  Ext^1 free generator Q-degrees=[0, 0, 2, 2, 2]
+  Ext^1: Hilb_Q=(-3*Q**2 - 2)/(Q**10 - 5*Q**8 + 10*Q**6 - 10*Q**4 + 5*Q**2 - 1)
+  Ext^2 free generator Q-degrees=[-4, -2, -2, -2, -2, -2, -2, 0, 0, 0]
+  Ext^2: Hilb_Q=(-3*Q**4 - 6*Q**2 - 1)/(Q**14 - 5*Q**12 + 10*Q**10 - 10*Q**8 + 5*Q**6 - Q**4)
+  Ext^3 free generator Q-degrees=[-6, -6, -6, -4, -4, -4, -4, -4, -4, -2]
+  Ext^3: Hilb_Q=(-Q**4 - 6*Q**2 - 3)/(Q**16 - 5*Q**14 + 10*Q**12 - 10*Q**10 + 5*Q**8 - Q**6)
+  Ext^4 free generator Q-degrees=[-8, -8, -8, -6, -6]
+  Ext^4: Hilb_Q=(-2*Q**2 - 3)/(Q**18 - 5*Q**16 + 10*Q**14 - 10*Q**12 + 5*Q**10 - Q**8)
+  Ext^5 free generator Q-degrees=[-10]
+  Ext^5: Hilb_Q=-1/(Q**20 - 5*Q**18 + 10*Q**16 - 10*Q**14 + 5*Q**12 - Q**10)
+term (0, 1, 0, 1, 0, 0) total: 0.203093s
+
+term (0, 1, 1, 0, 0, 0): degree=-2, word=(1, 2), rank=4
+  Koszul complex: 0.106602s
+  k tensor Ext generator degrees: 0.028312s
+  Ext^0 free generator Q-degrees=[4]
+  Ext^0: Hilb_Q=-Q**4/(Q**10 - 5*Q**8 + 10*Q**6 - 10*Q**4 + 5*Q**2 - 1)
+  Ext^1 free generator Q-degrees=[0, 0, 2, 2, 2]
+  Ext^1: Hilb_Q=(-3*Q**2 - 2)/(Q**10 - 5*Q**8 + 10*Q**6 - 10*Q**4 + 5*Q**2 - 1)
+  Ext^2 free generator Q-degrees=[-4, -2, -2, -2, -2, -2, -2, 0, 0, 0]
+  Ext^2: Hilb_Q=(-3*Q**4 - 6*Q**2 - 1)/(Q**14 - 5*Q**12 + 10*Q**10 - 10*Q**8 + 5*Q**6 - Q**4)
+  Ext^3 free generator Q-degrees=[-6, -6, -6, -4, -4, -4, -4, -4, -4, -2]
+  Ext^3: Hilb_Q=(-Q**4 - 6*Q**2 - 3)/(Q**16 - 5*Q**14 + 10*Q**12 - 10*Q**10 + 5*Q**8 - Q**6)
+  Ext^4 free generator Q-degrees=[-8, -8, -8, -6, -6]
+  Ext^4: Hilb_Q=(-2*Q**2 - 3)/(Q**18 - 5*Q**16 + 10*Q**14 - 10*Q**12 + 5*Q**10 - Q**8)
+  Ext^5 free generator Q-degrees=[-10]
+  Ext^5: Hilb_Q=-1/(Q**20 - 5*Q**18 + 10*Q**16 - 10*Q**14 + 5*Q**12 - Q**10)
+term (0, 1, 1, 0, 0, 0) total: 0.143490s
+
+term (1, 0, 0, 0, 0, 1): degree=-2, word=(0, 2), rank=4
+  Koszul complex: 0.163693s
+  k tensor Ext generator degrees: 0.032198s
+  Ext^0 free generator Q-degrees=[4]
+  Ext^0: Hilb_Q=-Q**4/(Q**10 - 5*Q**8 + 10*Q**6 - 10*Q**4 + 5*Q**2 - 1)
+  Ext^1 free generator Q-degrees=[0, 0, 2, 2, 2]
+  Ext^1: Hilb_Q=(-3*Q**2 - 2)/(Q**10 - 5*Q**8 + 10*Q**6 - 10*Q**4 + 5*Q**2 - 1)
+  Ext^2 free generator Q-degrees=[-4, -2, -2, -2, -2, -2, -2, 0, 0, 0]
+  Ext^2: Hilb_Q=(-3*Q**4 - 6*Q**2 - 1)/(Q**14 - 5*Q**12 + 10*Q**10 - 10*Q**8 + 5*Q**6 - Q**4)
+  Ext^3 free generator Q-degrees=[-6, -6, -6, -4, -4, -4, -4, -4, -4, -2]
+  Ext^3: Hilb_Q=(-Q**4 - 6*Q**2 - 3)/(Q**16 - 5*Q**14 + 10*Q**12 - 10*Q**10 + 5*Q**8 - Q**6)
+  Ext^4 free generator Q-degrees=[-8, -8, -8, -6, -6]
+  Ext^4: Hilb_Q=(-2*Q**2 - 3)/(Q**18 - 5*Q**16 + 10*Q**14 - 10*Q**12 + 5*Q**10 - Q**8)
+  Ext^5 free generator Q-degrees=[-10]
+  Ext^5: Hilb_Q=-1/(Q**20 - 5*Q**18 + 10*Q**16 - 10*Q**14 + 5*Q**12 - Q**10)
+term (1, 0, 0, 0, 0, 1) total: 0.207145s
+
+term (1, 0, 0, 0, 1, 0): degree=-2, word=(0, 1), rank=4
+  Koszul complex: 0.147584s
+  k tensor Ext generator degrees: 0.034905s
+  Ext^0 free generator Q-degrees=[4]
+  Ext^0: Hilb_Q=-Q**4/(Q**10 - 5*Q**8 + 10*Q**6 - 10*Q**4 + 5*Q**2 - 1)
+  Ext^1 free generator Q-degrees=[0, 0, 2, 2, 2]
+  Ext^1: Hilb_Q=(-3*Q**2 - 2)/(Q**10 - 5*Q**8 + 10*Q**6 - 10*Q**4 + 5*Q**2 - 1)
+  Ext^2 free generator Q-degrees=[-4, -2, -2, -2, -2, -2, -2, 0, 0, 0]
+  Ext^2: Hilb_Q=(-3*Q**4 - 6*Q**2 - 1)/(Q**14 - 5*Q**12 + 10*Q**10 - 10*Q**8 + 5*Q**6 - Q**4)
+  Ext^3 free generator Q-degrees=[-6, -6, -6, -4, -4, -4, -4, -4, -4, -2]
+  Ext^3: Hilb_Q=(-Q**4 - 6*Q**2 - 3)/(Q**16 - 5*Q**14 + 10*Q**12 - 10*Q**10 + 5*Q**8 - Q**6)
+  Ext^4 free generator Q-degrees=[-8, -8, -8, -6, -6]
+  Ext^4: Hilb_Q=(-2*Q**2 - 3)/(Q**18 - 5*Q**16 + 10*Q**14 - 10*Q**12 + 5*Q**10 - Q**8)
+  Ext^5 free generator Q-degrees=[-10]
+  Ext^5: Hilb_Q=-1/(Q**20 - 5*Q**18 + 10*Q**16 - 10*Q**14 + 5*Q**12 - Q**10)
+term (1, 0, 0, 0, 1, 0) total: 0.195120s
+
+term (1, 0, 0, 1, 0, 0): degree=-2, word=(0, 0), rank=4
+  Koszul complex: 0.069497s
+  k tensor Ext generator degrees: 0.028270s
+  Ext^0 free generator Q-degrees=[2, 4]
+  Ext^0: Hilb_Q=(-Q**4 - Q**2)/(Q**10 - 5*Q**8 + 10*Q**6 - 10*Q**4 + 5*Q**2 - 1)
+  Ext^1 free generator Q-degrees=[-2, 0, 0, 0, 0, 0, 2, 2, 2, 2]
+  Ext^1: Hilb_Q=(-4*Q**4 - 5*Q**2 - 1)/(Q**12 - 5*Q**10 + 10*Q**8 - 10*Q**6 + 5*Q**4 - Q**2)
+  Ext^2 free generator Q-degrees=[-4, -4, -4, -4, -2, -2, -2, -2, -2, -2, -2, -2, -2, -2, 0, 0, 0, 0, 0, 0]
+  Ext^2: Hilb_Q=(-6*Q**4 - 10*Q**2 - 4)/(Q**14 - 5*Q**12 + 10*Q**10 - 10*Q**8 + 5*Q**6 - Q**4)
+  Ext^3 free generator Q-degrees=[-6, -6, -6, -6, -6, -6, -4, -4, -4, -4, -4, -4, -4, -4, -4, -4, -2, -2, -2, -2]
+  Ext^3: Hilb_Q=(-4*Q**4 - 10*Q**2 - 6)/(Q**16 - 5*Q**14 + 10*Q**12 - 10*Q**10 + 5*Q**8 - Q**6)
+  Ext^4 free generator Q-degrees=[-8, -8, -8, -8, -6, -6, -6, -6, -6, -4]
+  Ext^4: Hilb_Q=(-Q**4 - 5*Q**2 - 4)/(Q**18 - 5*Q**16 + 10*Q**14 - 10*Q**12 + 5*Q**10 - Q**8)
+  Ext^5 free generator Q-degrees=[-10, -8]
+  Ext^5: Hilb_Q=(-Q**2 - 1)/(Q**20 - 5*Q**18 + 10*Q**16 - 10*Q**14 + 5*Q**12 - Q**10)
+term (1, 0, 0, 1, 0, 0) total: 0.111016s
+
+term (1, 0, 1, 0, 0, 0): degree=-2, word=(0, 2), rank=4
+  Koszul complex: 0.167399s
+  k tensor Ext generator degrees: 0.033019s
+  Ext^0 free generator Q-degrees=[4]
+  Ext^0: Hilb_Q=-Q**4/(Q**10 - 5*Q**8 + 10*Q**6 - 10*Q**4 + 5*Q**2 - 1)
+  Ext^1 free generator Q-degrees=[0, 0, 2, 2, 2]
+  Ext^1: Hilb_Q=(-3*Q**2 - 2)/(Q**10 - 5*Q**8 + 10*Q**6 - 10*Q**4 + 5*Q**2 - 1)
+  Ext^2 free generator Q-degrees=[-4, -2, -2, -2, -2, -2, -2, 0, 0, 0]
+  Ext^2: Hilb_Q=(-3*Q**4 - 6*Q**2 - 1)/(Q**14 - 5*Q**12 + 10*Q**10 - 10*Q**8 + 5*Q**6 - Q**4)
+  Ext^3 free generator Q-degrees=[-6, -6, -6, -4, -4, -4, -4, -4, -4, -2]
+  Ext^3: Hilb_Q=(-Q**4 - 6*Q**2 - 3)/(Q**16 - 5*Q**14 + 10*Q**12 - 10*Q**10 + 5*Q**8 - Q**6)
+  Ext^4 free generator Q-degrees=[-8, -8, -8, -6, -6]
+  Ext^4: Hilb_Q=(-2*Q**2 - 3)/(Q**18 - 5*Q**16 + 10*Q**14 - 10*Q**12 + 5*Q**10 - Q**8)
+  Ext^5 free generator Q-degrees=[-10]
+  Ext^5: Hilb_Q=-1/(Q**20 - 5*Q**18 + 10*Q**16 - 10*Q**14 + 5*Q**12 - Q**10)
+term (1, 0, 1, 0, 0, 0) total: 0.212557s
+
+term (1, 1, 0, 0, 0, 0): degree=-2, word=(0, 1), rank=4
+  Koszul complex: 0.157728s
+  k tensor Ext generator degrees: 0.032699s
+  Ext^0 free generator Q-degrees=[4]
+  Ext^0: Hilb_Q=-Q**4/(Q**10 - 5*Q**8 + 10*Q**6 - 10*Q**4 + 5*Q**2 - 1)
+  Ext^1 free generator Q-degrees=[0, 0, 2, 2, 2]
+  Ext^1: Hilb_Q=(-3*Q**2 - 2)/(Q**10 - 5*Q**8 + 10*Q**6 - 10*Q**4 + 5*Q**2 - 1)
+  Ext^2 free generator Q-degrees=[-4, -2, -2, -2, -2, -2, -2, 0, 0, 0]
+  Ext^2: Hilb_Q=(-3*Q**4 - 6*Q**2 - 1)/(Q**14 - 5*Q**12 + 10*Q**10 - 10*Q**8 + 5*Q**6 - Q**4)
+  Ext^3 free generator Q-degrees=[-6, -6, -6, -4, -4, -4, -4, -4, -4, -2]
+  Ext^3: Hilb_Q=(-Q**4 - 6*Q**2 - 3)/(Q**16 - 5*Q**14 + 10*Q**12 - 10*Q**10 + 5*Q**8 - Q**6)
+  Ext^4 free generator Q-degrees=[-8, -8, -8, -6, -6]
+  Ext^4: Hilb_Q=(-2*Q**2 - 3)/(Q**18 - 5*Q**16 + 10*Q**14 - 10*Q**12 + 5*Q**10 - Q**8)
+  Ext^5 free generator Q-degrees=[-10]
+  Ext^5: Hilb_Q=-1/(Q**20 - 5*Q**18 + 10*Q**16 - 10*Q**14 + 5*Q**12 - Q**10)
+term (1, 1, 0, 0, 0, 0) total: 0.202087s
+
+term (0, 0, 0, 0, 0, 1): degree=-1, word=(2,), rank=2
+  Koszul complex: 0.018920s
+  k tensor Ext generator degrees: 0.009241s
+  Ext^0 free generator Q-degrees=[2]
+  Ext^0: Hilb_Q=-Q**2/(Q**10 - 5*Q**8 + 10*Q**6 - 10*Q**4 + 5*Q**2 - 1)
+  Ext^1 free generator Q-degrees=[-2, 0, 0, 0, 0]
+  Ext^1: Hilb_Q=(-4*Q**2 - 1)/(Q**12 - 5*Q**10 + 10*Q**8 - 10*Q**6 + 5*Q**4 - Q**2)
+  Ext^2 free generator Q-degrees=[-4, -4, -4, -4, -2, -2, -2, -2, -2, -2]
+  Ext^2: Hilb_Q=(-6*Q**2 - 4)/(Q**14 - 5*Q**12 + 10*Q**10 - 10*Q**8 + 5*Q**6 - Q**4)
+  Ext^3 free generator Q-degrees=[-6, -6, -6, -6, -6, -6, -4, -4, -4, -4]
+  Ext^3: Hilb_Q=(-4*Q**2 - 6)/(Q**16 - 5*Q**14 + 10*Q**12 - 10*Q**10 + 5*Q**8 - Q**6)
+  Ext^4 free generator Q-degrees=[-8, -8, -8, -8, -6]
+  Ext^4: Hilb_Q=(-Q**2 - 4)/(Q**18 - 5*Q**16 + 10*Q**14 - 10*Q**12 + 5*Q**10 - Q**8)
+  Ext^5 free generator Q-degrees=[-10]
+  Ext^5: Hilb_Q=-1/(Q**20 - 5*Q**18 + 10*Q**16 - 10*Q**14 + 5*Q**12 - Q**10)
+term (0, 0, 0, 0, 0, 1) total: 0.040704s
+
+term (0, 0, 0, 0, 1, 0): degree=-1, word=(1,), rank=2
+  Koszul complex: 0.019258s
+  k tensor Ext generator degrees: 0.009546s
+  Ext^0 free generator Q-degrees=[2]
+  Ext^0: Hilb_Q=-Q**2/(Q**10 - 5*Q**8 + 10*Q**6 - 10*Q**4 + 5*Q**2 - 1)
+  Ext^1 free generator Q-degrees=[-2, 0, 0, 0, 0]
+  Ext^1: Hilb_Q=(-4*Q**2 - 1)/(Q**12 - 5*Q**10 + 10*Q**8 - 10*Q**6 + 5*Q**4 - Q**2)
+  Ext^2 free generator Q-degrees=[-4, -4, -4, -4, -2, -2, -2, -2, -2, -2]
+  Ext^2: Hilb_Q=(-6*Q**2 - 4)/(Q**14 - 5*Q**12 + 10*Q**10 - 10*Q**8 + 5*Q**6 - Q**4)
+  Ext^3 free generator Q-degrees=[-6, -6, -6, -6, -6, -6, -4, -4, -4, -4]
+  Ext^3: Hilb_Q=(-4*Q**2 - 6)/(Q**16 - 5*Q**14 + 10*Q**12 - 10*Q**10 + 5*Q**8 - Q**6)
+  Ext^4 free generator Q-degrees=[-8, -8, -8, -8, -6]
+  Ext^4: Hilb_Q=(-Q**2 - 4)/(Q**18 - 5*Q**16 + 10*Q**14 - 10*Q**12 + 5*Q**10 - Q**8)
+  Ext^5 free generator Q-degrees=[-10]
+  Ext^5: Hilb_Q=-1/(Q**20 - 5*Q**18 + 10*Q**16 - 10*Q**14 + 5*Q**12 - Q**10)
+term (0, 0, 0, 0, 1, 0) total: 0.037396s
+
+term (0, 0, 0, 1, 0, 0): degree=-1, word=(0,), rank=2
+  Koszul complex: 0.027360s
+  k tensor Ext generator degrees: 0.010475s
+  Ext^0 free generator Q-degrees=[2]
+  Ext^0: Hilb_Q=-Q**2/(Q**10 - 5*Q**8 + 10*Q**6 - 10*Q**4 + 5*Q**2 - 1)
+  Ext^1 free generator Q-degrees=[-2, 0, 0, 0, 0]
+  Ext^1: Hilb_Q=(-4*Q**2 - 1)/(Q**12 - 5*Q**10 + 10*Q**8 - 10*Q**6 + 5*Q**4 - Q**2)
+  Ext^2 free generator Q-degrees=[-4, -4, -4, -4, -2, -2, -2, -2, -2, -2]
+  Ext^2: Hilb_Q=(-6*Q**2 - 4)/(Q**14 - 5*Q**12 + 10*Q**10 - 10*Q**8 + 5*Q**6 - Q**4)
+  Ext^3 free generator Q-degrees=[-6, -6, -6, -6, -6, -6, -4, -4, -4, -4]
+  Ext^3: Hilb_Q=(-4*Q**2 - 6)/(Q**16 - 5*Q**14 + 10*Q**12 - 10*Q**10 + 5*Q**8 - Q**6)
+  Ext^4 free generator Q-degrees=[-8, -8, -8, -8, -6]
+  Ext^4: Hilb_Q=(-Q**2 - 4)/(Q**18 - 5*Q**16 + 10*Q**14 - 10*Q**12 + 5*Q**10 - Q**8)
+  Ext^5 free generator Q-degrees=[-10]
+  Ext^5: Hilb_Q=-1/(Q**20 - 5*Q**18 + 10*Q**16 - 10*Q**14 + 5*Q**12 - Q**10)
+term (0, 0, 0, 1, 0, 0) total: 0.046198s
+
+term (0, 0, 1, 0, 0, 0): degree=-1, word=(2,), rank=2
+  Koszul complex: 0.016938s
+  k tensor Ext generator degrees: 0.009129s
+  Ext^0 free generator Q-degrees=[2]
+  Ext^0: Hilb_Q=-Q**2/(Q**10 - 5*Q**8 + 10*Q**6 - 10*Q**4 + 5*Q**2 - 1)
+  Ext^1 free generator Q-degrees=[-2, 0, 0, 0, 0]
+  Ext^1: Hilb_Q=(-4*Q**2 - 1)/(Q**12 - 5*Q**10 + 10*Q**8 - 10*Q**6 + 5*Q**4 - Q**2)
+  Ext^2 free generator Q-degrees=[-4, -4, -4, -4, -2, -2, -2, -2, -2, -2]
+  Ext^2: Hilb_Q=(-6*Q**2 - 4)/(Q**14 - 5*Q**12 + 10*Q**10 - 10*Q**8 + 5*Q**6 - Q**4)
+  Ext^3 free generator Q-degrees=[-6, -6, -6, -6, -6, -6, -4, -4, -4, -4]
+  Ext^3: Hilb_Q=(-4*Q**2 - 6)/(Q**16 - 5*Q**14 + 10*Q**12 - 10*Q**10 + 5*Q**8 - Q**6)
+  Ext^4 free generator Q-degrees=[-8, -8, -8, -8, -6]
+  Ext^4: Hilb_Q=(-Q**2 - 4)/(Q**18 - 5*Q**16 + 10*Q**14 - 10*Q**12 + 5*Q**10 - Q**8)
+  Ext^5 free generator Q-degrees=[-10]
+  Ext^5: Hilb_Q=-1/(Q**20 - 5*Q**18 + 10*Q**16 - 10*Q**14 + 5*Q**12 - Q**10)
+term (0, 0, 1, 0, 0, 0) total: 0.035382s
+
+term (0, 1, 0, 0, 0, 0): degree=-1, word=(1,), rank=2
+  Koszul complex: 0.017269s
+  k tensor Ext generator degrees: 0.009025s
+  Ext^0 free generator Q-degrees=[2]
+  Ext^0: Hilb_Q=-Q**2/(Q**10 - 5*Q**8 + 10*Q**6 - 10*Q**4 + 5*Q**2 - 1)
+  Ext^1 free generator Q-degrees=[-2, 0, 0, 0, 0]
+  Ext^1: Hilb_Q=(-4*Q**2 - 1)/(Q**12 - 5*Q**10 + 10*Q**8 - 10*Q**6 + 5*Q**4 - Q**2)
+  Ext^2 free generator Q-degrees=[-4, -4, -4, -4, -2, -2, -2, -2, -2, -2]
+  Ext^2: Hilb_Q=(-6*Q**2 - 4)/(Q**14 - 5*Q**12 + 10*Q**10 - 10*Q**8 + 5*Q**6 - Q**4)
+  Ext^3 free generator Q-degrees=[-6, -6, -6, -6, -6, -6, -4, -4, -4, -4]
+  Ext^3: Hilb_Q=(-4*Q**2 - 6)/(Q**16 - 5*Q**14 + 10*Q**12 - 10*Q**10 + 5*Q**8 - Q**6)
+  Ext^4 free generator Q-degrees=[-8, -8, -8, -8, -6]
+  Ext^4: Hilb_Q=(-Q**2 - 4)/(Q**18 - 5*Q**16 + 10*Q**14 - 10*Q**12 + 5*Q**10 - Q**8)
+  Ext^5 free generator Q-degrees=[-10]
+  Ext^5: Hilb_Q=-1/(Q**20 - 5*Q**18 + 10*Q**16 - 10*Q**14 + 5*Q**12 - Q**10)
+term (0, 1, 0, 0, 0, 0) total: 0.034376s
+
+term (1, 0, 0, 0, 0, 0): degree=-1, word=(0,), rank=2
+  Koszul complex: 0.025824s
+  k tensor Ext generator degrees: 0.010765s
+  Ext^0 free generator Q-degrees=[2]
+  Ext^0: Hilb_Q=-Q**2/(Q**10 - 5*Q**8 + 10*Q**6 - 10*Q**4 + 5*Q**2 - 1)
+  Ext^1 free generator Q-degrees=[-2, 0, 0, 0, 0]
+  Ext^1: Hilb_Q=(-4*Q**2 - 1)/(Q**12 - 5*Q**10 + 10*Q**8 - 10*Q**6 + 5*Q**4 - Q**2)
+  Ext^2 free generator Q-degrees=[-4, -4, -4, -4, -2, -2, -2, -2, -2, -2]
+  Ext^2: Hilb_Q=(-6*Q**2 - 4)/(Q**14 - 5*Q**12 + 10*Q**10 - 10*Q**8 + 5*Q**6 - Q**4)
+  Ext^3 free generator Q-degrees=[-6, -6, -6, -6, -6, -6, -4, -4, -4, -4]
+  Ext^3: Hilb_Q=(-4*Q**2 - 6)/(Q**16 - 5*Q**14 + 10*Q**12 - 10*Q**10 + 5*Q**8 - Q**6)
+  Ext^4 free generator Q-degrees=[-8, -8, -8, -8, -6]
+  Ext^4: Hilb_Q=(-Q**2 - 4)/(Q**18 - 5*Q**16 + 10*Q**14 - 10*Q**12 + 5*Q**10 - Q**8)
+  Ext^5 free generator Q-degrees=[-10]
+  Ext^5: Hilb_Q=-1/(Q**20 - 5*Q**18 + 10*Q**16 - 10*Q**14 + 5*Q**12 - Q**10)
+term (1, 0, 0, 0, 0, 0) total: 0.045038s
+
+term (0, 0, 0, 0, 0, 0): degree=0, word=(), rank=1
+  Koszul complex: 0.001463s
+  k tensor Ext generator degrees: 0.003582s
+  Ext^0 free generator Q-degrees=[0]
+  Ext^0: Hilb_Q=-1/(Q**10 - 5*Q**8 + 10*Q**6 - 10*Q**4 + 5*Q**2 - 1)
+  Ext^1 free generator Q-degrees=[-2, -2, -2, -2, -2]
+  Ext^1: Hilb_Q=-5/(Q**12 - 5*Q**10 + 10*Q**8 - 10*Q**6 + 5*Q**4 - Q**2)
+  Ext^2 free generator Q-degrees=[-4, -4, -4, -4, -4, -4, -4, -4, -4, -4]
+  Ext^2: Hilb_Q=-10/(Q**14 - 5*Q**12 + 10*Q**10 - 10*Q**8 + 5*Q**6 - Q**4)
+  Ext^3 free generator Q-degrees=[-6, -6, -6, -6, -6, -6, -6, -6, -6, -6]
+  Ext^3: Hilb_Q=-10/(Q**16 - 5*Q**14 + 10*Q**12 - 10*Q**10 + 5*Q**8 - Q**6)
+  Ext^4 free generator Q-degrees=[-8, -8, -8, -8, -8]
+  Ext^4: Hilb_Q=-5/(Q**18 - 5*Q**16 + 10*Q**14 - 10*Q**12 + 5*Q**10 - Q**8)
+  Ext^5 free generator Q-degrees=[-10]
+  Ext^5: Hilb_Q=-1/(Q**20 - 5*Q**18 + 10*Q**16 - 10*Q**14 + 5*Q**12 - Q**10)
+term (0, 0, 0, 0, 0, 0) total: 0.013022s
+
+simplify final Euler trace: 0.121052s
+
+Final Kac-Moody Ext-free Euler trace:
+-(A + Q**2)**2*(A**3 + 3*A**2*Q**4 - A**2*Q**2 + A**2 + A*Q**10 - A*Q**8 + 3*A*Q**6 + Q**14 - 3*Q**12 + 4*Q**10 - 2*Q**8 + 3*Q**6 - 3*Q**4 + Q**2)/(Q**6*(Q - 1)**5*(Q + 1)**5)
+
+Timing summary:
+  k tensor generator-degree total: 31.648363s
+  Overall wall time: 859.187454s
+  Recorded term data entries: 64

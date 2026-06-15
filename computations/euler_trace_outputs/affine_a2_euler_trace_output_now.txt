@@ -1,0 +1,492 @@
+Affine A2 Euler-trace computation
+Python: 3.11.7
+Platform: macOS-10.16-x86_64-i386-64bit
+Output file: /Users/calvinyost-wolff/Documents/my math papers/acyclicClusterAlgebras/computations/affine_a2_euler_trace_output_now.txt
+
+setup diagram and realization: 0.001916s
+diagram vertices: (0, 1, 2)
+diagram edges: [(0, 1), (0, 2), (1, 2)]
+braid: ((0, '+'), (1, '+'), (2, '+'), (0, '+'), (1, '+'), (2, '+'))
+input matrices interpreted as V action
+realization dimension: 2
+s0 action on V^* used by R:
+Matrix([[-1, -1], [0, 1]])
+alpha_0: [1, 0]
+s1 action on V^* used by R:
+Matrix([[0, 1], [1, 0]])
+alpha_1: [-1, 1]
+s2 action on V^* used by R:
+Matrix([[1, 0], [-1, -1]])
+alpha_2: [0, 1]
+
+build Rouquier complex as free left R-modules: 16.312772s
+R variables: (x_0, x_1)
+Rouquier degrees: [-6, -5, -4, -3, -2, -1, 0]
+number of Rouquier terms: 64
+number of Rouquier arrows: 192
+d^2=0 on free-left-R Rouquier complex: True
+
+construct left polynomial ring: 0.001597s
+ring: QQ[x_0,x_1]
+
+term (1, 1, 1, 1, 1, 1): degree=-6, word=(0, 1, 2, 0, 1, 2), rank=64
+  Koszul complex: 24.089928s
+  Ext^0: ext=9.128112s, Hilb=0.193546s, zero=False, Hilb_Q=(Q**12 + 4*Q**10 + 5*Q**8 + Q**6)/(Q**4 - 2*Q**2 + 1)
+  Ext^1: ext=49.994950s, Hilb=5.703244s, zero=False, Hilb_Q=(Q**8 + 5*Q**6 + 10*Q**4 + 5*Q**2 + 1)/(Q**4 - 2*Q**2 + 1)
+  Ext^2: ext=2.178924s, Hilb=2.065355s, zero=False, Hilb_Q=(Q**6 + 5*Q**4 + 4*Q**2 + 1)/(Q**8 - 2*Q**6 + Q**4)
+term (1, 1, 1, 1, 1, 1) total: 93.359496s
+
+term (0, 1, 1, 1, 1, 1): degree=-5, word=(1, 2, 0, 1, 2), rank=32
+  Koszul complex: 4.840800s
+  Ext^0: ext=1.173353s, Hilb=0.054670s, zero=False, Hilb_Q=(Q**10 + 3*Q**8 + Q**6)/(Q**4 - 2*Q**2 + 1)
+  Ext^1: ext=6.169298s, Hilb=0.571552s, zero=False, Hilb_Q=(5*Q**4 + 4*Q**2 + 1)/(Q**4 - 2*Q**2 + 1)
+  Ext^2: ext=0.471524s, Hilb=0.322757s, zero=False, Hilb_Q=(-Q**6 + 2*Q**4 + 3*Q**2 + 1)/(Q**8 - 2*Q**6 + Q**4)
+term (0, 1, 1, 1, 1, 1) total: 13.607482s
+
+term (1, 0, 1, 1, 1, 1): degree=-5, word=(0, 2, 0, 1, 2), rank=32
+  Koszul complex: 4.540691s
+  Ext^0: ext=1.176605s, Hilb=0.050947s, zero=False, Hilb_Q=(Q**10 + 3*Q**8 + Q**6)/(Q**4 - 2*Q**2 + 1)
+  Ext^1: ext=5.786219s, Hilb=0.676692s, zero=False, Hilb_Q=(5*Q**4 + 4*Q**2 + 1)/(Q**4 - 2*Q**2 + 1)
+  Ext^2: ext=0.405404s, Hilb=0.315010s, zero=False, Hilb_Q=(-Q**6 + 2*Q**4 + 3*Q**2 + 1)/(Q**8 - 2*Q**6 + Q**4)
+term (1, 0, 1, 1, 1, 1) total: 12.955429s
+
+term (1, 1, 0, 1, 1, 1): degree=-5, word=(0, 1, 0, 1, 2), rank=32
+  Koszul complex: 4.570268s
+  Ext^0: ext=1.150029s, Hilb=0.051153s, zero=False, Hilb_Q=(Q**10 + 3*Q**8 + Q**6)/(Q**4 - 2*Q**2 + 1)
+  Ext^1: ext=5.766095s, Hilb=0.552947s, zero=False, Hilb_Q=(5*Q**4 + 4*Q**2 + 1)/(Q**4 - 2*Q**2 + 1)
+  Ext^2: ext=0.397810s, Hilb=0.307851s, zero=False, Hilb_Q=(-Q**6 + 2*Q**4 + 3*Q**2 + 1)/(Q**8 - 2*Q**6 + Q**4)
+term (1, 1, 0, 1, 1, 1) total: 12.799823s
+
+term (1, 1, 1, 0, 1, 1): degree=-5, word=(0, 1, 2, 1, 2), rank=32
+  Koszul complex: 4.545510s
+  Ext^0: ext=1.165755s, Hilb=0.052098s, zero=False, Hilb_Q=(Q**10 + 3*Q**8 + Q**6)/(Q**4 - 2*Q**2 + 1)
+  Ext^1: ext=5.810461s, Hilb=0.568964s, zero=False, Hilb_Q=(5*Q**4 + 4*Q**2 + 1)/(Q**4 - 2*Q**2 + 1)
+  Ext^2: ext=0.390219s, Hilb=0.306685s, zero=False, Hilb_Q=(-Q**6 + 2*Q**4 + 3*Q**2 + 1)/(Q**8 - 2*Q**6 + Q**4)
+term (1, 1, 1, 0, 1, 1) total: 12.844064s
+
+term (1, 1, 1, 1, 0, 1): degree=-5, word=(0, 1, 2, 0, 2), rank=32
+  Koszul complex: 4.643503s
+  Ext^0: ext=1.152013s, Hilb=0.051499s, zero=False, Hilb_Q=(Q**10 + 3*Q**8 + Q**6)/(Q**4 - 2*Q**2 + 1)
+  Ext^1: ext=5.694097s, Hilb=0.666034s, zero=False, Hilb_Q=(5*Q**4 + 4*Q**2 + 1)/(Q**4 - 2*Q**2 + 1)
+  Ext^2: ext=0.398568s, Hilb=0.310033s, zero=False, Hilb_Q=(-Q**6 + 2*Q**4 + 3*Q**2 + 1)/(Q**8 - 2*Q**6 + Q**4)
+term (1, 1, 1, 1, 0, 1) total: 12.919584s
+
+term (1, 1, 1, 1, 1, 0): degree=-5, word=(0, 1, 2, 0, 1), rank=32
+  Koszul complex: 5.994049s
+  Ext^0: ext=1.242114s, Hilb=0.047902s, zero=False, Hilb_Q=(Q**10 + 3*Q**8 + Q**6)/(Q**4 - 2*Q**2 + 1)
+  Ext^1: ext=7.344782s, Hilb=0.727394s, zero=False, Hilb_Q=(5*Q**4 + 4*Q**2 + 1)/(Q**4 - 2*Q**2 + 1)
+  Ext^2: ext=0.504910s, Hilb=0.486445s, zero=False, Hilb_Q=(-Q**6 + 2*Q**4 + 3*Q**2 + 1)/(Q**8 - 2*Q**6 + Q**4)
+term (1, 1, 1, 1, 1, 0) total: 16.350642s
+
+term (0, 0, 1, 1, 1, 1): degree=-4, word=(2, 0, 1, 2), rank=16
+  Koszul complex: 0.808289s
+  Ext^0: ext=0.104290s, Hilb=0.025780s, zero=False, Hilb_Q=(Q**8 + Q**6)/(Q**4 - 2*Q**2 + 1)
+  Ext^1: ext=0.646357s, Hilb=0.120098s, zero=False, Hilb_Q=(-Q**6 + Q**4 + 3*Q**2 + 1)/(Q**4 - 2*Q**2 + 1)
+  Ext^2: ext=0.070820s, Hilb=0.055033s, zero=False, Hilb_Q=(-Q**6 + 2*Q**2 + 1)/(Q**8 - 2*Q**6 + Q**4)
+term (0, 0, 1, 1, 1, 1) total: 1.833259s
+
+term (0, 1, 0, 1, 1, 1): degree=-4, word=(1, 0, 1, 2), rank=16
+  Koszul complex: 0.981291s
+  Ext^0: ext=0.143614s, Hilb=0.027703s, zero=False, Hilb_Q=(Q**8 + 2*Q**6)/(Q**4 - 2*Q**2 + 1)
+  Ext^1: ext=0.847924s, Hilb=0.133483s, zero=False, Hilb_Q=(Q**4 + 4*Q**2 + 1)/(Q**4 - 2*Q**2 + 1)
+  Ext^2: ext=0.086054s, Hilb=0.058916s, zero=False, Hilb_Q=(2*Q**2 + 1)/(Q**8 - 2*Q**6 + Q**4)
+term (0, 1, 0, 1, 1, 1) total: 2.283094s
+
+term (0, 1, 1, 0, 1, 1): degree=-4, word=(1, 2, 1, 2), rank=16
+  Koszul complex: 0.852999s
+  Ext^0: ext=0.140026s, Hilb=0.027110s, zero=False, Hilb_Q=(Q**8 + 2*Q**6)/(Q**4 - 2*Q**2 + 1)
+  Ext^1: ext=0.822107s, Hilb=0.130835s, zero=False, Hilb_Q=(Q**4 + 4*Q**2 + 1)/(Q**4 - 2*Q**2 + 1)
+  Ext^2: ext=0.081464s, Hilb=0.057893s, zero=False, Hilb_Q=(2*Q**2 + 1)/(Q**8 - 2*Q**6 + Q**4)
+term (0, 1, 1, 0, 1, 1) total: 2.117351s
+
+term (0, 1, 1, 1, 0, 1): degree=-4, word=(1, 2, 0, 2), rank=16
+  Koszul complex: 0.867989s
+  Ext^0: ext=0.142638s, Hilb=0.027615s, zero=False, Hilb_Q=(Q**8 + 2*Q**6)/(Q**4 - 2*Q**2 + 1)
+  Ext^1: ext=0.953873s, Hilb=0.131788s, zero=False, Hilb_Q=(Q**4 + 4*Q**2 + 1)/(Q**4 - 2*Q**2 + 1)
+  Ext^2: ext=0.084690s, Hilb=0.059270s, zero=False, Hilb_Q=(2*Q**2 + 1)/(Q**8 - 2*Q**6 + Q**4)
+term (0, 1, 1, 1, 0, 1) total: 2.270856s
+
+term (0, 1, 1, 1, 1, 0): degree=-4, word=(1, 2, 0, 1), rank=16
+  Koszul complex: 1.168387s
+  Ext^0: ext=0.163640s, Hilb=0.024963s, zero=False, Hilb_Q=(Q**8 + Q**6)/(Q**4 - 2*Q**2 + 1)
+  Ext^1: ext=1.125496s, Hilb=0.159051s, zero=False, Hilb_Q=(-Q**6 + Q**4 + 3*Q**2 + 1)/(Q**4 - 2*Q**2 + 1)
+  Ext^2: ext=0.106425s, Hilb=0.089411s, zero=False, Hilb_Q=(-Q**6 + 2*Q**2 + 1)/(Q**8 - 2*Q**6 + Q**4)
+term (0, 1, 1, 1, 1, 0) total: 2.840164s
+
+term (1, 0, 0, 1, 1, 1): degree=-4, word=(0, 0, 1, 2), rank=16
+  Koszul complex: 0.363266s
+  Ext^0: ext=0.051579s, Hilb=0.025984s, zero=False, Hilb_Q=(Q**8 + Q**6)/(Q**4 - 2*Q**2 + 1)
+  Ext^1: ext=0.222358s, Hilb=0.084306s, zero=False, Hilb_Q=(-Q**6 + Q**4 + 3*Q**2 + 1)/(Q**4 - 2*Q**2 + 1)
+  Ext^2: ext=0.043434s, Hilb=0.034130s, zero=False, Hilb_Q=(-Q**6 + 2*Q**2 + 1)/(Q**8 - 2*Q**6 + Q**4)
+term (1, 0, 0, 1, 1, 1) total: 0.827642s
+
+term (1, 0, 1, 0, 1, 1): degree=-4, word=(0, 2, 1, 2), rank=16
+  Koszul complex: 0.927861s
+  Ext^0: ext=0.131573s, Hilb=0.026686s, zero=False, Hilb_Q=(Q**8 + 2*Q**6)/(Q**4 - 2*Q**2 + 1)
+  Ext^1: ext=0.759798s, Hilb=0.134037s, zero=False, Hilb_Q=(Q**4 + 4*Q**2 + 1)/(Q**4 - 2*Q**2 + 1)
+  Ext^2: ext=0.069594s, Hilb=0.056532s, zero=False, Hilb_Q=(2*Q**2 + 1)/(Q**8 - 2*Q**6 + Q**4)
+term (1, 0, 1, 0, 1, 1) total: 2.108966s
+
+term (1, 0, 1, 1, 0, 1): degree=-4, word=(0, 2, 0, 2), rank=16
+  Koszul complex: 0.804100s
+  Ext^0: ext=0.129027s, Hilb=0.026489s, zero=False, Hilb_Q=(Q**8 + 2*Q**6)/(Q**4 - 2*Q**2 + 1)
+  Ext^1: ext=0.734060s, Hilb=0.131806s, zero=False, Hilb_Q=(Q**4 + 4*Q**2 + 1)/(Q**4 - 2*Q**2 + 1)
+  Ext^2: ext=0.069892s, Hilb=0.054582s, zero=False, Hilb_Q=(2*Q**2 + 1)/(Q**8 - 2*Q**6 + Q**4)
+term (1, 0, 1, 1, 0, 1) total: 1.952447s
+
+term (1, 0, 1, 1, 1, 0): degree=-4, word=(0, 2, 0, 1), rank=16
+  Koszul complex: 1.090332s
+  Ext^0: ext=0.148586s, Hilb=0.027471s, zero=False, Hilb_Q=(Q**8 + 2*Q**6)/(Q**4 - 2*Q**2 + 1)
+  Ext^1: ext=1.140318s, Hilb=0.147394s, zero=False, Hilb_Q=(Q**4 + 4*Q**2 + 1)/(Q**4 - 2*Q**2 + 1)
+  Ext^2: ext=0.089580s, Hilb=0.079738s, zero=False, Hilb_Q=(2*Q**2 + 1)/(Q**8 - 2*Q**6 + Q**4)
+term (1, 0, 1, 1, 1, 0) total: 2.725763s
+
+term (1, 1, 0, 0, 1, 1): degree=-4, word=(0, 1, 1, 2), rank=16
+  Koszul complex: 0.367609s
+  Ext^0: ext=0.053450s, Hilb=0.025148s, zero=False, Hilb_Q=(Q**8 + Q**6)/(Q**4 - 2*Q**2 + 1)
+  Ext^1: ext=0.220147s, Hilb=0.081287s, zero=False, Hilb_Q=(-Q**6 + Q**4 + 3*Q**2 + 1)/(Q**4 - 2*Q**2 + 1)
+  Ext^2: ext=0.043019s, Hilb=0.033016s, zero=False, Hilb_Q=(-Q**6 + 2*Q**2 + 1)/(Q**8 - 2*Q**6 + Q**4)
+term (1, 1, 0, 0, 1, 1) total: 0.826242s
+
+term (1, 1, 0, 1, 0, 1): degree=-4, word=(0, 1, 0, 2), rank=16
+  Koszul complex: 0.814488s
+  Ext^0: ext=0.138592s, Hilb=0.026167s, zero=False, Hilb_Q=(Q**8 + 2*Q**6)/(Q**4 - 2*Q**2 + 1)
+  Ext^1: ext=0.742987s, Hilb=0.130682s, zero=False, Hilb_Q=(Q**4 + 4*Q**2 + 1)/(Q**4 - 2*Q**2 + 1)
+  Ext^2: ext=0.072068s, Hilb=0.054834s, zero=False, Hilb_Q=(2*Q**2 + 1)/(Q**8 - 2*Q**6 + Q**4)
+term (1, 1, 0, 1, 0, 1) total: 1.982345s
+
+term (1, 1, 0, 1, 1, 0): degree=-4, word=(0, 1, 0, 1), rank=16
+  Koszul complex: 1.073784s
+  Ext^0: ext=0.145974s, Hilb=0.027099s, zero=False, Hilb_Q=(Q**8 + 2*Q**6)/(Q**4 - 2*Q**2 + 1)
+  Ext^1: ext=1.105112s, Hilb=0.145790s, zero=False, Hilb_Q=(Q**4 + 4*Q**2 + 1)/(Q**4 - 2*Q**2 + 1)
+  Ext^2: ext=0.087943s, Hilb=0.078143s, zero=False, Hilb_Q=(2*Q**2 + 1)/(Q**8 - 2*Q**6 + Q**4)
+term (1, 1, 0, 1, 1, 0) total: 2.666165s
+
+term (1, 1, 1, 0, 0, 1): degree=-4, word=(0, 1, 2, 2), rank=16
+  Koszul complex: 0.353380s
+  Ext^0: ext=0.052298s, Hilb=0.024800s, zero=False, Hilb_Q=(Q**8 + Q**6)/(Q**4 - 2*Q**2 + 1)
+  Ext^1: ext=0.218072s, Hilb=0.081271s, zero=False, Hilb_Q=(-Q**6 + Q**4 + 3*Q**2 + 1)/(Q**4 - 2*Q**2 + 1)
+  Ext^2: ext=0.044125s, Hilb=0.031950s, zero=False, Hilb_Q=(-Q**6 + 2*Q**2 + 1)/(Q**8 - 2*Q**6 + Q**4)
+term (1, 1, 1, 0, 0, 1) total: 0.808463s
+
+term (1, 1, 1, 0, 1, 0): degree=-4, word=(0, 1, 2, 1), rank=16
+  Koszul complex: 1.055852s
+  Ext^0: ext=0.194055s, Hilb=0.028366s, zero=False, Hilb_Q=(Q**8 + 2*Q**6)/(Q**4 - 2*Q**2 + 1)
+  Ext^1: ext=0.965112s, Hilb=0.148012s, zero=False, Hilb_Q=(Q**4 + 4*Q**2 + 1)/(Q**4 - 2*Q**2 + 1)
+  Ext^2: ext=0.087167s, Hilb=0.080159s, zero=False, Hilb_Q=(2*Q**2 + 1)/(Q**8 - 2*Q**6 + Q**4)
+term (1, 1, 1, 0, 1, 0) total: 2.561828s
+
+term (1, 1, 1, 1, 0, 0): degree=-4, word=(0, 1, 2, 0), rank=16
+  Koszul complex: 0.843758s
+  Ext^0: ext=0.087604s, Hilb=0.025254s, zero=False, Hilb_Q=(Q**8 + Q**6)/(Q**4 - 2*Q**2 + 1)
+  Ext^1: ext=0.936652s, Hilb=0.150727s, zero=False, Hilb_Q=(-Q**6 + Q**4 + 3*Q**2 + 1)/(Q**4 - 2*Q**2 + 1)
+  Ext^2: ext=0.070352s, Hilb=0.065538s, zero=False, Hilb_Q=(-Q**6 + 2*Q**2 + 1)/(Q**8 - 2*Q**6 + Q**4)
+term (1, 1, 1, 1, 0, 0) total: 2.182664s
+
+term (0, 0, 0, 1, 1, 1): degree=-3, word=(0, 1, 2), rank=8
+  Koszul complex: 0.143197s
+  Ext^0: ext=0.024721s, Hilb=0.016171s, zero=False, Hilb_Q=Q**6/(Q**4 - 2*Q**2 + 1)
+  Ext^1: ext=0.127545s, Hilb=0.048759s, zero=False, Hilb_Q=(-Q**4 + 2*Q**2 + 1)/(Q**4 - 2*Q**2 + 1)
+  Ext^2: ext=0.015965s, Hilb=0.016542s, zero=False, Hilb_Q=(-Q**4 + Q**2 + 1)/(Q**8 - 2*Q**6 + Q**4)
+term (0, 0, 0, 1, 1, 1) total: 0.395179s
+
+term (0, 0, 1, 0, 1, 1): degree=-3, word=(2, 1, 2), rank=8
+  Koszul complex: 0.146166s
+  Ext^0: ext=0.017004s, Hilb=0.018091s, zero=False, Hilb_Q=(Q**6 + Q**4)/(Q**4 - 2*Q**2 + 1)
+  Ext^1: ext=0.104653s, Hilb=0.046178s, zero=False, Hilb_Q=(2*Q**2 + 2)/(Q**4 - 2*Q**2 + 1)
+  Ext^2: ext=0.015444s, Hilb=0.017704s, zero=False, Hilb_Q=(Q**2 + 1)/(Q**8 - 2*Q**6 + Q**4)
+term (0, 0, 1, 0, 1, 1) total: 0.367284s
+
+term (0, 0, 1, 1, 0, 1): degree=-3, word=(2, 0, 2), rank=8
+  Koszul complex: 0.141029s
+  Ext^0: ext=0.016805s, Hilb=0.016390s, zero=False, Hilb_Q=(Q**6 + Q**4)/(Q**4 - 2*Q**2 + 1)
+  Ext^1: ext=0.090539s, Hilb=0.039262s, zero=False, Hilb_Q=(2*Q**2 + 2)/(Q**4 - 2*Q**2 + 1)
+  Ext^2: ext=0.014814s, Hilb=0.014077s, zero=False, Hilb_Q=(Q**2 + 1)/(Q**8 - 2*Q**6 + Q**4)
+term (0, 0, 1, 1, 0, 1) total: 0.335005s
+
+term (0, 0, 1, 1, 1, 0): degree=-3, word=(2, 0, 1), rank=8
+  Koszul complex: 0.172202s
+  Ext^0: ext=0.018630s, Hilb=0.015297s, zero=False, Hilb_Q=Q**6/(Q**4 - 2*Q**2 + 1)
+  Ext^1: ext=0.195450s, Hilb=0.088861s, zero=False, Hilb_Q=(-Q**4 + 2*Q**2 + 1)/(Q**4 - 2*Q**2 + 1)
+  Ext^2: ext=0.029917s, Hilb=0.034845s, zero=False, Hilb_Q=(-Q**4 + Q**2 + 1)/(Q**8 - 2*Q**6 + Q**4)
+term (0, 0, 1, 1, 1, 0) total: 0.559394s
+
+term (0, 1, 0, 0, 1, 1): degree=-3, word=(1, 1, 2), rank=8
+  Koszul complex: 0.093795s
+  Ext^0: ext=0.012299s, Hilb=0.017203s, zero=False, Hilb_Q=(Q**6 + Q**4)/(Q**4 - 2*Q**2 + 1)
+  Ext^1: ext=0.044457s, Hilb=0.039647s, zero=False, Hilb_Q=(2*Q**2 + 2)/(Q**4 - 2*Q**2 + 1)
+  Ext^2: ext=0.011335s, Hilb=0.012610s, zero=False, Hilb_Q=(Q**2 + 1)/(Q**8 - 2*Q**6 + Q**4)
+term (0, 1, 0, 0, 1, 1) total: 0.233687s
+
+term (0, 1, 0, 1, 0, 1): degree=-3, word=(1, 0, 2), rank=8
+  Koszul complex: 0.157354s
+  Ext^0: ext=0.024420s, Hilb=0.014484s, zero=False, Hilb_Q=Q**6/(Q**4 - 2*Q**2 + 1)
+  Ext^1: ext=0.139190s, Hilb=0.043010s, zero=False, Hilb_Q=(-Q**4 + 2*Q**2 + 1)/(Q**4 - 2*Q**2 + 1)
+  Ext^2: ext=0.016740s, Hilb=0.015740s, zero=False, Hilb_Q=(-Q**4 + Q**2 + 1)/(Q**8 - 2*Q**6 + Q**4)
+term (0, 1, 0, 1, 0, 1) total: 0.413268s
+
+term (0, 1, 0, 1, 1, 0): degree=-3, word=(1, 0, 1), rank=8
+  Koszul complex: 0.181867s
+  Ext^0: ext=0.026810s, Hilb=0.017440s, zero=False, Hilb_Q=(Q**6 + Q**4)/(Q**4 - 2*Q**2 + 1)
+  Ext^1: ext=0.172321s, Hilb=0.045538s, zero=False, Hilb_Q=(2*Q**2 + 2)/(Q**4 - 2*Q**2 + 1)
+  Ext^2: ext=0.020400s, Hilb=0.020678s, zero=False, Hilb_Q=(Q**2 + 1)/(Q**8 - 2*Q**6 + Q**4)
+term (0, 1, 0, 1, 1, 0) total: 0.487220s
+
+term (0, 1, 1, 0, 0, 1): degree=-3, word=(1, 2, 2), rank=8
+  Koszul complex: 0.078260s
+  Ext^0: ext=0.010680s, Hilb=0.016205s, zero=False, Hilb_Q=(Q**6 + Q**4)/(Q**4 - 2*Q**2 + 1)
+  Ext^1: ext=0.041674s, Hilb=0.037901s, zero=False, Hilb_Q=(2*Q**2 + 2)/(Q**4 - 2*Q**2 + 1)
+  Ext^2: ext=0.011541s, Hilb=0.011394s, zero=False, Hilb_Q=(Q**2 + 1)/(Q**8 - 2*Q**6 + Q**4)
+term (0, 1, 1, 0, 0, 1) total: 0.209725s
+
+term (0, 1, 1, 0, 1, 0): degree=-3, word=(1, 2, 1), rank=8
+  Koszul complex: 0.177409s
+  Ext^0: ext=0.024152s, Hilb=0.016850s, zero=False, Hilb_Q=(Q**6 + Q**4)/(Q**4 - 2*Q**2 + 1)
+  Ext^1: ext=0.151907s, Hilb=0.042909s, zero=False, Hilb_Q=(2*Q**2 + 2)/(Q**4 - 2*Q**2 + 1)
+  Ext^2: ext=0.020625s, Hilb=0.017968s, zero=False, Hilb_Q=(Q**2 + 1)/(Q**8 - 2*Q**6 + Q**4)
+term (0, 1, 1, 0, 1, 0) total: 0.453990s
+
+term (0, 1, 1, 1, 0, 0): degree=-3, word=(1, 2, 0), rank=8
+  Koszul complex: 0.153139s
+  Ext^0: ext=0.018082s, Hilb=0.014728s, zero=False, Hilb_Q=Q**6/(Q**4 - 2*Q**2 + 1)
+  Ext^1: ext=0.149562s, Hilb=0.047567s, zero=False, Hilb_Q=(-Q**4 + 2*Q**2 + 1)/(Q**4 - 2*Q**2 + 1)
+  Ext^2: ext=0.017533s, Hilb=0.018086s, zero=False, Hilb_Q=(-Q**4 + Q**2 + 1)/(Q**8 - 2*Q**6 + Q**4)
+term (0, 1, 1, 1, 0, 0) total: 0.421071s
+
+term (1, 0, 0, 0, 1, 1): degree=-3, word=(0, 1, 2), rank=8
+  Koszul complex: 0.146155s
+  Ext^0: ext=0.171830s, Hilb=0.013900s, zero=False, Hilb_Q=Q**6/(Q**4 - 2*Q**2 + 1)
+  Ext^1: ext=0.125487s, Hilb=0.041062s, zero=False, Hilb_Q=(-Q**4 + 2*Q**2 + 1)/(Q**4 - 2*Q**2 + 1)
+  Ext^2: ext=0.016551s, Hilb=0.014820s, zero=False, Hilb_Q=(-Q**4 + Q**2 + 1)/(Q**8 - 2*Q**6 + Q**4)
+term (1, 0, 0, 0, 1, 1) total: 0.532588s
+
+term (1, 0, 0, 1, 0, 1): degree=-3, word=(0, 0, 2), rank=8
+  Koszul complex: 0.074076s
+  Ext^0: ext=0.008290s, Hilb=0.015624s, zero=False, Hilb_Q=(Q**6 + Q**4)/(Q**4 - 2*Q**2 + 1)
+  Ext^1: ext=0.040079s, Hilb=0.037898s, zero=False, Hilb_Q=(2*Q**2 + 2)/(Q**4 - 2*Q**2 + 1)
+  Ext^2: ext=0.010574s, Hilb=0.011441s, zero=False, Hilb_Q=(Q**2 + 1)/(Q**8 - 2*Q**6 + Q**4)
+term (1, 0, 0, 1, 0, 1) total: 0.200213s
+
+term (1, 0, 0, 1, 1, 0): degree=-3, word=(0, 0, 1), rank=8
+  Koszul complex: 0.089522s
+  Ext^0: ext=0.009900s, Hilb=0.014636s, zero=False, Hilb_Q=(Q**6 + Q**4)/(Q**4 - 2*Q**2 + 1)
+  Ext^1: ext=0.046296s, Hilb=0.040081s, zero=False, Hilb_Q=(2*Q**2 + 2)/(Q**4 - 2*Q**2 + 1)
+  Ext^2: ext=0.010856s, Hilb=0.010533s, zero=False, Hilb_Q=(Q**2 + 1)/(Q**8 - 2*Q**6 + Q**4)
+term (1, 0, 0, 1, 1, 0) total: 0.223940s
+
+term (1, 0, 1, 0, 0, 1): degree=-3, word=(0, 2, 2), rank=8
+  Koszul complex: 0.073612s
+  Ext^0: ext=0.007774s, Hilb=0.014903s, zero=False, Hilb_Q=(Q**6 + Q**4)/(Q**4 - 2*Q**2 + 1)
+  Ext^1: ext=0.030169s, Hilb=0.032328s, zero=False, Hilb_Q=(2*Q**2 + 2)/(Q**4 - 2*Q**2 + 1)
+  Ext^2: ext=0.010768s, Hilb=0.009506s, zero=False, Hilb_Q=(Q**2 + 1)/(Q**8 - 2*Q**6 + Q**4)
+term (1, 0, 1, 0, 0, 1) total: 0.181198s
+
+term (1, 0, 1, 0, 1, 0): degree=-3, word=(0, 2, 1), rank=8
+  Koszul complex: 0.171058s
+  Ext^0: ext=0.023565s, Hilb=0.013695s, zero=False, Hilb_Q=Q**6/(Q**4 - 2*Q**2 + 1)
+  Ext^1: ext=0.162359s, Hilb=0.043873s, zero=False, Hilb_Q=(-Q**4 + 2*Q**2 + 1)/(Q**4 - 2*Q**2 + 1)
+  Ext^2: ext=0.017198s, Hilb=0.019068s, zero=False, Hilb_Q=(-Q**4 + Q**2 + 1)/(Q**8 - 2*Q**6 + Q**4)
+term (1, 0, 1, 0, 1, 0) total: 0.453234s
+
+term (1, 0, 1, 1, 0, 0): degree=-3, word=(0, 2, 0), rank=8
+  Koszul complex: 0.139534s
+  Ext^0: ext=0.014433s, Hilb=0.016869s, zero=False, Hilb_Q=(Q**6 + Q**4)/(Q**4 - 2*Q**2 + 1)
+  Ext^1: ext=0.122922s, Hilb=0.044026s, zero=False, Hilb_Q=(2*Q**2 + 2)/(Q**4 - 2*Q**2 + 1)
+  Ext^2: ext=0.015197s, Hilb=0.018297s, zero=False, Hilb_Q=(Q**2 + 1)/(Q**8 - 2*Q**6 + Q**4)
+term (1, 0, 1, 1, 0, 0) total: 0.373416s
+
+term (1, 1, 0, 0, 0, 1): degree=-3, word=(0, 1, 2), rank=8
+  Koszul complex: 0.138505s
+  Ext^0: ext=0.023320s, Hilb=0.013659s, zero=False, Hilb_Q=Q**6/(Q**4 - 2*Q**2 + 1)
+  Ext^1: ext=0.122512s, Hilb=0.040374s, zero=False, Hilb_Q=(-Q**4 + 2*Q**2 + 1)/(Q**4 - 2*Q**2 + 1)
+  Ext^2: ext=0.015408s, Hilb=0.015536s, zero=False, Hilb_Q=(-Q**4 + Q**2 + 1)/(Q**8 - 2*Q**6 + Q**4)
+term (1, 1, 0, 0, 0, 1) total: 0.371822s
+
+term (1, 1, 0, 0, 1, 0): degree=-3, word=(0, 1, 1), rank=8
+  Koszul complex: 0.090301s
+  Ext^0: ext=0.009973s, Hilb=0.015984s, zero=False, Hilb_Q=(Q**6 + Q**4)/(Q**4 - 2*Q**2 + 1)
+  Ext^1: ext=0.046237s, Hilb=0.041836s, zero=False, Hilb_Q=(2*Q**2 + 2)/(Q**4 - 2*Q**2 + 1)
+  Ext^2: ext=0.011647s, Hilb=0.012614s, zero=False, Hilb_Q=(Q**2 + 1)/(Q**8 - 2*Q**6 + Q**4)
+term (1, 1, 0, 0, 1, 0) total: 0.230639s
+
+term (1, 1, 0, 1, 0, 0): degree=-3, word=(0, 1, 0), rank=8
+  Koszul complex: 0.140640s
+  Ext^0: ext=0.014603s, Hilb=0.017266s, zero=False, Hilb_Q=(Q**6 + Q**4)/(Q**4 - 2*Q**2 + 1)
+  Ext^1: ext=0.123697s, Hilb=0.045119s, zero=False, Hilb_Q=(2*Q**2 + 2)/(Q**4 - 2*Q**2 + 1)
+  Ext^2: ext=0.014892s, Hilb=0.018483s, zero=False, Hilb_Q=(Q**2 + 1)/(Q**8 - 2*Q**6 + Q**4)
+term (1, 1, 0, 1, 0, 0) total: 0.377073s
+
+term (1, 1, 1, 0, 0, 0): degree=-3, word=(0, 1, 2), rank=8
+  Koszul complex: 0.135226s
+  Ext^0: ext=0.023448s, Hilb=0.015279s, zero=False, Hilb_Q=Q**6/(Q**4 - 2*Q**2 + 1)
+  Ext^1: ext=0.120340s, Hilb=0.045918s, zero=False, Hilb_Q=(-Q**4 + 2*Q**2 + 1)/(Q**4 - 2*Q**2 + 1)
+  Ext^2: ext=0.015190s, Hilb=0.016438s, zero=False, Hilb_Q=(-Q**4 + Q**2 + 1)/(Q**8 - 2*Q**6 + Q**4)
+term (1, 1, 1, 0, 0, 0) total: 0.374178s
+
+term (0, 0, 0, 0, 1, 1): degree=-2, word=(1, 2), rank=4
+  Koszul complex: 0.037314s
+  Ext^0: ext=0.004511s, Hilb=0.010290s, zero=False, Hilb_Q=Q**4/(Q**4 - 2*Q**2 + 1)
+  Ext^1: ext=0.028156s, Hilb=0.023130s, zero=False, Hilb_Q=2/(Q**4 - 2*Q**2 + 1)
+  Ext^2: ext=0.004588s, Hilb=0.005672s, zero=False, Hilb_Q=1/(Q**8 - 2*Q**6 + Q**4)
+term (0, 0, 0, 0, 1, 1) total: 0.115254s
+
+term (0, 0, 0, 1, 0, 1): degree=-2, word=(0, 2), rank=4
+  Koszul complex: 0.031555s
+  Ext^0: ext=0.003717s, Hilb=0.009000s, zero=False, Hilb_Q=Q**4/(Q**4 - 2*Q**2 + 1)
+  Ext^1: ext=0.024259s, Hilb=0.017944s, zero=False, Hilb_Q=2/(Q**4 - 2*Q**2 + 1)
+  Ext^2: ext=0.004522s, Hilb=0.004880s, zero=False, Hilb_Q=1/(Q**8 - 2*Q**6 + Q**4)
+term (0, 0, 0, 1, 0, 1) total: 0.097624s
+
+term (0, 0, 0, 1, 1, 0): degree=-2, word=(0, 1), rank=4
+  Koszul complex: 0.038903s
+  Ext^0: ext=0.004352s, Hilb=0.008619s, zero=False, Hilb_Q=Q**4/(Q**4 - 2*Q**2 + 1)
+  Ext^1: ext=0.027110s, Hilb=0.022837s, zero=False, Hilb_Q=2/(Q**4 - 2*Q**2 + 1)
+  Ext^2: ext=0.005472s, Hilb=0.005768s, zero=False, Hilb_Q=1/(Q**8 - 2*Q**6 + Q**4)
+term (0, 0, 0, 1, 1, 0) total: 0.114847s
+
+term (0, 0, 1, 0, 0, 1): degree=-2, word=(2, 2), rank=4
+  Koszul complex: 0.013344s
+  Ext^0: ext=0.001520s, Hilb=0.010464s, zero=False, Hilb_Q=(Q**4 + Q**2)/(Q**4 - 2*Q**2 + 1)
+  Ext^1: ext=0.005152s, Hilb=0.017658s, zero=False, Hilb_Q=(Q**4 + 2*Q**2 + 1)/(Q**6 - 2*Q**4 + Q**2)
+  Ext^2: ext=0.002754s, Hilb=0.008503s, zero=False, Hilb_Q=(Q**2 + 1)/(Q**8 - 2*Q**6 + Q**4)
+term (0, 0, 1, 0, 0, 1) total: 0.061422s
+
+term (0, 0, 1, 0, 1, 0): degree=-2, word=(2, 1), rank=4
+  Koszul complex: 0.039568s
+  Ext^0: ext=0.003303s, Hilb=0.008750s, zero=False, Hilb_Q=Q**4/(Q**4 - 2*Q**2 + 1)
+  Ext^1: ext=0.023028s, Hilb=0.022809s, zero=False, Hilb_Q=2/(Q**4 - 2*Q**2 + 1)
+  Ext^2: ext=0.004136s, Hilb=0.004968s, zero=False, Hilb_Q=1/(Q**8 - 2*Q**6 + Q**4)
+term (0, 0, 1, 0, 1, 0) total: 0.108536s
+
+term (0, 0, 1, 1, 0, 0): degree=-2, word=(2, 0), rank=4
+  Koszul complex: 0.028777s
+  Ext^0: ext=0.002612s, Hilb=0.008841s, zero=False, Hilb_Q=Q**4/(Q**4 - 2*Q**2 + 1)
+  Ext^1: ext=0.020711s, Hilb=0.018227s, zero=False, Hilb_Q=2/(Q**4 - 2*Q**2 + 1)
+  Ext^2: ext=0.005280s, Hilb=0.005009s, zero=False, Hilb_Q=1/(Q**8 - 2*Q**6 + Q**4)
+term (0, 0, 1, 1, 0, 0) total: 0.091406s
+
+term (0, 1, 0, 0, 0, 1): degree=-2, word=(1, 2), rank=4
+  Koszul complex: 0.030930s
+  Ext^0: ext=0.003806s, Hilb=0.009208s, zero=False, Hilb_Q=Q**4/(Q**4 - 2*Q**2 + 1)
+  Ext^1: ext=0.015741s, Hilb=0.016483s, zero=False, Hilb_Q=2/(Q**4 - 2*Q**2 + 1)
+  Ext^2: ext=0.004041s, Hilb=0.004889s, zero=False, Hilb_Q=1/(Q**8 - 2*Q**6 + Q**4)
+term (0, 1, 0, 0, 0, 1) total: 0.086908s
+
+term (0, 1, 0, 0, 1, 0): degree=-2, word=(1, 1), rank=4
+  Koszul complex: 0.020907s
+  Ext^0: ext=0.002351s, Hilb=0.008807s, zero=False, Hilb_Q=(Q**4 + Q**2)/(Q**4 - 2*Q**2 + 1)
+  Ext^1: ext=0.008626s, Hilb=0.012716s, zero=False, Hilb_Q=(Q**4 + 2*Q**2 + 1)/(Q**6 - 2*Q**4 + Q**2)
+  Ext^2: ext=0.003554s, Hilb=0.005634s, zero=False, Hilb_Q=(Q**2 + 1)/(Q**8 - 2*Q**6 + Q**4)
+term (0, 1, 0, 0, 1, 0) total: 0.064697s
+
+term (0, 1, 0, 1, 0, 0): degree=-2, word=(1, 0), rank=4
+  Koszul complex: 0.033757s
+  Ext^0: ext=0.003218s, Hilb=0.008824s, zero=False, Hilb_Q=Q**4/(Q**4 - 2*Q**2 + 1)
+  Ext^1: ext=0.027298s, Hilb=0.019838s, zero=False, Hilb_Q=2/(Q**4 - 2*Q**2 + 1)
+  Ext^2: ext=0.003884s, Hilb=0.005518s, zero=False, Hilb_Q=1/(Q**8 - 2*Q**6 + Q**4)
+term (0, 1, 0, 1, 0, 0) total: 0.104130s
+
+term (0, 1, 1, 0, 0, 0): degree=-2, word=(1, 2), rank=4
+  Koszul complex: 0.030741s
+  Ext^0: ext=0.003517s, Hilb=0.009411s, zero=False, Hilb_Q=Q**4/(Q**4 - 2*Q**2 + 1)
+  Ext^1: ext=0.014949s, Hilb=0.016094s, zero=False, Hilb_Q=2/(Q**4 - 2*Q**2 + 1)
+  Ext^2: ext=0.004165s, Hilb=0.004401s, zero=False, Hilb_Q=1/(Q**8 - 2*Q**6 + Q**4)
+term (0, 1, 1, 0, 0, 0) total: 0.085107s
+
+term (1, 0, 0, 0, 0, 1): degree=-2, word=(0, 2), rank=4
+  Koszul complex: 0.028580s
+  Ext^0: ext=0.003199s, Hilb=0.007998s, zero=False, Hilb_Q=Q**4/(Q**4 - 2*Q**2 + 1)
+  Ext^1: ext=0.013998s, Hilb=0.015249s, zero=False, Hilb_Q=2/(Q**4 - 2*Q**2 + 1)
+  Ext^2: ext=0.003694s, Hilb=0.004641s, zero=False, Hilb_Q=1/(Q**8 - 2*Q**6 + Q**4)
+term (1, 0, 0, 0, 0, 1) total: 0.079125s
+
+term (1, 0, 0, 0, 1, 0): degree=-2, word=(0, 1), rank=4
+  Koszul complex: 0.032838s
+  Ext^0: ext=0.003734s, Hilb=0.008230s, zero=False, Hilb_Q=Q**4/(Q**4 - 2*Q**2 + 1)
+  Ext^1: ext=0.017289s, Hilb=0.017134s, zero=False, Hilb_Q=2/(Q**4 - 2*Q**2 + 1)
+  Ext^2: ext=0.003974s, Hilb=0.005355s, zero=False, Hilb_Q=1/(Q**8 - 2*Q**6 + Q**4)
+term (1, 0, 0, 0, 1, 0) total: 0.090560s
+
+term (1, 0, 0, 1, 0, 0): degree=-2, word=(0, 0), rank=4
+  Koszul complex: 0.012333s
+  Ext^0: ext=0.001447s, Hilb=0.008519s, zero=False, Hilb_Q=(Q**4 + Q**2)/(Q**4 - 2*Q**2 + 1)
+  Ext^1: ext=0.004990s, Hilb=0.013412s, zero=False, Hilb_Q=(Q**4 + 2*Q**2 + 1)/(Q**6 - 2*Q**4 + Q**2)
+  Ext^2: ext=0.002729s, Hilb=0.005692s, zero=False, Hilb_Q=(Q**2 + 1)/(Q**8 - 2*Q**6 + Q**4)
+term (1, 0, 0, 1, 0, 0) total: 0.051139s
+
+term (1, 0, 1, 0, 0, 0): degree=-2, word=(0, 2), rank=4
+  Koszul complex: 0.029207s
+  Ext^0: ext=0.003521s, Hilb=0.009107s, zero=False, Hilb_Q=Q**4/(Q**4 - 2*Q**2 + 1)
+  Ext^1: ext=0.014289s, Hilb=0.017010s, zero=False, Hilb_Q=2/(Q**4 - 2*Q**2 + 1)
+  Ext^2: ext=0.003666s, Hilb=0.005001s, zero=False, Hilb_Q=1/(Q**8 - 2*Q**6 + Q**4)
+term (1, 0, 1, 0, 0, 0) total: 0.083538s
+
+term (1, 1, 0, 0, 0, 0): degree=-2, word=(0, 1), rank=4
+  Koszul complex: 0.032725s
+  Ext^0: ext=0.003642s, Hilb=0.008383s, zero=False, Hilb_Q=Q**4/(Q**4 - 2*Q**2 + 1)
+  Ext^1: ext=0.016679s, Hilb=0.018366s, zero=False, Hilb_Q=2/(Q**4 - 2*Q**2 + 1)
+  Ext^2: ext=0.004151s, Hilb=0.005158s, zero=False, Hilb_Q=1/(Q**8 - 2*Q**6 + Q**4)
+term (1, 1, 0, 0, 0, 0) total: 0.090903s
+
+term (0, 0, 0, 0, 0, 1): degree=-1, word=(2,), rank=2
+  Koszul complex: 0.003953s
+  Ext^0: ext=0.000667s, Hilb=0.006207s, zero=False, Hilb_Q=Q**2/(Q**4 - 2*Q**2 + 1)
+  Ext^1: ext=0.002038s, Hilb=0.010538s, zero=False, Hilb_Q=(Q**2 + 1)/(Q**6 - 2*Q**4 + Q**2)
+  Ext^2: ext=0.001136s, Hilb=0.003939s, zero=False, Hilb_Q=1/(Q**8 - 2*Q**6 + Q**4)
+term (0, 0, 0, 0, 0, 1) total: 0.030173s
+
+term (0, 0, 0, 0, 1, 0): degree=-1, word=(1,), rank=2
+  Koszul complex: 0.009104s
+  Ext^0: ext=0.000801s, Hilb=0.005033s, zero=False, Hilb_Q=Q**2/(Q**4 - 2*Q**2 + 1)
+  Ext^1: ext=0.003459s, Hilb=0.006495s, zero=False, Hilb_Q=(Q**2 + 1)/(Q**6 - 2*Q**4 + Q**2)
+  Ext^2: ext=0.001355s, Hilb=0.002550s, zero=False, Hilb_Q=1/(Q**8 - 2*Q**6 + Q**4)
+term (0, 0, 0, 0, 1, 0) total: 0.030614s
+
+term (0, 0, 0, 1, 0, 0): degree=-1, word=(0,), rank=2
+  Koszul complex: 0.004860s
+  Ext^0: ext=0.000782s, Hilb=0.005020s, zero=False, Hilb_Q=Q**2/(Q**4 - 2*Q**2 + 1)
+  Ext^1: ext=0.002256s, Hilb=0.006962s, zero=False, Hilb_Q=(Q**2 + 1)/(Q**6 - 2*Q**4 + Q**2)
+  Ext^2: ext=0.001167s, Hilb=0.002481s, zero=False, Hilb_Q=1/(Q**8 - 2*Q**6 + Q**4)
+term (0, 0, 0, 1, 0, 0) total: 0.025332s
+
+term (0, 0, 1, 0, 0, 0): degree=-1, word=(2,), rank=2
+  Koszul complex: 0.003892s
+  Ext^0: ext=0.000578s, Hilb=0.004871s, zero=False, Hilb_Q=Q**2/(Q**4 - 2*Q**2 + 1)
+  Ext^1: ext=0.002126s, Hilb=0.006193s, zero=False, Hilb_Q=(Q**2 + 1)/(Q**6 - 2*Q**4 + Q**2)
+  Ext^2: ext=0.000961s, Hilb=0.002765s, zero=False, Hilb_Q=1/(Q**8 - 2*Q**6 + Q**4)
+term (0, 0, 1, 0, 0, 0) total: 0.023091s
+
+term (0, 1, 0, 0, 0, 0): degree=-1, word=(1,), rank=2
+  Koszul complex: 0.006574s
+  Ext^0: ext=0.000825s, Hilb=0.005693s, zero=False, Hilb_Q=Q**2/(Q**4 - 2*Q**2 + 1)
+  Ext^1: ext=0.002360s, Hilb=0.006658s, zero=False, Hilb_Q=(Q**2 + 1)/(Q**6 - 2*Q**4 + Q**2)
+  Ext^2: ext=0.001312s, Hilb=0.002552s, zero=False, Hilb_Q=1/(Q**8 - 2*Q**6 + Q**4)
+term (0, 1, 0, 0, 0, 0) total: 0.027640s
+
+term (1, 0, 0, 0, 0, 0): degree=-1, word=(0,), rank=2
+  Koszul complex: 0.003951s
+  Ext^0: ext=0.000573s, Hilb=0.004886s, zero=False, Hilb_Q=Q**2/(Q**4 - 2*Q**2 + 1)
+  Ext^1: ext=0.001884s, Hilb=0.006184s, zero=False, Hilb_Q=(Q**2 + 1)/(Q**6 - 2*Q**4 + Q**2)
+  Ext^2: ext=0.001042s, Hilb=0.002417s, zero=False, Hilb_Q=1/(Q**8 - 2*Q**6 + Q**4)
+term (1, 0, 0, 0, 0, 0) total: 0.022585s
+
+term (0, 0, 0, 0, 0, 0): degree=0, word=(), rank=1
+  Koszul complex: 0.000285s
+  Ext^0: ext=0.000248s, Hilb=0.001330s, zero=False, Hilb_Q=1/(Q**4 - 2*Q**2 + 1)
+  Ext^1: ext=0.000369s, Hilb=0.001927s, zero=False, Hilb_Q=2/(Q**6 - 2*Q**4 + Q**2)
+  Ext^2: ext=0.000171s, Hilb=0.001320s, zero=False, Hilb_Q=1/(Q**8 - 2*Q**6 + Q**4)
+term (0, 0, 0, 0, 0, 0) total: 0.006908s
+
+simplify final Euler trace: 0.039439s
+
+Final Euler trace:
+(A**2*Q**4 + A**2*Q**2 - A**2 + A*Q**10 - A*Q**8 + 3*A*Q**6 - 2*A*Q**4 + 2*A*Q**2 - A + Q**14 - 2*Q**12 + 2*Q**10 - Q**8 + 3*Q**6 - 3*Q**4 + Q**2)/(Q**2*(Q - 1)**2*(Q + 1)**2)
+
+Timing summary:
+  Ext module homology total: 125.243362s
+  Hilbert-series total: 19.392794s
+  Overall wall time: 265.152007s
+
+Reminder: this script can be wrapped in macOS caffeinate to prevent system sleep.
+Example:
+  python3 -m computations.run_affine_a2_euler_trace --caffeinate --output computations/affine_a2_euler_trace_output_now.txt
