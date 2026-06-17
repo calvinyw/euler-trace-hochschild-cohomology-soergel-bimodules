@@ -33,7 +33,7 @@ from computations.khovanov_rozansky_2_0 import (
     _minimal_block_sizes,
 )
 from computations.light_leaves import rouquier_complex_as_free_left_r_modules
-from computations.run_affine_a2_012_euler_trace_2_0 import _realization
+from computations.scripts.run_affine_a2_012_euler_trace_2_0 import _realization
 from computations.slower_old_KR.khovanov_rozansky_free_r import (
     _free_module_homology,
     _horizontal_homology,
@@ -191,9 +191,9 @@ def _timeout_handler(_signum, _frame) -> None:
 
 def _wrapper_module_name(case_name: CaseName) -> str:
     return {
-        "a2_1212": "computations.run_a2_hhh_2_0",
+        "a2_1212": "computations.scripts.run_a2_hhh_2_0",
         "affine_a2_geometric_3d_012012": (
-            "computations.run_affine_a2_geometric_3d_012012_hhh_2_0"
+            "computations.scripts.run_affine_a2_geometric_3d_012012_hhh_2_0"
         ),
     }[case_name]
 

@@ -1,6 +1,6 @@
 """Run affine A2 ``s0 s1 s2 s0 s1 s2`` HHH 2.0 in the 3D geometric realization."""
 
-from computations.run_hhh_2_0 import main_for_case
+from computations.scripts.run_hhh_2_0 import main_for_case
 
 
 if __name__ == "__main__":

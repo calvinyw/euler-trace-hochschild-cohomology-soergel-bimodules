@@ -8,10 +8,10 @@ from pathlib import Path
 
 import sympy as sp
 
-from computations.diagnose_affine_a2_rank64_ext0_2d import Logger, _nonzero_entries
+from computations.scripts.diagnostics.diagnose_affine_a2_rank64_ext0_2d import Logger, _nonzero_entries
 from computations.khovanov_rozansky import DynkinDiagram
 from computations.light_leaves import rouquier_complex_as_free_left_r_modules
-from computations.run_affine_a2_kac_moody_6d_euler_trace_extfree import (
+from computations.scripts.run_affine_a2_kac_moody_6d_euler_trace_extfree import (
     kac_moody_affine_a2_universal_realization,
 )
 from computations.slower_old_KR.khovanov_rozansky_free_r import free_r_koszul_complex

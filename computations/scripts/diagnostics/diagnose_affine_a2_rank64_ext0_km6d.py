@@ -11,7 +11,7 @@ from pathlib import Path
 
 import sympy as sp
 
-from computations.diagnose_affine_a2_rank64_ext0_2d import (
+from computations.scripts.diagnostics.diagnose_affine_a2_rank64_ext0_2d import (
     Logger,
     _homogeneous_kernel_basis,
     _lift_with_constant_part,
@@ -22,7 +22,7 @@ from computations.diagnose_affine_a2_rank64_ext0_2d import (
 )
 from computations.khovanov_rozansky import DEFAULT_SHIFTS, DynkinDiagram, _graded_homology_basis
 from computations.light_leaves import rouquier_complex_as_free_left_r_modules
-from computations.run_affine_a2_kac_moody_6d_euler_trace_extfree import (
+from computations.scripts.run_affine_a2_kac_moody_6d_euler_trace_extfree import (
     kac_moody_affine_a2_universal_realization,
 )
 from computations.slower_old_KR.khovanov_rozansky_free_r import free_r_koszul_complex

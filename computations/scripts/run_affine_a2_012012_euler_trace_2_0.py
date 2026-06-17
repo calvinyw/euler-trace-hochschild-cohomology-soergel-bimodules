@@ -1,4 +1,4 @@
-"""Run affine A2 ``s0 s1 s2`` Euler-trace 2.0 computations.
+"""Run affine A2 ``s0 s1 s2 s0 s1 s2`` Euler-trace 2.0 computations.
 
 This module is the shared implementation for the geometric and 6D Kac--Moody
 runner scripts.  It logs per Bott--Samelson timing for:
@@ -19,7 +19,6 @@ import subprocess
 import sys
 import time
 from pathlib import Path
-from typing import Literal
 
 import sympy as sp
 
@@ -30,10 +29,13 @@ from computations.euler_trace_2_0 import (
     minimal_koszul_complex_from_splitting_data,
     split_certified_free_summands,
 )
-from computations.khovanov_rozansky import A, DEFAULT_SHIFTS, DynkinDiagram, Realization
+from computations.khovanov_rozansky import A, DEFAULT_SHIFTS, DynkinDiagram
 from computations.light_leaves import rouquier_complex_as_free_left_r_modules
-from computations.run_affine_a2_kac_moody_6d_euler_trace_extfree import (
-    kac_moody_affine_a2_universal_realization,
+from computations.scripts.run_affine_a2_012_euler_trace_2_0 import (
+    Logger,
+    RealizationName,
+    TimeoutExpired,
+    _realization,
 )
 from computations.slower_old_KR.khovanov_rozansky_free_r import (
     _polynomial_ring,
@@ -42,46 +44,17 @@ from computations.slower_old_KR.khovanov_rozansky_free_r import (
 from computations.slower_old_euler_trace.euler_trace import koszul_ext_hilbert_series_by_degree
 
 
-RealizationName = Literal["geometric", "geometric_3d", "kac_moody_6d"]
-
 DEFAULT_OUTPUTS = {
     "geometric": Path(
-        "computations/euler_trace_outputs/affine_a2_geometric_012_euler_trace_2_0_output.txt"
+        "computations/euler_trace_outputs/affine_a2_geometric_012012_euler_trace_2_0_output.txt"
     ),
     "geometric_3d": Path(
-        "computations/euler_trace_outputs/affine_a2_geometric_3d_012_euler_trace_2_0_output.txt"
+        "computations/euler_trace_outputs/affine_a2_geometric_3d_012012_euler_trace_2_0_output.txt"
     ),
     "kac_moody_6d": Path(
-        "computations/euler_trace_outputs/affine_a2_kac_moody_6d_012_euler_trace_2_0_output.txt"
+        "computations/euler_trace_outputs/affine_a2_kac_moody_6d_012012_euler_trace_2_0_output.txt"
     ),
 }
-
-
-class TimeoutExpired(Exception):
-    """Raised when the script reaches its wall-clock budget."""
-
-
-class Logger:
-    def __init__(self, path: Path) -> None:
-        path.parent.mkdir(parents=True, exist_ok=True)
-        self.path = path
-        self.handle = path.open("w", encoding="utf-8")
-
-    def close(self) -> None:
-        self.handle.close()
-
-    def log(self, message: str = "") -> None:
-        print(message, flush=True)
-        self.handle.write(message + "\n")
-        self.handle.flush()
-
-    def log_timing(self, label: str, start: float) -> None:
-        self.log(f"{label}: {time.perf_counter() - start:.6f}s")
-
-    def log_elapsed(self, label: str, start: float) -> float:
-        elapsed = time.perf_counter() - start
-        self.log(f"{label}: {elapsed:.6f}s")
-        return elapsed
 
 
 def main_with_realization(realization_name: RealizationName) -> int:
@@ -115,7 +88,7 @@ def main_with_realization(realization_name: RealizationName) -> int:
     )
     args = parser.parse_args()
 
-    env_var = f"AFFINE_A2_012_ET20_{realization_name.upper()}_CAFFEINATED"
+    env_var = f"AFFINE_A2_012012_ET20_{realization_name.upper()}_CAFFEINATED"
     if args.caffeinate and not os.environ.get(env_var):
         env = os.environ.copy()
         env[env_var] = "1"
@@ -170,9 +143,9 @@ def _timeout_handler(_signum, _frame) -> None:
 
 def _wrapper_module_name(realization_name: RealizationName) -> str:
     return {
-        "geometric": "computations.run_affine_a2_geometric_012_euler_trace_2_0",
-        "geometric_3d": "computations.run_affine_a2_geometric_3d_012_euler_trace_2_0",
-        "kac_moody_6d": "computations.run_affine_a2_kac_moody_6d_012_euler_trace_2_0",
+        "geometric": "computations.scripts.run_affine_a2_geometric_012012_euler_trace_2_0",
+        "geometric_3d": "computations.scripts.run_affine_a2_geometric_3d_012012_euler_trace_2_0",
+        "kac_moody_6d": "computations.scripts.run_affine_a2_kac_moody_6d_012012_euler_trace_2_0",
     }[realization_name]
 
 
@@ -190,7 +163,7 @@ def _run(
         "geometric_3d": "geometric 3D",
         "kac_moody_6d": "6D universal Kac-Moody",
     }[realization_name]
-    logger.log(f"Affine A2 {label} s0s1s2 Euler-trace 2.0 computation")
+    logger.log(f"Affine A2 {label} s0s1s2s0s1s2 Euler-trace 2.0 computation")
     logger.log(f"Python: {sys.version.split()[0]}")
     logger.log(f"Platform: {platform.platform()}")
     logger.log(f"Output file: {logger.path.resolve()}")
@@ -200,7 +173,7 @@ def _run(
     logger.log("")
 
     diagram = DynkinDiagram.from_data([0, 1, 2], [(0, 1), (1, 2), (2, 0)])
-    braid = ((0, "+"), (1, "+"), (2, "+"))
+    braid = ((0, "+"), (1, "+"), (2, "+"), (0, "+"), (1, "+"), (2, "+"))
 
     section_start = time.perf_counter()
     realization = _realization(diagram, realization_name)
@@ -276,7 +249,7 @@ def _run(
             koszul,
             rouquier_free.r_variables,
             validate=validate,
-            context=f"affine A2 {label} s0s1s2 Euler trace 2.0 term {choices}",
+            context=f"affine A2 {label} s0s1s2s0s1s2 Euler trace 2.0 term {choices}",
         )
         totals["field"] += logger.log_elapsed("  step 1 field B+H+S splitting", field_start)
         logger.log(
@@ -294,7 +267,7 @@ def _run(
             rouquier_free.r_variables,
             field_splitting,
             validate=validate,
-            context=f"affine A2 {label} s0s1s2 Euler trace 2.0 term {choices}",
+            context=f"affine A2 {label} s0s1s2s0s1s2 Euler trace 2.0 term {choices}",
         )
         totals["minimal"] += logger.log_elapsed(
             "  step 2 lifted cancellation/minimal complex",
@@ -311,7 +284,7 @@ def _run(
             minimal.complex,
             rouquier_free.r_variables,
             validate=validate,
-            context=f"affine A2 {label} s0s1s2 Euler trace 2.0 term {choices}",
+            context=f"affine A2 {label} s0s1s2s0s1s2 Euler trace 2.0 term {choices}",
         )
         totals["free_split"] += logger.log_elapsed(
             "  step 3 certified free homology splitting",
@@ -370,7 +343,7 @@ def _run(
     simplified = sp.factor(sp.cancel(total_trace))
     logger.log_timing("simplify final Euler trace", section_start)
     logger.log("")
-    logger.log(f"Final affine A2 {label} s0s1s2 Euler trace 2.0:")
+    logger.log(f"Final affine A2 {label} s0s1s2s0s1s2 Euler trace 2.0:")
     logger.log(str(simplified))
     logger.log("")
     logger.log("Timing summary:")
@@ -386,37 +359,5 @@ def _run(
     logger.log(f"  Recorded term data entries: {len(term_data)}")
 
 
-def _realization(diagram: DynkinDiagram, realization_name: RealizationName) -> Realization:
-    if realization_name == "kac_moody_6d":
-        return kac_moody_affine_a2_universal_realization(diagram)
-    if realization_name == "geometric_3d":
-        action_on_dual = {}
-        identity = sp.eye(3)
-        for reflection in diagram.vertices:
-            matrix = identity.copy()
-            row = diagram.vertex_index(reflection)
-            for column_vertex in diagram.vertices:
-                column = diagram.vertex_index(column_vertex)
-                kronecker = sp.Integer(1) if reflection == column_vertex else sp.Integer(0)
-                matrix[row, column] = kronecker - diagram.cartan_entry(
-                    reflection,
-                    column_vertex,
-                )
-            action_on_dual[reflection] = matrix
-        return Realization.from_matrices(
-            diagram,
-            action_on_dual,
-            dual=True,
-            validate=True,
-        )
-    matrices_on_v = {
-        0: sp.Matrix([[-1, 0], [-1, 1]]),
-        1: sp.Matrix([[0, 1], [1, 0]]),
-        2: sp.Matrix([[1, -1], [0, -1]]),
-    }
-    return Realization.from_matrices(
-        diagram,
-        matrices_on_v,
-        dual=False,
-        validate=True,
-    )
+if __name__ == "__main__":
+    raise SystemExit(main_with_realization("geometric"))

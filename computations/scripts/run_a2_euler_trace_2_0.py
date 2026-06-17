@@ -72,7 +72,7 @@ def main() -> None:
             "-dimsu",
             sys.executable,
             "-m",
-            "computations.run_a2_euler_trace_2_0",
+            "computations.scripts.run_a2_euler_trace_2_0",
             "--output",
             str(args.output),
         ]
