@@ -42,11 +42,14 @@ from computations.slower_old_KR.khovanov_rozansky_free_r import (
 from computations.slower_old_euler_trace.euler_trace import koszul_ext_hilbert_series_by_degree
 
 
-RealizationName = Literal["geometric", "kac_moody_6d"]
+RealizationName = Literal["geometric", "geometric_3d", "kac_moody_6d"]
 
 DEFAULT_OUTPUTS = {
     "geometric": Path(
         "computations/euler_trace_outputs/affine_a2_geometric_012_euler_trace_2_0_output.txt"
+    ),
+    "geometric_3d": Path(
+        "computations/euler_trace_outputs/affine_a2_geometric_3d_012_euler_trace_2_0_output.txt"
     ),
     "kac_moody_6d": Path(
         "computations/euler_trace_outputs/affine_a2_kac_moody_6d_012_euler_trace_2_0_output.txt"
@@ -168,6 +171,7 @@ def _timeout_handler(_signum, _frame) -> None:
 def _wrapper_module_name(realization_name: RealizationName) -> str:
     return {
         "geometric": "computations.run_affine_a2_geometric_012_euler_trace_2_0",
+        "geometric_3d": "computations.run_affine_a2_geometric_3d_012_euler_trace_2_0",
         "kac_moody_6d": "computations.run_affine_a2_kac_moody_6d_012_euler_trace_2_0",
     }[realization_name]
 
@@ -183,6 +187,7 @@ def _run(
 ) -> None:
     label = {
         "geometric": "geometric 2D",
+        "geometric_3d": "geometric 3D",
         "kac_moody_6d": "6D universal Kac-Moody",
     }[realization_name]
     logger.log(f"Affine A2 {label} s0s1s2 Euler-trace 2.0 computation")
@@ -206,6 +211,8 @@ def _run(
     logger.log(f"realization dimension: {realization.dim}")
     if realization_name == "geometric":
         logger.log("input matrices interpreted as V action; R uses the contragredient V^* action")
+    elif realization_name == "geometric_3d":
+        logger.log("basis: alpha_0, alpha_1, alpha_2")
     else:
         logger.log("basis: alpha_0, alpha_1, alpha_2, Lambda_0, Lambda_1, Lambda_2")
     for generator in diagram.vertices:
@@ -382,6 +389,26 @@ def _run(
 def _realization(diagram: DynkinDiagram, realization_name: RealizationName) -> Realization:
     if realization_name == "kac_moody_6d":
         return kac_moody_affine_a2_universal_realization(diagram)
+    if realization_name == "geometric_3d":
+        action_on_dual = {}
+        identity = sp.eye(3)
+        for reflection in diagram.vertices:
+            matrix = identity.copy()
+            row = diagram.vertex_index(reflection)
+            for column_vertex in diagram.vertices:
+                column = diagram.vertex_index(column_vertex)
+                kronecker = sp.Integer(1) if reflection == column_vertex else sp.Integer(0)
+                matrix[row, column] = kronecker - diagram.cartan_entry(
+                    reflection,
+                    column_vertex,
+                )
+            action_on_dual[reflection] = matrix
+        return Realization.from_matrices(
+            diagram,
+            action_on_dual,
+            dual=True,
+            validate=True,
+        )
     matrices_on_v = {
         0: sp.Matrix([[-1, 0], [-1, 1]]),
         1: sp.Matrix([[0, 1], [1, 0]]),

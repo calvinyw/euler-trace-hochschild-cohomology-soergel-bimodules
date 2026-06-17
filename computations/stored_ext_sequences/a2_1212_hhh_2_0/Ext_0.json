@@ -1,0 +1,1141 @@
+{
+  "braid": [
+    [
+      1,
+      "+"
+    ],
+    [
+      2,
+      "+"
+    ],
+    [
+      1,
+      "+"
+    ],
+    [
+      2,
+      "+"
+    ]
+  ],
+  "case": "a2_1212",
+  "chain_groups": [
+    {
+      "ambient_q_degrees": [
+        6,
+        6,
+        8
+      ],
+      "image_generators": [],
+      "kernel_generators": [
+        [
+          "1",
+          "0",
+          "0"
+        ],
+        [
+          "0",
+          "1",
+          "0"
+        ],
+        [
+          "0",
+          "0",
+          "1"
+        ]
+      ],
+      "offsets": {
+        "(1, 1, 1, 1)": 0
+      },
+      "rouquier_degree": -4,
+      "term_keys": [
+        [
+          1,
+          1,
+          1,
+          1
+        ]
+      ],
+      "terms": [
+        {
+          "ambient_q_degrees": [
+            6,
+            6,
+            8
+          ],
+          "choices": [
+            1,
+            1,
+            1,
+            1
+          ],
+          "image_generators": [],
+          "kernel_generator_q_degrees": [
+            6,
+            6,
+            8
+          ],
+          "kernel_generators": [
+            [
+              "1",
+              "0",
+              "0"
+            ],
+            [
+              "0",
+              "1",
+              "0"
+            ],
+            [
+              "0",
+              "0",
+              "1"
+            ]
+          ],
+          "module_is_zero": false,
+          "offset": 0,
+          "rouquier_degree": -4,
+          "word": [
+            1,
+            2,
+            1,
+            2
+          ]
+        }
+      ]
+    },
+    {
+      "ambient_q_degrees": [
+        4,
+        6,
+        4,
+        6,
+        4,
+        6,
+        4,
+        6
+      ],
+      "image_generators": [],
+      "kernel_generators": [
+        [
+          "1",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0"
+        ],
+        [
+          "0",
+          "1",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0"
+        ],
+        [
+          "0",
+          "0",
+          "1",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0"
+        ],
+        [
+          "0",
+          "0",
+          "0",
+          "1",
+          "0",
+          "0",
+          "0",
+          "0"
+        ],
+        [
+          "0",
+          "0",
+          "0",
+          "0",
+          "1",
+          "0",
+          "0",
+          "0"
+        ],
+        [
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "1",
+          "0",
+          "0"
+        ],
+        [
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "1",
+          "0"
+        ],
+        [
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "1"
+        ]
+      ],
+      "offsets": {
+        "(0, 1, 1, 1)": 0,
+        "(1, 0, 1, 1)": 2,
+        "(1, 1, 0, 1)": 4,
+        "(1, 1, 1, 0)": 6
+      },
+      "rouquier_degree": -3,
+      "term_keys": [
+        [
+          0,
+          1,
+          1,
+          1
+        ],
+        [
+          1,
+          0,
+          1,
+          1
+        ],
+        [
+          1,
+          1,
+          0,
+          1
+        ],
+        [
+          1,
+          1,
+          1,
+          0
+        ]
+      ],
+      "terms": [
+        {
+          "ambient_q_degrees": [
+            4,
+            6
+          ],
+          "choices": [
+            0,
+            1,
+            1,
+            1
+          ],
+          "image_generators": [],
+          "kernel_generator_q_degrees": [
+            4,
+            6
+          ],
+          "kernel_generators": [
+            [
+              "1",
+              "0"
+            ],
+            [
+              "0",
+              "1"
+            ]
+          ],
+          "module_is_zero": false,
+          "offset": 0,
+          "rouquier_degree": -3,
+          "word": [
+            2,
+            1,
+            2
+          ]
+        },
+        {
+          "ambient_q_degrees": [
+            4,
+            6
+          ],
+          "choices": [
+            1,
+            0,
+            1,
+            1
+          ],
+          "image_generators": [],
+          "kernel_generator_q_degrees": [
+            4,
+            6
+          ],
+          "kernel_generators": [
+            [
+              "1",
+              "0"
+            ],
+            [
+              "0",
+              "1"
+            ]
+          ],
+          "module_is_zero": false,
+          "offset": 2,
+          "rouquier_degree": -3,
+          "word": [
+            1,
+            1,
+            2
+          ]
+        },
+        {
+          "ambient_q_degrees": [
+            4,
+            6
+          ],
+          "choices": [
+            1,
+            1,
+            0,
+            1
+          ],
+          "image_generators": [],
+          "kernel_generator_q_degrees": [
+            4,
+            6
+          ],
+          "kernel_generators": [
+            [
+              "1",
+              "0"
+            ],
+            [
+              "0",
+              "1"
+            ]
+          ],
+          "module_is_zero": false,
+          "offset": 4,
+          "rouquier_degree": -3,
+          "word": [
+            1,
+            2,
+            2
+          ]
+        },
+        {
+          "ambient_q_degrees": [
+            4,
+            6
+          ],
+          "choices": [
+            1,
+            1,
+            1,
+            0
+          ],
+          "image_generators": [],
+          "kernel_generator_q_degrees": [
+            4,
+            6
+          ],
+          "kernel_generators": [
+            [
+              "1",
+              "0"
+            ],
+            [
+              "0",
+              "1"
+            ]
+          ],
+          "module_is_zero": false,
+          "offset": 6,
+          "rouquier_degree": -3,
+          "word": [
+            1,
+            2,
+            1
+          ]
+        }
+      ]
+    },
+    {
+      "ambient_q_degrees": [
+        4,
+        2,
+        4,
+        4,
+        4,
+        2,
+        4,
+        4
+      ],
+      "image_generators": [],
+      "kernel_generators": [
+        [
+          "1",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0"
+        ],
+        [
+          "0",
+          "1",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0"
+        ],
+        [
+          "0",
+          "0",
+          "1",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0"
+        ],
+        [
+          "0",
+          "0",
+          "0",
+          "1",
+          "0",
+          "0",
+          "0",
+          "0"
+        ],
+        [
+          "0",
+          "0",
+          "0",
+          "0",
+          "1",
+          "0",
+          "0",
+          "0"
+        ],
+        [
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "1",
+          "0",
+          "0"
+        ],
+        [
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "1",
+          "0"
+        ],
+        [
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0",
+          "1"
+        ]
+      ],
+      "offsets": {
+        "(0, 0, 1, 1)": 0,
+        "(0, 1, 0, 1)": 1,
+        "(0, 1, 1, 0)": 3,
+        "(1, 0, 0, 1)": 4,
+        "(1, 0, 1, 0)": 5,
+        "(1, 1, 0, 0)": 7
+      },
+      "rouquier_degree": -2,
+      "term_keys": [
+        [
+          0,
+          0,
+          1,
+          1
+        ],
+        [
+          0,
+          1,
+          0,
+          1
+        ],
+        [
+          0,
+          1,
+          1,
+          0
+        ],
+        [
+          1,
+          0,
+          0,
+          1
+        ],
+        [
+          1,
+          0,
+          1,
+          0
+        ],
+        [
+          1,
+          1,
+          0,
+          0
+        ]
+      ],
+      "terms": [
+        {
+          "ambient_q_degrees": [
+            4
+          ],
+          "choices": [
+            0,
+            0,
+            1,
+            1
+          ],
+          "image_generators": [],
+          "kernel_generator_q_degrees": [
+            4
+          ],
+          "kernel_generators": [
+            [
+              "1"
+            ]
+          ],
+          "module_is_zero": false,
+          "offset": 0,
+          "rouquier_degree": -2,
+          "word": [
+            1,
+            2
+          ]
+        },
+        {
+          "ambient_q_degrees": [
+            2,
+            4
+          ],
+          "choices": [
+            0,
+            1,
+            0,
+            1
+          ],
+          "image_generators": [],
+          "kernel_generator_q_degrees": [
+            2,
+            4
+          ],
+          "kernel_generators": [
+            [
+              "1",
+              "0"
+            ],
+            [
+              "0",
+              "1"
+            ]
+          ],
+          "module_is_zero": false,
+          "offset": 1,
+          "rouquier_degree": -2,
+          "word": [
+            2,
+            2
+          ]
+        },
+        {
+          "ambient_q_degrees": [
+            4
+          ],
+          "choices": [
+            0,
+            1,
+            1,
+            0
+          ],
+          "image_generators": [],
+          "kernel_generator_q_degrees": [
+            4
+          ],
+          "kernel_generators": [
+            [
+              "1"
+            ]
+          ],
+          "module_is_zero": false,
+          "offset": 3,
+          "rouquier_degree": -2,
+          "word": [
+            2,
+            1
+          ]
+        },
+        {
+          "ambient_q_degrees": [
+            4
+          ],
+          "choices": [
+            1,
+            0,
+            0,
+            1
+          ],
+          "image_generators": [],
+          "kernel_generator_q_degrees": [
+            4
+          ],
+          "kernel_generators": [
+            [
+              "1"
+            ]
+          ],
+          "module_is_zero": false,
+          "offset": 4,
+          "rouquier_degree": -2,
+          "word": [
+            1,
+            2
+          ]
+        },
+        {
+          "ambient_q_degrees": [
+            2,
+            4
+          ],
+          "choices": [
+            1,
+            0,
+            1,
+            0
+          ],
+          "image_generators": [],
+          "kernel_generator_q_degrees": [
+            2,
+            4
+          ],
+          "kernel_generators": [
+            [
+              "1",
+              "0"
+            ],
+            [
+              "0",
+              "1"
+            ]
+          ],
+          "module_is_zero": false,
+          "offset": 5,
+          "rouquier_degree": -2,
+          "word": [
+            1,
+            1
+          ]
+        },
+        {
+          "ambient_q_degrees": [
+            4
+          ],
+          "choices": [
+            1,
+            1,
+            0,
+            0
+          ],
+          "image_generators": [],
+          "kernel_generator_q_degrees": [
+            4
+          ],
+          "kernel_generators": [
+            [
+              "1"
+            ]
+          ],
+          "module_is_zero": false,
+          "offset": 7,
+          "rouquier_degree": -2,
+          "word": [
+            1,
+            2
+          ]
+        }
+      ]
+    },
+    {
+      "ambient_q_degrees": [
+        2,
+        2,
+        2,
+        2
+      ],
+      "image_generators": [],
+      "kernel_generators": [
+        [
+          "1",
+          "0",
+          "0",
+          "0"
+        ],
+        [
+          "0",
+          "1",
+          "0",
+          "0"
+        ],
+        [
+          "0",
+          "0",
+          "1",
+          "0"
+        ],
+        [
+          "0",
+          "0",
+          "0",
+          "1"
+        ]
+      ],
+      "offsets": {
+        "(0, 0, 0, 1)": 0,
+        "(0, 0, 1, 0)": 1,
+        "(0, 1, 0, 0)": 2,
+        "(1, 0, 0, 0)": 3
+      },
+      "rouquier_degree": -1,
+      "term_keys": [
+        [
+          0,
+          0,
+          0,
+          1
+        ],
+        [
+          0,
+          0,
+          1,
+          0
+        ],
+        [
+          0,
+          1,
+          0,
+          0
+        ],
+        [
+          1,
+          0,
+          0,
+          0
+        ]
+      ],
+      "terms": [
+        {
+          "ambient_q_degrees": [
+            2
+          ],
+          "choices": [
+            0,
+            0,
+            0,
+            1
+          ],
+          "image_generators": [],
+          "kernel_generator_q_degrees": [
+            2
+          ],
+          "kernel_generators": [
+            [
+              "1"
+            ]
+          ],
+          "module_is_zero": false,
+          "offset": 0,
+          "rouquier_degree": -1,
+          "word": [
+            2
+          ]
+        },
+        {
+          "ambient_q_degrees": [
+            2
+          ],
+          "choices": [
+            0,
+            0,
+            1,
+            0
+          ],
+          "image_generators": [],
+          "kernel_generator_q_degrees": [
+            2
+          ],
+          "kernel_generators": [
+            [
+              "1"
+            ]
+          ],
+          "module_is_zero": false,
+          "offset": 1,
+          "rouquier_degree": -1,
+          "word": [
+            1
+          ]
+        },
+        {
+          "ambient_q_degrees": [
+            2
+          ],
+          "choices": [
+            0,
+            1,
+            0,
+            0
+          ],
+          "image_generators": [],
+          "kernel_generator_q_degrees": [
+            2
+          ],
+          "kernel_generators": [
+            [
+              "1"
+            ]
+          ],
+          "module_is_zero": false,
+          "offset": 2,
+          "rouquier_degree": -1,
+          "word": [
+            2
+          ]
+        },
+        {
+          "ambient_q_degrees": [
+            2
+          ],
+          "choices": [
+            1,
+            0,
+            0,
+            0
+          ],
+          "image_generators": [],
+          "kernel_generator_q_degrees": [
+            2
+          ],
+          "kernel_generators": [
+            [
+              "1"
+            ]
+          ],
+          "module_is_zero": false,
+          "offset": 3,
+          "rouquier_degree": -1,
+          "word": [
+            1
+          ]
+        }
+      ]
+    },
+    {
+      "ambient_q_degrees": [
+        0
+      ],
+      "image_generators": [],
+      "kernel_generators": [
+        [
+          "1"
+        ]
+      ],
+      "offsets": {
+        "(0, 0, 0, 0)": 0
+      },
+      "rouquier_degree": 0,
+      "term_keys": [
+        [
+          0,
+          0,
+          0,
+          0
+        ]
+      ],
+      "terms": [
+        {
+          "ambient_q_degrees": [
+            0
+          ],
+          "choices": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "image_generators": [],
+          "kernel_generator_q_degrees": [
+            0
+          ],
+          "kernel_generators": [
+            [
+              "1"
+            ]
+          ],
+          "module_is_zero": false,
+          "offset": 0,
+          "rouquier_degree": 0,
+          "word": []
+        }
+      ]
+    }
+  ],
+  "ext_degree": 0,
+  "ext_degrees": [
+    0,
+    1,
+    2
+  ],
+  "horizontal_maps": [
+    {
+      "matrix": [
+        [
+          "-2*x_0",
+          "-2*x_0",
+          "4*x_0**2 + 2*x_0*x_1"
+        ],
+        [
+          "-2",
+          "-4",
+          "6*x_0 + 2*x_1"
+        ],
+        [
+          "2*x_0 + 4*x_1",
+          "6*x_0 + 8*x_1",
+          "-6*x_0**2 - 12*x_0*x_1 - 4*x_1**2"
+        ],
+        [
+          "-2",
+          "-2",
+          "2*x_0"
+        ],
+        [
+          "-2*x_1",
+          "-4*x_0 - 6*x_1",
+          "4*x_0**2 + 8*x_0*x_1 + 2*x_1**2"
+        ],
+        [
+          "-2",
+          "-2",
+          "4*x_0 + 2*x_1"
+        ],
+        [
+          "-2*x_1",
+          "-2*x_1",
+          "2*x_0*x_1"
+        ],
+        [
+          "0",
+          "2",
+          "-2*x_0 - 2*x_1"
+        ]
+      ],
+      "shape": [
+        8,
+        3
+      ],
+      "source_rouquier_degree": -4,
+      "target_rouquier_degree": -3
+    },
+    {
+      "matrix": [
+        [
+          "-2",
+          "2*x_0 + 2*x_1",
+          "1",
+          "x_0",
+          "0",
+          "0",
+          "0",
+          "0"
+        ],
+        [
+          "4*x_0 + 2*x_1",
+          "-4*x_0**2 - 4*x_0*x_1",
+          "0",
+          "0",
+          "2*x_0",
+          "0",
+          "0",
+          "0"
+        ],
+        [
+          "-2",
+          "0",
+          "0",
+          "0",
+          "0",
+          "2*x_0",
+          "0",
+          "0"
+        ],
+        [
+          "-2",
+          "2*x_0 + 2*x_1",
+          "0",
+          "0",
+          "0",
+          "0",
+          "-2",
+          "2*x_0 + 2*x_1"
+        ],
+        [
+          "0",
+          "0",
+          "-1",
+          "-x_0",
+          "-1",
+          "-x_1",
+          "0",
+          "0"
+        ],
+        [
+          "0",
+          "0",
+          "2*x_1",
+          "0",
+          "0",
+          "0",
+          "2*x_0 + 4*x_1",
+          "-4*x_0*x_1 - 4*x_1**2"
+        ],
+        [
+          "0",
+          "0",
+          "0",
+          "2*x_1",
+          "0",
+          "0",
+          "-2",
+          "0"
+        ],
+        [
+          "0",
+          "0",
+          "0",
+          "0",
+          "1",
+          "x_1",
+          "-2",
+          "2*x_0 + 2*x_1"
+        ]
+      ],
+      "shape": [
+        8,
+        8
+      ],
+      "source_rouquier_degree": -3,
+      "target_rouquier_degree": -2
+    },
+    {
+      "matrix": [
+        [
+          "2*x_0",
+          "1",
+          "x_1",
+          "0",
+          "2*x_0",
+          "0",
+          "0",
+          "0"
+        ],
+        [
+          "-2*x_1",
+          "0",
+          "0",
+          "2*x_1",
+          "0",
+          "1",
+          "x_0",
+          "0"
+        ],
+        [
+          "0",
+          "-1",
+          "-x_1",
+          "-2*x_0",
+          "0",
+          "0",
+          "0",
+          "2*x_0"
+        ],
+        [
+          "0",
+          "0",
+          "0",
+          "0",
+          "-2*x_1",
+          "-1",
+          "-x_0",
+          "-2*x_1"
+        ]
+      ],
+      "shape": [
+        4,
+        8
+      ],
+      "source_rouquier_degree": -2,
+      "target_rouquier_degree": -1
+    },
+    {
+      "matrix": [
+        [
+          "2*x_1",
+          "2*x_0",
+          "2*x_1",
+          "2*x_0"
+        ]
+      ],
+      "shape": [
+        1,
+        4
+      ],
+      "source_rouquier_degree": -1,
+      "target_rouquier_degree": 0
+    }
+  ],
+  "realization_note": "standard finite type A2 reflection representation",
+  "title": "Type A2 s1s2s1s2 HHH 2.0 computation",
+  "variable_q_degree": 2,
+  "variables": [
+    "x_0",
+    "x_1"
+  ]
+}

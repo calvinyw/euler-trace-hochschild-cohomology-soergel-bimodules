@@ -28,7 +28,7 @@ from __future__ import annotations
 from collections import defaultdict
 from collections.abc import Iterable, Sequence
 from dataclasses import dataclass
-from typing import Any, TypeAlias
+from typing import Any, Literal, TypeAlias
 
 import sympy as sp
 
@@ -228,6 +228,7 @@ def minimal_koszul_complex_from_field_splitting(
     koszul: FreeRKoszulComplex,
     variables: Sequence[sp.Symbol],
     *,
+    method: Literal["unit_pivot", "inverse"] = "unit_pivot",
     validate: bool = True,
     context: str = "minimal Koszul complex",
 ) -> MinimalComplexData:
@@ -243,6 +244,7 @@ def minimal_koszul_complex_from_field_splitting(
         koszul,
         variables,
         field_splitting,
+        method=method,
         validate=validate,
         context=context,
     )
@@ -252,13 +254,28 @@ def koszul_field_splitting(
     koszul: FreeRKoszulComplex,
     variables: Sequence[sp.Symbol],
     *,
+    method: Literal["pivot_completion", "kernel"] = "pivot_completion",
     validate: bool = True,
     context: str = "Koszul field splitting",
 ) -> dict[int, FieldSplittingDegree]:
     """Compute the ``B + H + S`` splitting of ``k tensor C``."""
 
     specialized = _left_specialized_differentials(koszul, variables)
-    return _field_splitting(koszul, specialized, validate=validate, context=context)
+    if method == "pivot_completion":
+        return _field_splitting_by_pivot_completion(
+            koszul,
+            specialized,
+            validate=validate,
+            context=context,
+        )
+    if method == "kernel":
+        return _field_splitting_by_kernel(
+            koszul,
+            specialized,
+            validate=validate,
+            context=context,
+        )
+    raise ValueError(f"unknown field-splitting method {method!r}")
 
 
 def minimal_koszul_complex_from_splitting_data(
@@ -266,45 +283,118 @@ def minimal_koszul_complex_from_splitting_data(
     variables: Sequence[sp.Symbol],
     field_splitting: dict[int, FieldSplittingDegree],
     *,
+    method: Literal["unit_pivot", "inverse"] = "unit_pivot",
     validate: bool = True,
     context: str = "minimal Koszul complex",
 ) -> MinimalComplexData:
     """Lift an already-computed field splitting and cancel ``S -> B`` over ``R``."""
 
+    if method == "inverse":
+        return _minimal_koszul_complex_from_splitting_data_inverse(
+            koszul,
+            variables,
+            field_splitting,
+            validate=validate,
+            context=context,
+        )
+    if method != "unit_pivot":
+        raise ValueError(f"unknown minimal-complex method {method!r}")
+
+    degrees = sorted(koszul.q_degrees)
+    basis_changes, block_sizes, cancelled_pairs_by_degree = _minimal_basis_data(
+        koszul,
+        field_splitting,
+        context=context,
+    )
+
+    minimal_q_degrees = {
+        degree: list(field_splitting[degree].homology_q_degrees)
+        for degree in degrees
+    }
+    minimal_differentials: dict[int, sp.Matrix] = {}
+    for degree in degrees:
+        source_homology_count = block_sizes[degree][1]
+        source_homology_start = block_sizes[degree][0]
+        source_homology_end = source_homology_start + source_homology_count
+        if degree + 1 not in koszul.q_degrees:
+            minimal_differentials[degree] = sp.zeros(0, source_homology_count)
+            continue
+
+        target_homology_count = block_sizes[degree + 1][1]
+        target_homology_start = block_sizes[degree + 1][0]
+        target_homology_end = target_homology_start + target_homology_count
+        source_homology_lifts = basis_changes[degree].extract(
+            range(basis_changes[degree].rows),
+            range(source_homology_start, source_homology_end),
+        )
+        homology_images = (koszul.differentials[degree] * source_homology_lifts).applyfunc(sp.expand)
+        homology_coords = _unit_pivot_solve_matrix(
+            basis_changes[degree + 1],
+            homology_images,
+            variables,
+            context=f"{context}, target coordinates for d_{degree}(H)",
+        )
+
+        if validate:
+            source_boundary, source_homology, source_source = block_sizes[degree]
+            if source_source:
+                source_start = source_boundary + source_homology
+                source_end = source_start + source_source
+                source_lifts = basis_changes[degree].extract(
+                    range(basis_changes[degree].rows),
+                    range(source_start, source_end),
+                )
+                source_images = (koszul.differentials[degree] * source_lifts).applyfunc(sp.expand)
+                source_coords = _unit_pivot_solve_matrix(
+                    basis_changes[degree + 1],
+                    source_images,
+                    variables,
+                    context=f"{context}, target coordinates for d_{degree}(S)",
+                )
+                _validate_cancelled_source_block(
+                    source_coords,
+                    block_sizes[degree],
+                    block_sizes[degree + 1],
+                    context=f"{context}, differential {degree}",
+                )
+
+        minimal_differentials[degree] = homology_coords.extract(
+            range(target_homology_start, target_homology_end),
+            range(source_homology_count),
+        )
+
+    minimal = ReducedFreeRComplex(minimal_q_degrees, minimal_differentials)
+    if validate:
+        _validate_complex_shapes(minimal, context=context)
+        _validate_compositions(minimal, context=context)
+    return MinimalComplexData(
+        complex=minimal,
+        field_splitting=field_splitting,
+        cancelled_pairs_by_degree=cancelled_pairs_by_degree,
+        basis_changes=basis_changes,
+    )
+
+
+def _minimal_koszul_complex_from_splitting_data_inverse(
+    koszul: FreeRKoszulComplex,
+    variables: Sequence[sp.Symbol],
+    field_splitting: dict[int, FieldSplittingDegree],
+    *,
+    validate: bool,
+    context: str,
+) -> MinimalComplexData:
+    """Original full inverse/conjugation implementation, kept for comparison."""
+
     degrees = sorted(koszul.q_degrees)
 
-    basis_changes: dict[int, sp.Matrix] = {}
     inverse_changes: dict[int, sp.Matrix] = {}
-    block_sizes: dict[int, tuple[int, int, int]] = {}
-    cancelled_pairs_by_degree: dict[int, int] = {}
-
-    for degree in degrees:
-        previous_sources = (
-            field_splitting[degree - 1].source_lifts
-            if degree - 1 in field_splitting
-            else []
-        )
-        boundary_lifts = [
-            _matrix_times_vector(koszul.differentials[degree - 1], source)
-            for source in previous_sources
-        ]
-        splitting = field_splitting[degree]
-        columns = boundary_lifts + splitting.homology_lifts + splitting.source_lifts
-        row_count = len(koszul.q_degrees[degree])
-        change = _matrix_from_columns(columns, row_count)
-        if change.shape != (row_count, row_count):
-            raise ValueError(
-                f"{context}, degree {degree}: B+H+S has shape {change.shape}, "
-                f"expected {(row_count, row_count)}"
-            )
-        basis_changes[degree] = change
+    basis_changes, block_sizes, cancelled_pairs_by_degree = _minimal_basis_data(
+        koszul,
+        field_splitting,
+        context=context,
+    )
+    for degree, change in basis_changes.items():
         inverse_changes[degree] = _polynomial_inverse(change, variables, f"{context}, degree {degree}")
-        block_sizes[degree] = (
-            len(boundary_lifts),
-            len(splitting.homology_lifts),
-            len(splitting.source_lifts),
-        )
-        cancelled_pairs_by_degree[degree] = len(splitting.source_lifts)
 
     minimal_q_degrees = {
         degree: list(field_splitting[degree].homology_q_degrees)
@@ -348,6 +438,50 @@ def minimal_koszul_complex_from_splitting_data(
         cancelled_pairs_by_degree=cancelled_pairs_by_degree,
         basis_changes=basis_changes,
     )
+
+
+def _minimal_basis_data(
+    koszul: FreeRKoszulComplex,
+    field_splitting: dict[int, FieldSplittingDegree],
+    *,
+    context: str,
+) -> tuple[
+    dict[int, sp.Matrix],
+    dict[int, tuple[int, int, int]],
+    dict[int, int],
+]:
+    degrees = sorted(koszul.q_degrees)
+    basis_changes: dict[int, sp.Matrix] = {}
+    block_sizes: dict[int, tuple[int, int, int]] = {}
+    cancelled_pairs_by_degree: dict[int, int] = {}
+
+    for degree in degrees:
+        previous_sources = (
+            field_splitting[degree - 1].source_lifts
+            if degree - 1 in field_splitting
+            else []
+        )
+        boundary_lifts = [
+            _matrix_times_vector(koszul.differentials[degree - 1], source)
+            for source in previous_sources
+        ]
+        splitting = field_splitting[degree]
+        columns = boundary_lifts + splitting.homology_lifts + splitting.source_lifts
+        row_count = len(koszul.q_degrees[degree])
+        change = _matrix_from_columns(columns, row_count)
+        if change.shape != (row_count, row_count):
+            raise ValueError(
+                f"{context}, degree {degree}: B+H+S has shape {change.shape}, "
+                f"expected {(row_count, row_count)}"
+            )
+        basis_changes[degree] = change
+        block_sizes[degree] = (
+            len(boundary_lifts),
+            len(splitting.homology_lifts),
+            len(splitting.source_lifts),
+        )
+        cancelled_pairs_by_degree[degree] = len(splitting.source_lifts)
+    return basis_changes, block_sizes, cancelled_pairs_by_degree
 
 
 def split_certified_free_summands(
@@ -402,7 +536,101 @@ def split_certified_free_summands(
     return result
 
 
-def _field_splitting(
+def _field_splitting_by_pivot_completion(
+    koszul: FreeRKoszulComplex,
+    specialized: dict[int, sp.Matrix],
+    *,
+    validate: bool,
+    context: str,
+) -> dict[int, FieldSplittingDegree]:
+    splitting: dict[int, FieldSplittingDegree] = {}
+    degrees = sorted(koszul.q_degrees)
+    minimum_degree = min(degrees)
+    for degree in degrees:
+        previous = (
+            specialized[degree - 1]
+            if degree > minimum_degree
+            else sp.zeros(len(koszul.q_degrees[degree]), 0)
+        )
+        next_map = specialized[degree]
+        previous_degrees = koszul.q_degrees[degree - 1] if degree > minimum_degree else []
+        current_degrees = koszul.q_degrees[degree]
+        next_degrees = koszul.q_degrees.get(degree + 1, [])
+        if validate:
+            _validate_specialized_differentials(
+                previous,
+                next_map,
+                previous_degrees,
+                current_degrees,
+                next_degrees,
+                context=f"{context}, field degree {degree}",
+            )
+
+        homology_lifts: list[sp.Matrix] = []
+        homology_q_degrees: list[int] = []
+        source_lifts: list[sp.Matrix] = []
+        source_q_degrees: list[int] = []
+
+        current_by_q = _indices_by_q_degree(current_degrees)
+        previous_split = splitting.get(degree - 1)
+        next_by_q = _indices_by_q_degree(next_degrees)
+
+        for q_degree in sorted(current_by_q):
+            current_indices = current_by_q[q_degree]
+            next_indices = next_by_q.get(q_degree, [])
+            next_block = _extract_matrix(next_map, next_indices, current_indices)
+
+            boundary_columns = _specialized_boundary_columns_from_previous_sources(
+                previous,
+                previous_split,
+                q_degree,
+                current_indices,
+            )
+            source_pivots = _fast_rref_pivots(next_block)
+            source_columns = [
+                _standard_basis_column(len(current_indices), pivot)
+                for pivot in source_pivots
+            ]
+            span_columns = boundary_columns + source_columns
+            span = _matrix_from_columns(span_columns, len(current_indices))
+            standard_columns = [
+                _standard_basis_column(len(current_indices), index)
+                for index in range(len(current_indices))
+            ]
+            homology_columns = _independent_extension(span, standard_columns)
+
+            if validate:
+                _validate_pivot_completion_slice(
+                    previous,
+                    next_block,
+                    boundary_columns,
+                    homology_columns,
+                    source_columns,
+                    current_indices,
+                    context=f"{context}, field degree {degree}, Q={q_degree}",
+                )
+
+            homology_lifts.extend(
+                _lift_slice_vector(column, current_indices, len(current_degrees))
+                for column in homology_columns
+            )
+            homology_q_degrees.extend(q_degree for _ in homology_columns)
+            source_lifts.extend(
+                _lift_slice_vector(column, current_indices, len(current_degrees))
+                for column in source_columns
+            )
+            source_q_degrees.extend(q_degree for _ in source_columns)
+
+        splitting[degree] = FieldSplittingDegree(
+            homology_lifts=homology_lifts,
+            homology_q_degrees=homology_q_degrees,
+            source_lifts=source_lifts,
+            source_q_degrees=source_q_degrees,
+        )
+    return splitting
+
+
+def _field_splitting_by_kernel(
     koszul: FreeRKoszulComplex,
     specialized: dict[int, sp.Matrix],
     *,
@@ -611,6 +839,64 @@ def _validate_specialized_differentials(
             raise ValueError(f"{context}: differentials do not compose after specialization")
 
 
+def _specialized_boundary_columns_from_previous_sources(
+    previous: sp.Matrix,
+    previous_split: FieldSplittingDegree | None,
+    q_degree: int,
+    current_indices: Sequence[int],
+) -> list[sp.Matrix]:
+    if previous_split is None:
+        return []
+    columns: list[sp.Matrix] = []
+    for source, source_q_degree in zip(
+        previous_split.source_lifts,
+        previous_split.source_q_degrees,
+        strict=True,
+    ):
+        if source_q_degree != q_degree:
+            continue
+        image = (previous * source).applyfunc(sp.expand)
+        columns.append(image.extract(current_indices, [0]))
+    return columns
+
+
+def _validate_pivot_completion_slice(
+    previous: sp.Matrix,
+    next_block: sp.Matrix,
+    boundary_columns: Sequence[sp.Matrix],
+    homology_columns: Sequence[sp.Matrix],
+    source_columns: Sequence[sp.Matrix],
+    current_indices: Sequence[int],
+    *,
+    context: str,
+) -> None:
+    current_count = len(current_indices)
+    combined = _matrix_from_columns(
+        [*boundary_columns, *homology_columns, *source_columns],
+        current_count,
+    )
+    if len(_fast_rref_pivots(combined)) != current_count:
+        raise ValueError(f"{context}: B+H+S does not span")
+
+    if source_columns:
+        source_matrix = _matrix_from_columns(source_columns, current_count)
+        image_matrix = next_block * source_matrix
+        if len(_fast_rref_pivots(image_matrix)) != len(source_columns):
+            raise ValueError(f"{context}: selected S columns do not map injectively to B")
+
+    if previous.cols:
+        previous_block = previous.extract(current_indices, range(previous.cols))
+        if len(_fast_rref_pivots(previous_block)) != len(boundary_columns):
+            raise ValueError(f"{context}: lifted previous S columns do not span im previous")
+
+    boundary_span = _matrix_from_columns(boundary_columns, current_count)
+    source_span = _matrix_from_columns(source_columns, current_count)
+    if len(_fast_rref_pivots(boundary_span.row_join(source_span))) != (
+        len(boundary_columns) + len(source_columns)
+    ):
+        raise ValueError(f"{context}: B and S columns are not independent")
+
+
 def _validate_cancelled_block(
     transformed: sp.Matrix,
     source_sizes: tuple[int, int, int],
@@ -637,6 +923,110 @@ def _validate_cancelled_block(
         for column in source_columns
     ):
         raise ValueError(f"{context}: lifted S columns have uncancelled lower entries")
+
+
+def _validate_cancelled_source_block(
+    source_coords: sp.Matrix,
+    source_sizes: tuple[int, int, int],
+    target_sizes: tuple[int, int, int],
+    *,
+    context: str,
+) -> None:
+    source_boundary, source_homology, source_source = source_sizes
+    target_boundary, _target_homology, _target_source = target_sizes
+    if source_source != target_boundary:
+        raise ValueError(f"{context}: source and boundary cancellation sizes differ")
+    if source_source == 0:
+        return
+    if source_coords.shape[1] != source_source:
+        raise ValueError(f"{context}: source-coordinate matrix has wrong column count")
+    block = source_coords.extract(range(target_boundary), range(source_source))
+    if block != sp.eye(source_source):
+        raise ValueError(f"{context}: lifted S->B block is not the identity")
+    lower_rows = range(target_boundary, source_coords.rows)
+    if lower_rows and any(
+        source_coords[row, column] != 0
+        for row in lower_rows
+        for column in range(source_source)
+    ):
+        raise ValueError(f"{context}: lifted S columns have uncancelled lower entries")
+
+
+def _unit_pivot_solve_matrix(
+    matrix: sp.Matrix,
+    rhs: sp.Matrix,
+    variables: Sequence[sp.Symbol],
+    *,
+    context: str,
+) -> sp.Matrix:
+    """Solve ``matrix * x = rhs`` by unit-pivot elimination over ``R``.
+
+    The basis matrices arising from the lifted ``B + H + S`` splitting have
+    determinant a nonzero rational constant.  Therefore row operations with
+    rational unit pivots suffice, and we avoid forming the full polynomial
+    inverse.  If an unexpected nonunit pivot is encountered, fall back to the
+    original inverse path so correctness is preserved.
+    """
+
+    if matrix.rows != matrix.cols:
+        raise ValueError(f"{context}: expected a square basis matrix")
+    if rhs.rows != matrix.rows:
+        raise ValueError(f"{context}: right-hand side has incompatible row count")
+    if rhs.cols == 0:
+        return sp.zeros(matrix.cols, 0)
+
+    size = matrix.rows
+    augmented = matrix.row_join(rhs).applyfunc(sp.expand)
+    for column in range(size):
+        pivot_row = _find_unit_pivot_row(augmented, column, column, variables)
+        if pivot_row is None:
+            inverse = _polynomial_inverse(matrix, variables, context)
+            return (inverse * rhs).applyfunc(lambda entry: _as_polynomial(entry, variables, context))
+        if pivot_row != column:
+            augmented.row_swap(column, pivot_row)
+
+        pivot = augmented[column, column]
+        if pivot != 1:
+            for item_column in range(augmented.cols):
+                augmented[column, item_column] = sp.expand(augmented[column, item_column] / pivot)
+
+        for row in range(size):
+            if row == column:
+                continue
+            factor = augmented[row, column]
+            if factor == 0:
+                continue
+            for item_column in range(column, augmented.cols):
+                augmented[row, item_column] = sp.expand(
+                    augmented[row, item_column] - factor * augmented[column, item_column]
+                )
+
+    if any(
+        augmented[row, column] != (1 if row == column else 0)
+        for row in range(size)
+        for column in range(size)
+    ):
+        raise ValueError(f"{context}: unit-pivot elimination did not produce identity")
+    return augmented[:, size:].applyfunc(lambda entry: _as_polynomial(entry, variables, context))
+
+
+def _find_unit_pivot_row(
+    matrix: sp.Matrix,
+    column: int,
+    first_row: int,
+    variables: Sequence[sp.Symbol],
+) -> int | None:
+    for row in range(first_row, matrix.rows):
+        if _is_unit(matrix[row, column], variables):
+            return row
+    return None
+
+
+def _is_unit(entry: sp.Expr, variables: Sequence[sp.Symbol]) -> bool:
+    entry = sp.cancel(entry)
+    if entry == 0:
+        return False
+    return not (entry.free_symbols & set(variables))
 
 
 def _validate_complex_shapes(complex_: ReducedFreeRComplex, *, context: str) -> None:

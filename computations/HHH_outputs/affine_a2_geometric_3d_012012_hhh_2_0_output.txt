@@ -1,0 +1,44 @@
+Affine A2 geometric 3D s0s1s2s0s1s2 HHH 2.0 computation
+Python: 3.11.15
+Platform: macOS-15.7.3-x86_64-i386-64bit
+Output file: /Users/calvinyost-wolff/Documents/my math papers/acyclicClusterAlgebras/computations/HHH_outputs/affine_a2_geometric_3d_012012_hhh_2_0_output.txt
+Ext sequence directory: /Users/calvinyost-wolff/Documents/my math papers/acyclicClusterAlgebras/computations/stored_ext_sequences/affine_a2_geometric_3d_012012_hhh_2_0
+Timeout seconds: 43200
+Validate minimization pipeline: True
+Check d^2=0 before Ext computations: True
+
+setup diagram and realization: 0.000009s
+diagram vertices: (0, 1, 2)
+diagram edges: [(0, 1), (0, 2), (1, 2)]
+braid: ((0, '+'), (1, '+'), (2, '+'), (0, '+'), (1, '+'), (2, '+'))
+realization: geometric 3D basis: alpha_0, alpha_1, alpha_2
+realization dimension: 3
+s0 action on V^* used by R:
+Matrix([[-1, 1, 1], [0, 1, 0], [0, 0, 1]])
+alpha_0: [1, 0, 0]
+s1 action on V^* used by R:
+Matrix([[1, 0, 0], [1, -1, 1], [0, 0, 1]])
+alpha_1: [0, 1, 0]
+s2 action on V^* used by R:
+Matrix([[1, 0, 0], [0, 1, 0], [1, 1, -1]])
+alpha_2: [0, 0, 1]
+
+build Rouquier complex as free left R-modules: 19.410794s
+R variables: (x_0, x_1, x_2)
+Rouquier degrees: [-6, -5, -4, -3, -2, -1, 0]
+number of Rouquier terms: 64
+number of Rouquier arrows: 192
+d^2=0 on free-left-R Rouquier complex: True
+check d^2=0: 56.400850s
+
+construct left polynomial ring: 0.002588s
+ring: QQ[x_0,x_1,x_2]
+
+term (1, 1, 1, 1, 1, 1): degree=-6, word=(0, 1, 2, 0, 1, 2), rank=64
+  Koszul complex: 92.411595s
+  step 1 field B+H+S splitting: 0.836832s
+    field homology ranks by Ext degree: {0: 11, 1: 33, 2: 33, 3: 11}
+    field source ranks by Ext degree: {0: 53, 1: 106, 2: 53, 3: 0}
+  step 2 lifted cancellation/minimal complex: 4744.632582s
+    minimal ranks by Ext degree: {0: 11, 1: 33, 2: 33, 3: 11}
+    cancelled S->B pairs by source degree: {0: 53, 1: 106, 2: 53, 3: 0}

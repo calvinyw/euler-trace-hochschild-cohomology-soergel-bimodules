@@ -1,12 +1,12 @@
 Affine A2 6D universal Kac-Moody s0s1s2s0s1s2 Euler-trace 2.0 computation
 Python: 3.11.7
 Platform: macOS-10.16-x86_64-i386-64bit
-Output file: /Users/calvinyost-wolff/Documents/my math papers/acyclicClusterAlgebras/computations/euler_trace_outputs/affine_a2_kac_moody_6d_012012_euler_trace_2_0_output.txt
-Timeout seconds: 86400
+Output file: /Users/calvinyost-wolff/Documents/my math papers/acyclicClusterAlgebras/computations/euler_trace_outputs/affine_a2_kac_moody_6d_012012_launch_smoke.txt
+Timeout seconds: 5
 Validate minimization pipeline: True
 Check d^2=0 before Ext computations: True
 
-setup 6D universal Kac-Moody realization: 0.003449s
+setup 6D universal Kac-Moody realization: 0.002925s
 diagram vertices: (0, 1, 2)
 diagram edges: [(0, 1), (0, 2), (1, 2)]
 braid: ((0, '+'), (1, '+'), (2, '+'), (0, '+'), (1, '+'), (2, '+'))
@@ -22,19 +22,6 @@ s2 action on V^* used by R:
 Matrix([[1, 0, 0, 0, 0, 0], [0, 1, 0, 0, 0, 0], [1, 1, -1, 0, 0, -1], [0, 0, 0, 1, 0, 0], [0, 0, 0, 0, 1, 0], [0, 0, 0, 0, 0, 1]])
 alpha_2: [0, 0, 1, 0, 0, 0]
 
-build Rouquier complex as free left R-modules: 20.020716s
-R variables: (x_0, x_1, x_2, x_3, x_4, x_5)
-Rouquier degrees: [-6, -5, -4, -3, -2, -1, 0]
-number of Rouquier terms: 64
-number of Rouquier arrows: 192
-d^2=0 on free-left-R Rouquier complex: True
-check d^2=0: 56.461736s
 
-construct left polynomial ring: 0.001829s
-ring: QQ[x_0,x_1,x_2,x_3,x_4,x_5]
-
-term (1, 1, 1, 1, 1, 1): degree=-6, word=(0, 1, 2, 0, 1, 2), rank=64
-  Koszul complex: 192.617601s
-  step 1 field B+H+S splitting: 106.936939s
-    field homology ranks by Ext degree: {0: 5, 1: 30, 2: 75, 3: 100, 4: 75, 5: 30, 6: 5}
-    field source ranks by Ext degree: {0: 59, 1: 295, 2: 590, 3: 590, 4: 295, 5: 59, 6: 0}
+TIMEOUT: wall-clock timeout reached
+Elapsed before timeout: 5.008332s

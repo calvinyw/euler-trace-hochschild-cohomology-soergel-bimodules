@@ -1,0 +1,27 @@
+Affine A2 geometric 3D s0s1s2s0s1s2 Euler-trace 2.0 computation
+Python: 3.11.7
+Platform: macOS-10.16-x86_64-i386-64bit
+Output file: /Users/calvinyost-wolff/Documents/my math papers/acyclicClusterAlgebras/computations/euler_trace_outputs/affine_a2_geometric_3d_012012_launch_smoke.txt
+Timeout seconds: 5
+Validate minimization pipeline: True
+Check d^2=0 before Ext computations: True
+
+setup geometric 3D realization: 0.002472s
+diagram vertices: (0, 1, 2)
+diagram edges: [(0, 1), (0, 2), (1, 2)]
+braid: ((0, '+'), (1, '+'), (2, '+'), (0, '+'), (1, '+'), (2, '+'))
+realization dimension: 3
+basis: alpha_0, alpha_1, alpha_2
+s0 action on V^* used by R:
+Matrix([[-1, 1, 1], [0, 1, 0], [0, 0, 1]])
+alpha_0: [1, 0, 0]
+s1 action on V^* used by R:
+Matrix([[1, 0, 0], [1, -1, 1], [0, 0, 1]])
+alpha_1: [0, 1, 0]
+s2 action on V^* used by R:
+Matrix([[1, 0, 0], [0, 1, 0], [1, 1, -1]])
+alpha_2: [0, 0, 1]
+
+
+TIMEOUT: wall-clock timeout reached
+Elapsed before timeout: 5.006837s

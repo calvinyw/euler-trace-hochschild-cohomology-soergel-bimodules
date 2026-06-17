@@ -1,0 +1,33 @@
+{
+  "braid": [
+    [
+      1,
+      "+"
+    ],
+    [
+      2,
+      "+"
+    ],
+    [
+      1,
+      "+"
+    ],
+    [
+      2,
+      "+"
+    ]
+  ],
+  "case": "a2_1212",
+  "ext_degrees": [
+    0,
+    1,
+    2
+  ],
+  "realization_note": "standard finite type A2 reflection representation",
+  "title": "Type A2 s1s2s1s2 HHH 2.0 computation",
+  "variable_q_degree": 2,
+  "variables": [
+    "x_0",
+    "x_1"
+  ]
+}

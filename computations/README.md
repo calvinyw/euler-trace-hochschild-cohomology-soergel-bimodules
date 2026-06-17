@@ -11,10 +11,21 @@ The state-of-the-art files in this folder are:
 * `khovanov_rozansky_extfree.py` for Khovanov-Rozansky homology computations.
 
 The Ext-free computations are conditional: they assume the termwise Ext
-modules are free over the left polynomial ring.  In particular, they are meant
-for realizations satisfying the usual Soergel bimodule assumptions, including
-a faithful reflection representation.  The Ext-free computations will not work
-correctly if the representation does not satisfy those assumptions.
+modules are free over the left polynomial ring.  In type A this is true but in affine A2 it seems this is not.  The Ext-free computations will not work correctly if the representation does not satisfy those assumptions.
+
+* `euler_trace_2_0.py` for Euler-trace computations.
+* `khovanov_rozansky_2_0.py` for Khovanov-Rozansky homology computations.
+
+The 2.0 computations are the honest general Groebner-basis implementations.
+They do not assume termwise Ext-freeness.  Before the Groebner step, each
+termwise Koszul complex is shrunk by field splitting over
+`k = R/(x_0, ..., x_n)`: acyclic free summands are cancelled over `R`, and
+certified free homology summands are removed when a unit-pivot splitting is
+found.  The final Groebner calculation is unchanged in principle, but it
+operates on smaller matrices than the direct implementations in
+`slower_old_euler_trace/euler_trace.py` and
+`slower_old_KR/khovanov_rozansky_free_r.py`.  Use these when the Ext-free
+shortcut is unavailable or untrusted, for example in affine type.
 
 The slower/older implementations have been moved out of the main computation
 surface:

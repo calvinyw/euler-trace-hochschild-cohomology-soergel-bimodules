@@ -48,6 +48,9 @@ DEFAULT_OUTPUTS = {
     "geometric": Path(
         "computations/euler_trace_outputs/affine_a2_geometric_012012_euler_trace_2_0_output.txt"
     ),
+    "geometric_3d": Path(
+        "computations/euler_trace_outputs/affine_a2_geometric_3d_012012_euler_trace_2_0_output.txt"
+    ),
     "kac_moody_6d": Path(
         "computations/euler_trace_outputs/affine_a2_kac_moody_6d_012012_euler_trace_2_0_output.txt"
     ),
@@ -141,6 +144,7 @@ def _timeout_handler(_signum, _frame) -> None:
 def _wrapper_module_name(realization_name: RealizationName) -> str:
     return {
         "geometric": "computations.run_affine_a2_geometric_012012_euler_trace_2_0",
+        "geometric_3d": "computations.run_affine_a2_geometric_3d_012012_euler_trace_2_0",
         "kac_moody_6d": "computations.run_affine_a2_kac_moody_6d_012012_euler_trace_2_0",
     }[realization_name]
 
@@ -156,6 +160,7 @@ def _run(
 ) -> None:
     label = {
         "geometric": "geometric 2D",
+        "geometric_3d": "geometric 3D",
         "kac_moody_6d": "6D universal Kac-Moody",
     }[realization_name]
     logger.log(f"Affine A2 {label} s0s1s2s0s1s2 Euler-trace 2.0 computation")
@@ -179,6 +184,8 @@ def _run(
     logger.log(f"realization dimension: {realization.dim}")
     if realization_name == "geometric":
         logger.log("input matrices interpreted as V action; R uses the contragredient V^* action")
+    elif realization_name == "geometric_3d":
+        logger.log("basis: alpha_0, alpha_1, alpha_2")
     else:
         logger.log("basis: alpha_0, alpha_1, alpha_2, Lambda_0, Lambda_1, Lambda_2")
     for generator in diagram.vertices:
